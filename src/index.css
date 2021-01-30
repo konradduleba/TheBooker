@@ -3,15 +3,17 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "tahoma", "arial", "sans-serif";
+  font-size: var(--app-font-size);
 }
 
 :root {
   --main-app-color: rgb(59, 89, 152);
-  --main-button-bgc: rgb(83, 138, 220);
+  --main-button-bgc: #538ADC;
   --main-banner-bgc: #3b5998;
   --link-color: #538adc;
   --link-hover-color: lightblue;
   --app-font-size: 14px;
+  --login-form-left-side-width: 200px;
 }
 
 body {
