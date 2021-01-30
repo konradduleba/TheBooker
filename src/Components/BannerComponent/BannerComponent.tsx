@@ -8,7 +8,7 @@ const BannerComponent = ():JSX.Element => (
         <img src={TheFacebookBanner} alt="the facebook banner"/>
         <div className='logo-and-menu'>
             <img src={TheFacebookLogo} alt="the facebook logo"/>
-            <ul className='menu'>
+            <ul>
                 <li>
                     <a href="#login">login</a>
                 </li>
