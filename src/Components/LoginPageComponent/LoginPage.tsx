@@ -1,11 +1,16 @@
 import React from 'react';
+import LoginComponent from '../GlobalComponents/LoginComponent';
+import SectionComponent from '../GlobalComponents/SectionComponent';
 import './LoginPage.scss';
 
-const LoginPage = ():JSX.Element => {
+const LoginPage = (): JSX.Element => {
     return (
-        <section className='login-page-wrapper'>
-            <h1>Login Page</h1>
-        </section>
+        <SectionComponent header="Login to Thefacebook">
+            <div className='login-page-wrapper'>
+                <h1>[ Login ]</h1>
+                <LoginComponent />
+            </div>
+        </SectionComponent>
     )
 }
 
