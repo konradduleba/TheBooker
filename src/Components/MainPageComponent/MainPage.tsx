@@ -7,26 +7,25 @@ import LoginLeftComponent from '../LoginLeftComponent/LoginLeftComponent';
 import { Route, Switch, Redirect } from "react-router-dom";
 import './MainPage.scss';
 import WelcomePageComponent from '../WelcomePageComponent/WelcomePageComponent';
+import RegisterPageComponent from '../RegisterPageComponent/RegisterPageComponent';
 
-const App = (): JSX.Element => {
-  return (
-    <div className="main-page-wrapper">
-      <BannerComponent />
-      <main>
-        <LoginLeftComponent />
-        <Switch>
-          <Route path="/app" >
-            <RouteComponent />
-          </Route>
-          <Route exact path="/welcome" component={WelcomePageComponent} />
-          <Route exact path="/login" component={LoginPage} />
-          <Redirect exact path="/" to="/app/home" />
-          {/* <Route path="*" component={NotFoundPage} /> */}
-        </Switch>
-      </main>
-      <FooterComponent />
-    </div>
-  );
-}
-
+const App = (): JSX.Element => (
+  <div className="main-page-wrapper">
+    <BannerComponent />
+    <main>
+      <LoginLeftComponent />
+      <Switch>
+        <Route path="/app" >
+          <RouteComponent />
+        </Route>
+        <Route exact path="/welcome" component={WelcomePageComponent} />
+        <Route exact path="/login" component={LoginPage} />
+        <Route exact path="/register" component={RegisterPageComponent} />
+        <Redirect exact path="/" to="/app/home" />
+        {/* <Route path="*" component={NotFoundPage} /> */}
+      </Switch>
+    </main>
+    <FooterComponent />
+  </div>
+);
 export default App;

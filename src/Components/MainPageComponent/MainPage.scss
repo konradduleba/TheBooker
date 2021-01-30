@@ -7,9 +7,16 @@
     margin: 5px;
 
     section {
-      width: calc(100% - var(--login-form-left-side-width));
+      width: calc(var(--app-width) - var(--login-form-left-side-width));
       border: 1px solid var(--main-banner-bgc);
       align-items: center;
+
+      p.header {
+        width: 100%;
+        background-color: var(--main-app-color);
+        color: #fff;
+        padding: 3px;
+      }
 
       &.login-left-component-wrapper {
         width: var(--login-form-left-side-width);

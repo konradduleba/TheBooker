@@ -1,13 +1,13 @@
 .banner-wrapper {
   display: flex;
   border-bottom: 1px solid var(--main-banner-bgc);
+  background-color: var(--main-banner-bgc);
 
   .logo-and-menu {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 0 100px;
-    background-color: var(--main-banner-bgc);
 
     img {
       width: 410px;

@@ -1,0 +1,51 @@
+.register-page-wrapper {
+    div {
+        padding: 20px 60px;
+
+        form {
+            margin: 10px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .input-container {
+                display: flex;
+                width: 70%;
+                justify-content: space-between;
+                padding: unset;
+                margin: 5px auto 0;
+
+                input {
+                    width: 200px;
+                }
+            }
+
+            .terms-checkbox,
+            .input-container,
+            .password-info {
+                padding: 0 60px;
+            }
+
+            .terms-checkbox {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                input {
+                    margin-right: 10px;
+                    cursor: pointer;
+                }
+            }
+
+            .password-info {
+                margin-top: 10px;
+            }
+
+            .register-button {
+                margin-top: 10px;
+                padding: 3px 20px;
+            }
+        }
+    }
+}

@@ -26,6 +26,7 @@ const LoginComponent = (): JSX.Element => {
                         pattern: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i
                     }
                     )}
+                    className='field-input'
                 />
             </div>
             <div className='input-container'>
@@ -39,6 +40,7 @@ const LoginComponent = (): JSX.Element => {
                         pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/i
                     }
                     )}
+                    className='field-input'
                 />
             </div>
             <div className='button-container'>

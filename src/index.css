@@ -14,6 +14,7 @@
   --link-hover-color: lightblue;
   --app-font-size: 14px;
   --login-form-left-side-width: 200px;
+  --app-width: 900px;
 }
 
 body {
@@ -65,4 +66,11 @@ button a {
 
 h1 {
   font-size: calc(2 * var(--app-font-size));
+}
+
+input.field-input {
+  border: 1px solid #666666;
+  background-color: #D9DFEA;
+  padding-left: 2px;
+  color: #000;
 }
