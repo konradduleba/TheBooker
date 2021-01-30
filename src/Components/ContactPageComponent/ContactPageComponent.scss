@@ -1,0 +1,23 @@
+.contact-page-wrapper {
+    text-align: center;
+    padding: 20px;
+
+    h1 {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    p {
+        padding: 20px;
+
+        span {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    }
+
+    button {
+        margin: 20px 0 0;
+        padding: 3px 10px;
+    }
+}
