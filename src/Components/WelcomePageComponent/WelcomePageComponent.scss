@@ -1,0 +1,64 @@
+.welcome-page-wrapper {
+    .header {
+        width: 100%;
+        background-color: var(--main-app-color);
+        color: #fff;
+        padding: 3px;
+    }
+
+    h1 {
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    div {
+        padding: 0 10px 10px;
+
+        p {
+            padding: 5px 0;
+
+            span {
+                font-weight: bold;
+            }
+
+            &:nth-child(3) {
+                padding-bottom: 0;
+            }
+
+            &:nth-last-of-type(1) {
+                padding: 10px 0;
+            }
+        }
+
+        ul {
+            li {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 3px 0 0;
+
+                img {
+                    height: 7px;
+                    margin: 0 8px;
+                }
+            }
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+
+            a {
+                margin: 0 10px;
+            }
+
+            button {
+                padding: 2px 20px;
+                text-transform: capitalize;
+                cursor: pointer;
+            }
+        }
+    }
+}

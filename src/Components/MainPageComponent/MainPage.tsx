@@ -6,6 +6,7 @@ import LoginPage from '../LoginPageComponent/LoginPage';
 import LoginLeftComponent from '../LoginLeftComponent/LoginLeftComponent';
 import { Route, Switch, Redirect } from "react-router-dom";
 import './MainPage.scss';
+import WelcomePageComponent from '../WelcomePageComponent/WelcomePageComponent';
 
 const App = (): JSX.Element => {
   return (
@@ -17,7 +18,7 @@ const App = (): JSX.Element => {
           <Route path="/app" >
             <RouteComponent />
           </Route>
-          {/* <Route exact path="/welcome" component={WelcomePage} /> */}
+          <Route exact path="/welcome" component={WelcomePageComponent} />
           <Route exact path="/login" component={LoginPage} />
           <Redirect exact path="/" to="/app/home" />
           {/* <Route path="*" component={NotFoundPage} /> */}

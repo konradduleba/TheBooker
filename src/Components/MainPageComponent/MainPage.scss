@@ -31,27 +31,6 @@
 
       .button-container {
         display: flex;
-
-        button,
-        input {
-          border-top-width: 1px;
-          border-left-width: 1px;
-          border-bottom-width: 2px;
-          border-right-width: 2px;
-          border-top-color: #D9DFEA;
-          border-left-color: #D9DFEA;
-          border-bottom-color: #3B5998;
-          border-right-color: #3B5998;
-          background-color: var(--main-button-bgc);
-          color: #fff;
-        }
-
-        button {
-          a {
-            color: #fff;
-            text-decoration: none;
-          }
-        }
       }
     }
   }

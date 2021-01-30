@@ -42,9 +42,9 @@ const LoginComponent = (): JSX.Element => {
                 />
             </div>
             <div className='button-container'>
-                <button>
-                    <Link to={routes.register.href}>{routes.register.title}</Link>
-                </button>
+                <Link to={routes.register.href}>
+                    <button>{routes.register.title}</button>
+                </Link>
                 <input type="submit" value="login" />
             </div>
         </form>
