@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
 import { terms } from '../../Utils/routes.json';
+import SectionComponent from '../GlobalComponents/SectionComponent';
 import './RegisterPageComponent.scss';
 
 interface LoginTypes {
@@ -43,9 +44,8 @@ const RegisterPageComponent = (): JSX.Element => {
     const onSubmit = (data: LoginTypes) => console.log(data);
 
     return (
-        <section className='register-page-wrapper'>
-            <p className='header'>Registration</p>
-            <div>
+        <SectionComponent header="Registration">
+            <div className='register-page-wrapper'>
                 <p>To register for thefacebook.com, just fill in the four fields below. You will have a chance to enter additional information and submit a picture once you have registered.</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {registerForm.map(({ label, name, type, ref }) =>
@@ -70,7 +70,7 @@ const RegisterPageComponent = (): JSX.Element => {
                     <input type="submit" value="Register Now!" className='register-button' />
                 </form>
             </div>
-        </section >
+        </SectionComponent>
     )
 };
 

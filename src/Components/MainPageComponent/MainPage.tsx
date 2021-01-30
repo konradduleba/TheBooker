@@ -8,6 +8,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import './MainPage.scss';
 import WelcomePageComponent from '../WelcomePageComponent/WelcomePageComponent';
 import RegisterPageComponent from '../RegisterPageComponent/RegisterPageComponent';
+import AboutPageComponent from '../AboutPageComponent/AboutPageComponent';
 
 const App = (): JSX.Element => (
   <div className="main-page-wrapper">
@@ -21,6 +22,7 @@ const App = (): JSX.Element => (
         <Route exact path="/welcome" component={WelcomePageComponent} />
         <Route exact path="/login" component={LoginPage} />
         <Route exact path="/register" component={RegisterPageComponent} />
+        <Route exact path="/about" component={AboutPageComponent} />
         <Redirect exact path="/" to="/app/home" />
         {/* <Route path="*" component={NotFoundPage} /> */}
       </Switch>

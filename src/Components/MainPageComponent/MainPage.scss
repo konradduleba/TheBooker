@@ -6,24 +6,25 @@
     display: flex;
     margin: 5px;
 
-    section {
+    section.section-component {
       width: calc(var(--app-width) - var(--login-form-left-side-width));
       border: 1px solid var(--main-banner-bgc);
+      margin: 0 auto;
       align-items: center;
+      text-align: left;
 
-      p.header {
+      p.section-header {
         width: 100%;
         background-color: var(--main-app-color);
         color: #fff;
         padding: 3px;
       }
+    }
 
-      &.login-left-component-wrapper {
-        width: var(--login-form-left-side-width);
-        margin: 0 5px 0 0;
-        align-items: unset;
-        border: 1px dashed var(--main-banner-bgc);
-      }
+    .login-left-component-wrapper {
+      width: var(--login-form-left-side-width);
+      margin: 0 5px 0 0;
+      border: 1px dashed var(--main-banner-bgc);
     }
 
     .login-left-component-wrapper,

@@ -1,0 +1,33 @@
+.about-page-wrapper {
+    margin: 20px;
+    text-align: center;
+
+    h1 {
+        margin: 20px 0;
+    }
+
+    .description {
+        padding: 20px;
+    }
+
+    ul {
+        padding: 20px;
+
+        li {
+            display: flex;
+            flex-direction: row;
+            padding: 10px 0;
+
+            p {
+                &:nth-child(1) {
+                    width: 25%;
+                }
+            }
+        }
+    }
+
+    button {
+        margin: 20px 0 0;
+        padding: 3px 10px;
+    }
+}
