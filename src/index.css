@@ -9,10 +9,35 @@
   --main-app-color: rgb(59, 89, 152);
   --main-button-bgc: rgb(83, 138, 220);
   --main-banner-bgc: #3b5998;
-  --link-hover-color: #538adc;
+  --link-color: #538adc;
+  --link-hover-color: lightblue;
+  --app-font-size: 14px;
 }
 
 body {
   display: flex;
   justify-content: center;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  padding: 10px;
+}
+
+p,
+a {
+  font-size: var(--app-font-size);
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: underline;
 }

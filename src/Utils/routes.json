@@ -1,0 +1,54 @@
+{
+    "login": {
+        "title": "login",
+        "href": "/login"
+    },
+    "register": {
+        "title": "register",
+        "href": "/register"
+    },
+    "about": {
+        "title": "about",
+        "href": "/about"
+    },
+    "home": {
+        "title": "home",
+        "href": "/home"
+    },
+    "search": {
+        "title": "search",
+        "href": "/search"
+    },
+    "global": {
+        "title": "global",
+        "href": "/global"
+    },
+    "socialNet": {
+        "title": "social net",
+        "href": "/social-net"
+    },
+    "invite": {
+        "title": "invite",
+        "href": "/invite"
+    },
+    "faq": {
+        "title": "faq",
+        "href": "/faq"
+    },
+    "logout": {
+        "title": "logout",
+        "href": "/logout"
+    },
+    "contact": {
+        "title": "contact",
+        "href": "/contact"
+    },
+    "terms": {
+        "title": "terms",
+        "href": "/terms"
+    },
+    "privacy": {
+        "title": "privacy",
+        "href": "/privacy"
+    }
+}
