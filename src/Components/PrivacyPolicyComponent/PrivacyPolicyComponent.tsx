@@ -5,9 +5,11 @@ import privacyPolicy from '../../Utils/privacyPolicy.json';
 import GenerateMultipleSections from '../GlobalComponents/GenerateMultipleSections';
 import HeaderMeta from '../GlobalComponents/HeaderMeta';
 import { privacyMeta } from '../../Utils/headerMeta.json';
+import ScrollToTopOnMount from '../GlobalComponents/ScrollToTopOnMount';
 
 const PrivacyPolicyComponent = (): JSX.Element => (
     <SectionComponent header="TheBooker Privacy Policy">
+        <ScrollToTopOnMount />
         <div className='privacy-policy-wrapper'>
             <HeaderMeta title={privacyMeta.title} />
             <h1>[ Privacy Policy ]</h1>
