@@ -1,5 +1,5 @@
 # TheBooker
-Application is a fan attempt to mirror TheBooker page from 2004/2005.
+Application is an online directory that connects people through all around the world
 
 <h3>Functionalities:</h3>
 <li>User accounts (login/register)</li>
