@@ -4,10 +4,13 @@ import { register, login } from '../../Utils/routes.json';
 import './WelcomePageComponent.scss';
 import DotIcon from '../../Assets/dot.png';
 import SectionComponent from '../GlobalComponents/SectionComponent';
+import HeaderMeta from '../GlobalComponents/HeaderMeta';
+import { welcomeMeta } from '../../Utils/headerMeta.json';
 
 const WelcomePageComponent = (): JSX.Element => (
     <SectionComponent header="Welcome to TheBooker">
         <div className='welcome-page-wrapper'>
+            <HeaderMeta title={welcomeMeta.title} />
             <h1>[ Welcome to TheBooker ]</h1>
             <div>
                 <p>TheBooker is an online directory that connects people through social networks at colleges.</p>

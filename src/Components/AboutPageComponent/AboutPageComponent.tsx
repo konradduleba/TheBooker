@@ -2,12 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { defaultWindowWidth } from '../../Utils/appSettings';
 import { contact } from '../../Utils/routes.json';
+import HeaderMeta from '../GlobalComponents/HeaderMeta';
 import SectionComponent from '../GlobalComponents/SectionComponent';
+import { aboutMeta } from '../../Utils/headerMeta.json';
 import './AboutPageComponent.scss';
 
 const AboutPageComponent = (): JSX.Element => (
     <SectionComponent header="About TheBooker">
         <div className='about-page-wrapper'>
+            <HeaderMeta title={aboutMeta.title} />
             <h1>[ About ]</h1>
             <SectionComponent header="The Project" style={{ width: defaultWindowWidth }}>
                 <p className='description'>TheBooker is an online directory that connects people throught social networks at colleges and universities.</p>
