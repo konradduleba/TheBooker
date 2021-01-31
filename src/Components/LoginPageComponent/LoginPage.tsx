@@ -5,7 +5,7 @@ import './LoginPage.scss';
 
 const LoginPage = (): JSX.Element => {
     return (
-        <SectionComponent header="Login to Thefacebook">
+        <SectionComponent header="Login to TheBooker">
             <div className='login-page-wrapper'>
                 <h1>[ Login ]</h1>
                 <LoginComponent />

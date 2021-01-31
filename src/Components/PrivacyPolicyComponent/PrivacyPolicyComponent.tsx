@@ -5,7 +5,7 @@ import privacyPolicy from '../../Utils/privacyPolicy.json';
 import GenerateMultipleSections from '../GlobalComponents/GenerateMultipleSections';
 
 const PrivacyPolicyComponent = (): JSX.Element => (
-    <SectionComponent header="Thefacebook Privacy Policy">
+    <SectionComponent header="TheBooker Privacy Policy">
         <div className='privacy-policy-wrapper'>
             <h1>[ Privacy Policy ]</h1>
             <GenerateMultipleSections listOfSections={Object.values(privacyPolicy)} />
