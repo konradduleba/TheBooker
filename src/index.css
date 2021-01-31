@@ -17,6 +17,18 @@
   --app-width: 900px;
 }
 
+::-webkit-scrollbar {
+  width: 17px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-banner-bgc);
+}
+
 body {
   display: flex;
   justify-content: center;
