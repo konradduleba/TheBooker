@@ -1,5 +1,5 @@
-# The-facebook
-Application is a fan attempt to mirror facebook page from 2004/2005.
+# Booker
+Application is an online directory that connects people through all over the world
 
 <h3>Functionalities:</h3>
 <li>User accounts (login/register)</li>
