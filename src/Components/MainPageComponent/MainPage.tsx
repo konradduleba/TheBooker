@@ -11,6 +11,8 @@ import RegisterPageComponent from '../RegisterPageComponent/RegisterPageComponen
 import AboutPageComponent from '../AboutPageComponent/AboutPageComponent';
 import ContactPageComponent from '../ContactPageComponent/ContactPageComponent';
 import PrivacyPolicyComponent from '../PrivacyPolicyComponent/PrivacyPolicyComponent';
+import TermsPageComponent from '../TermsPageComponent/TermsPageComponent';
+import FAQPageComponent from '../FAQPageComponent/FAQPageComponent';
 
 const App = (): JSX.Element => (
   <div className="main-page-wrapper">
@@ -27,6 +29,8 @@ const App = (): JSX.Element => (
         <Route exact path="/about" component={AboutPageComponent} />
         <Route exact path="/contact" component={ContactPageComponent} />
         <Route exact path="/privacy" component={PrivacyPolicyComponent} />
+        <Route exact path="/terms" component={TermsPageComponent} />
+        <Route exact path="/faq" component={FAQPageComponent} />
         <Redirect exact path="/" to="/app/home" />
         {/* <Route path="*" component={NotFoundPage} /> */}
       </Switch>
