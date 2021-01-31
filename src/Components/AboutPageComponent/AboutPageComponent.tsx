@@ -6,11 +6,11 @@ import SectionComponent from '../GlobalComponents/SectionComponent';
 import './AboutPageComponent.scss';
 
 const AboutPageComponent = (): JSX.Element => (
-    <SectionComponent header="About Thefacebook">
+    <SectionComponent header="About TheBooker">
         <div className='about-page-wrapper'>
             <h1>[ About ]</h1>
             <SectionComponent header="The Project" style={{ width: defaultWindowWidth }}>
-                <p className='description'>Thefacebook is an online directory that connects people throught social networks at colleges and universities.</p>
+                <p className='description'>TheBooker is an online directory that connects people throught social networks at colleges and universities.</p>
             </SectionComponent>
             <SectionComponent header="The People" style={{ width: defaultWindowWidth, marginTop: "20px" }}>
                 <ul>

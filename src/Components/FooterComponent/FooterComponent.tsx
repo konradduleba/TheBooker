@@ -3,12 +3,12 @@ import MenuList from '../GlobalComponents/MenuList';
 import './FooterComponent.scss';
 import { footerMenu } from '../../Utils/menuRoutes';
 
-const FooterComponent = ():JSX.Element => (
+const FooterComponent = (): JSX.Element => (
     <footer>
-        <MenuList menuList={footerMenu}/>
+        <MenuList menuList={footerMenu} />
         <h1>a Mark Zuckenberg production</h1>
         <h2>mirrored in 2021 by Konrad Dulęba</h2>
-        <p>TheFacebook &copy; 2004</p>
+        <p>TheBooker &copy; 2004</p>
     </footer>
 )
 

@@ -6,13 +6,13 @@ import DotIcon from '../../Assets/dot.png';
 import SectionComponent from '../GlobalComponents/SectionComponent';
 
 const WelcomePageComponent = (): JSX.Element => (
-    <SectionComponent header="Welcome to TheFacebook">
+    <SectionComponent header="Welcome to TheBooker">
         <div className='welcome-page-wrapper'>
-            <h1>[ Welcome to TheFacebook ]</h1>
+            <h1>[ Welcome to TheBooker ]</h1>
             <div>
-                <p>Thefacebook is an online directory that connects people through social networks at colleges.</p>
-                <p>We have opened up Thefacebook for popular consumption at <span>Harvard University</span>.</p>
-                <p>You can use Thefacebook to:</p>
+                <p>TheBooker is an online directory that connects people through social networks at colleges.</p>
+                <p>We have opened up TheBooker for popular consumption at <span>Harvard University</span>.</p>
+                <p>You can use TheBooker to:</p>
                 <ul>
                     <li><img src={DotIcon} alt="black dot" /> Search for people at your school</li>
                     <li><img src={DotIcon} alt="black dot" /> Find out who are in your classes</li>
