@@ -1,4 +1,4 @@
-# Booker
+# TheBooker
 Application is an online directory that connects people through all around the world
 
 <h3>Functionalities:</h3>
