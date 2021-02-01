@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
 import routes from '../../Utils/routes.json';
 import { Link } from 'react-router-dom';
+import { UserData } from '../../Authentication/UserDataContext';
 
 interface LoginTypes {
     email: string;
@@ -9,9 +10,15 @@ interface LoginTypes {
 }
 
 const LoginComponent = (): JSX.Element => {
-    const { register, handleSubmit } = useForm<LoginTypes>();
+    const { register, handleSubmit, reset } = useForm<LoginTypes>();
+    const { setUserData } = useContext(UserData);
 
-    const onSubmit = (data: LoginTypes) => console.log(data);
+    const onSubmit = ({ email, password }: LoginTypes) => {
+        if (email === 'admin@admin.pl' && password === 'admin123' && setUserData) {
+            setUserData({ isLoggedIn: true });
+            return reset();
+        }
+    }
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
