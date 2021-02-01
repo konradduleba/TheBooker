@@ -1,7 +1,7 @@
 import routes from './routes.json';
 import { MenuListTypes } from './globalTypes';
 
-export const menuListNotLoggedIn:MenuListTypes[] = [{
+export const menuListNotLoggedIn: MenuListTypes[] = [{
     title: routes.login.title,
     href: routes.login.href
 },
@@ -15,36 +15,36 @@ export const menuListNotLoggedIn:MenuListTypes[] = [{
 }];
 
 
-export const menuListLoggedIn:MenuListTypes[] = [{
+export const menuListLoggedIn: MenuListTypes[] = [{
     title: routes.home.title,
-    href: routes.home.href, 
+    href: `/app${routes.home.href}`,
 },
 {
     title: routes.search.title,
-    href: routes.search.href,
+    href: `/app${routes.search.href}`,
 },
 {
     title: routes.global.title,
-    href: routes.global.href,
+    href: `/app${routes.global.href}`,
 },
 {
     title: routes.socialNet.title,
-    href: routes.socialNet.href, 
+    href: `/app${routes.socialNet.href}`,
 },
 {
     title: routes.invite.title,
-    href: routes.invite.href,
+    href: `/app${routes.invite.href}`,
 },
 {
     title: routes.faq.title,
-    href: routes.faq.href,
+    href: `/app${routes.faq.href}`,
 },
 {
     title: routes.logout.title,
-    href: routes.logout.href,
+    href: `/app${routes.logout.href}`,
 }];
 
-export const footerMenu:MenuListTypes[] = [{
+export const footerMenu: MenuListTypes[] = [{
     title: routes.about.title,
     href: routes.about.href
 },
