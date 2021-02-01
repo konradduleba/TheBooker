@@ -10,10 +10,10 @@ import ScrollToTopOnMount from '../GlobalComponents/ScrollToTopOnMount';
 
 const FAQPageComponent = (): JSX.Element => (
     <SectionComponent header="Frequently Asked Questions">
-        <div className='faq-wrapper'>
+        <div className='faq-wrapper column-with-padding'>
             <ScrollToTopOnMount />
             <HeaderMeta title={faqMeta.title} />
-            <h1>[ FAQ ]</h1>
+            <h1 className='header'>[ FAQ ]</h1>
             <ul>
                 {Object.values(faq).map(({ title }, index) => <li key={title}><img src={dotIcon} alt="dot icon" /><a href={`#${title}`}>{title}</a></li>)}
             </ul>

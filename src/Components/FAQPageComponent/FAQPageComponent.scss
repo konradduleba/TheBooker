@@ -1,9 +1,6 @@
 .faq-wrapper {
-    padding: 20px;
-
-    h1 {
-        text-align: center;
-        margin: 0 0 20px;
+    &.column-with-padding {
+        padding-top: 0;
     }
 
     ul {

@@ -10,9 +10,9 @@ import ScrollToTopOnMount from '../GlobalComponents/ScrollToTopOnMount';
 const PrivacyPolicyComponent = (): JSX.Element => (
     <SectionComponent header="TheBooker Privacy Policy">
         <ScrollToTopOnMount />
-        <div className='privacy-policy-wrapper'>
+        <div className='privacy-policy-wrapper column-with-padding'>
             <HeaderMeta title={privacyMeta.title} />
-            <h1>[ Privacy Policy ]</h1>
+            <h1 className='header'>[ Privacy Policy ]</h1>
             <GenerateMultipleSections listOfSections={Object.values(privacyPolicy)} />
         </div>
     </SectionComponent>

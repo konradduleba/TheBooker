@@ -8,9 +8,9 @@ import './LoginPage.scss';
 const LoginPage = (): JSX.Element => {
     return (
         <SectionComponent header="Login to TheBooker">
-            <div className='login-page-wrapper'>
+            <div className='login-page-wrapper column-with-padding'>
                 <HeaderMeta title={loginMeta.title} />
-                <h1>[ Login ]</h1>
+                <h1 className='header'>[ Login ]</h1>
                 <LoginComponent />
             </div>
         </SectionComponent>

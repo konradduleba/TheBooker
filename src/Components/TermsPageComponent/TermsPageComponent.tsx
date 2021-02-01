@@ -9,10 +9,10 @@ import ScrollToTopOnMount from '../GlobalComponents/ScrollToTopOnMount';
 
 const TermsPageComponent = (): JSX.Element => (
     <SectionComponent header="TheBooker Terms of Use">
-        <div className='terms-of-use-wrapper'>
+        <div className='terms-of-use-wrapper column-with-padding'>
             <ScrollToTopOnMount />
             <HeaderMeta title={termsMeta.title} />
-            <h1>[ Terms of Use ]</h1>
+            <h1 className='header'>[ Terms of Use ]</h1>
             <GenerateMultipleSections listOfSections={Object.values(termsOfUse)} />
         </div>
     </SectionComponent>

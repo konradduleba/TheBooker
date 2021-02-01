@@ -1,5 +1,4 @@
 .register-page-wrapper {
-    padding: 20px 60px;
 
     form {
         margin: 10px auto;
@@ -11,7 +10,7 @@
             display: flex;
             width: 70%;
             justify-content: space-between;
-            padding: unset;
+            padding: 0 50px;
             margin: 5px auto 0;
 
             input {
@@ -20,7 +19,6 @@
         }
 
         .terms-checkbox,
-        .input-container,
         .password-info {
             padding: 0 60px;
         }

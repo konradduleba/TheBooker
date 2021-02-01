@@ -6,18 +6,19 @@
   .logo-and-menu {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 100px;
-
-    img {
-      width: 410px;
-      height: 70px;
-    }
+    justify-content: center;
+    padding-left: 100px;
 
     ul {
       display: flex;
 
       li {
+        padding: 0 10px;
+
+        &:nth-child(1) {
+          padding-left: 0;
+        }
+
         a {
           color: #fff;
 

@@ -14,7 +14,7 @@
   --link-hover-color: lightblue;
   --app-font-size: 14px;
   --login-form-left-side-width: 200px;
-  --app-width: 900px;
+  --app-width: 800px;
 }
 
 ::-webkit-scrollbar {
@@ -75,6 +75,17 @@ button a {
 
 h1 {
   font-size: calc(2 * var(--app-font-size));
+}
+
+h1.header {
+  margin: 20px 0;
+}
+
+div.column-with-padding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
 input:-webkit-autofill,
