@@ -2,7 +2,9 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
 import { terms } from '../../Utils/routes.json';
+import HeaderMeta from '../GlobalComponents/HeaderMeta';
 import SectionComponent from '../GlobalComponents/SectionComponent';
+import { registerMeta } from '../../Utils/headerMeta.json';
 import './RegisterPageComponent.scss';
 
 interface LoginTypes {
@@ -45,7 +47,8 @@ const RegisterPageComponent = (): JSX.Element => {
 
     return (
         <SectionComponent header="Registration">
-            <div className='register-page-wrapper'>
+            <div className='register-page-wrapper column-with-padding'>
+                <HeaderMeta title={registerMeta.title} />
                 <p>To register for TheBooker.com, just fill in the four fields below. You will have a chance to enter additional information and submit a picture once you have registered.</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {registerForm.map(({ label, name, type, ref }) =>

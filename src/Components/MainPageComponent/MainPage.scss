@@ -13,6 +13,14 @@
       align-items: center;
       text-align: left;
 
+      &.inside-window {
+        width: calc(100% - 40px);
+      }
+
+      &.margin-between-sections {
+        margin-bottom: 20px;
+      }
+
       p.section-header {
         width: 100%;
         background-color: var(--main-app-color);

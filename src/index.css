@@ -14,7 +14,19 @@
   --link-hover-color: lightblue;
   --app-font-size: 14px;
   --login-form-left-side-width: 200px;
-  --app-width: 900px;
+  --app-width: 800px;
+}
+
+::-webkit-scrollbar {
+  width: 17px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-banner-bgc);
 }
 
 body {
@@ -47,10 +59,7 @@ a:hover {
 
 button,
 input {
-  border-top-width: 1px;
-  border-left-width: 1px;
-  border-bottom-width: 2px;
-  border-right-width: 2px;
+  border: 2px solid var(--main-banner-bgc);
   border-top-color: #D9DFEA;
   border-left-color: #D9DFEA;
   border-bottom-color: #3B5998;
@@ -68,9 +77,41 @@ h1 {
   font-size: calc(2 * var(--app-font-size));
 }
 
+h1.header {
+  margin: 20px 0;
+}
+
+div.column-with-padding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 input.field-input {
   border: 1px solid #666666;
   background-color: #D9DFEA;
   padding-left: 2px;
   color: #000;
+}
+
+input.field-input:active {
+  background-color: #D9DFEA;
+}
+
+button,
+input {
+  outline: none;
+}
+
+button:active,
+input:active {
+  background-color: #4e76cc;
 }

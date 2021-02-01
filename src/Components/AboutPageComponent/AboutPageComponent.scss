@@ -1,9 +1,6 @@
 .about-page-wrapper {
-    margin: 20px;
-    text-align: center;
-
-    h1 {
-        margin: 20px 0;
+    &.column-with-padding {
+        padding-top: 0;
     }
 
     .description {

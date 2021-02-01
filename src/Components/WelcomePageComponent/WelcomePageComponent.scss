@@ -1,8 +1,6 @@
 .welcome-page-wrapper {
-    h1 {
-        width: 100%;
-        text-align: center;
-        margin: 20px 0;
+    &.column-with-padding {
+        padding-top: 0;
     }
 
     div {

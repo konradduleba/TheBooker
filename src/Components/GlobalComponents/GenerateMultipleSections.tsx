@@ -1,5 +1,4 @@
 import React from 'react';
-import { defaultWindowWidth } from '../../Utils/appSettings';
 import SectionComponent from './SectionComponent';
 
 interface PrivacyTypes {
@@ -15,9 +14,9 @@ const GenerateMultipleSections = ({ listOfSections }: MultipleSections): JSX.Ele
     <>
         {listOfSections.map(({ title, description }: PrivacyTypes) => (
             <SectionComponent
+                className="inside-window margin-between-sections"
                 id={title}
                 header={title}
-                style={{ width: defaultWindowWidth, marginBottom: "20px" }}
                 key={title}>
                 <div dangerouslySetInnerHTML={{ __html: `${description}` }}></div>
             </SectionComponent>

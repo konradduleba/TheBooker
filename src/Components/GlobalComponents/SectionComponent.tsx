@@ -5,10 +5,11 @@ interface Section {
     children: ReactNode;
     header: string;
     style?: CSSProperties;
+    className?: string;
 }
 
-const SectionComponent = ({ children, header, style, id }: Section): JSX.Element => (
-    <section className='section-component' style={style} id={id}>
+const SectionComponent = ({ children, header, style, id, className }: Section): JSX.Element => (
+    <section className={`section-component ${className}`} style={style} id={id}>
         <p className='section-header'>{header}</p>
         {children}
     </section>
