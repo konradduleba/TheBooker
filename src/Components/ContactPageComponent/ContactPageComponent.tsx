@@ -10,10 +10,10 @@ const ContactPageComponent = (): JSX.Element => (
         <div className='contact-page-wrapper column-with-padding'>
             <HeaderMeta title={contactMeta.title} />
             <h1 className='header'>[ Contact Us ]</h1>
-            <SectionComponent header="Email" className="inside-window">
+            <SectionComponent header="Email" className="inside-window margin-between-sections">
                 <p><span>Konrad Dulęba</span>kon.duleba@gmail.com</p>
             </SectionComponent>
-            <Link to="/"><button>Home</button></Link>
+            <Link to="/"><button className='normal-button'>Home</button></Link>
         </div>
     </SectionComponent>
 );

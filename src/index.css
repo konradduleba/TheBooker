@@ -42,6 +42,11 @@ ul li {
   padding: 10px;
 }
 
+li img {
+  height: 7px;
+  margin: 0 8px;
+}
+
 p,
 a {
   font-size: var(--app-font-size);
@@ -114,4 +119,9 @@ input {
 button:active,
 input:active {
   background-color: #4e76cc;
+}
+
+button.normal-button {
+  padding: 3px 10px;
+  cursor: pointer;
 }

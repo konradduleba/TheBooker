@@ -9,15 +9,16 @@ import './BannerComponent.scss';
 
 const BannerComponent = (): JSX.Element => {
     const { userData } = useContext(UserData);
+    const isUserLoggedIn = userData?.isLoggedIn ? true : false;
 
-    const menuList = userData?.isLoggedIn ? menuListLoggedIn : menuListNotLoggedIn;
+    const menuList = isUserLoggedIn ? menuListLoggedIn : menuListNotLoggedIn;
 
     return (
         <section className='banner-wrapper'>
             <img src={TheBookerBanner} alt="the TheBooker banner" />
             <div className='logo-and-menu'>
                 <Link to='/'><img src={TheBookerLogo} alt="the TheBooker logo" /></Link>
-                <MenuList menuList={menuList} />
+                <MenuList menuList={menuList} isUserLoggedIn={isUserLoggedIn} />
             </div>
         </section>
     )

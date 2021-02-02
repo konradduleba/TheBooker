@@ -17,31 +17,31 @@ export const menuListNotLoggedIn: MenuListTypes[] = [{
 
 export const menuListLoggedIn: MenuListTypes[] = [{
     title: routes.home.title,
-    href: `/app${routes.home.href}`,
+    href: routes.home.href,
 },
 {
     title: routes.search.title,
-    href: `/app${routes.search.href}`,
+    href: routes.search.href,
 },
 {
     title: routes.global.title,
-    href: `/app${routes.global.href}`,
+    href: routes.global.href,
 },
 {
     title: routes.socialNet.title,
-    href: `/app${routes.socialNet.href}`,
+    href: routes.socialNet.href,
 },
 {
     title: routes.invite.title,
-    href: `/app${routes.invite.href}`,
+    href: routes.invite.href,
 },
 {
     title: routes.faq.title,
-    href: `/app${routes.faq.href}`,
+    href: routes.faq.href,
 },
 {
     title: routes.logout.title,
-    href: `/app${routes.logout.href}`,
+    href: routes.logout.href,
 }];
 
 export const footerMenu: MenuListTypes[] = [{

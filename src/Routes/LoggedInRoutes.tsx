@@ -3,6 +3,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import { UserData } from '../Authentication/UserDataContext';
 import BannerComponent from '../Components/BannerComponent/BannerComponent';
 import FooterComponent from '../Components/FooterComponent/FooterComponent';
+import NotFoundPage from '../Components/NotFoundPage/NotFoundPage';
 
 const LoggedInRoutes = (): JSX.Element => {
     const { userData } = useContext(UserData);
@@ -15,7 +16,7 @@ const LoggedInRoutes = (): JSX.Element => {
             <main>
                 <Switch>
                     <Route exact path="/app/home"><h1>Hello</h1></Route>
-                    <Route path="/app/*" component={() => <>404</>} />
+                    <Route path="/app/*" component={NotFoundPage} />
                     <Redirect path='/app' to='/app/home' />
                 </Switch>
             </main>
