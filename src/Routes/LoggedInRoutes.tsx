@@ -4,6 +4,8 @@ import { UserData } from '../Authentication/UserDataContext';
 import BannerComponent from '../Components/BannerComponent/BannerComponent';
 import FooterComponent from '../Components/FooterComponent/FooterComponent';
 import NotFoundPage from '../Components/NotFoundPage/NotFoundPage';
+import QuickMenuComponent from '../Components/QuickMenuComponent/QuickMenuComponent';
+import QuickSearchComponent from '../Components/QuickSearchComponent/QuickSearchComponent';
 
 const LoggedInRoutes = (): JSX.Element => {
     const { userData } = useContext(UserData);
@@ -14,6 +16,10 @@ const LoggedInRoutes = (): JSX.Element => {
         <div className="main-page-wrapper">
             <BannerComponent />
             <main>
+                <div className='quick-panel-wrapper'>
+                    <QuickSearchComponent />
+                    <QuickMenuComponent />
+                </div>
                 <Switch>
                     <Route exact path="/app/home"><h1>Hello</h1></Route>
                     <Route path="/app/*" component={NotFoundPage} />

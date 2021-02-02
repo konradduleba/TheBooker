@@ -16,7 +16,7 @@ interface UserDataContainer {
 export const UserData = createContext<UserDataContext>({});
 
 export const UseUserData = ({ children }: UseUserDataInterface): JSX.Element => {
-    const [userData, setUserData] = useState<UserDataContainer>({ isLoggedIn: false });
+    const [userData, setUserData] = useState<UserDataContainer>({ isLoggedIn: true });
 
     return (
         <UserData.Provider value={{ userData, setUserData }}>

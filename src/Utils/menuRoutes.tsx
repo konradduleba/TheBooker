@@ -63,5 +63,34 @@ export const footerMenu: MenuListTypes[] = [{
 {
     title: routes.privacy.title,
     href: routes.privacy.href
-}]
+}];
+
+export const quickLinks: MenuListTypes[] = [{
+    title: routes.myProfile.title,
+    href: routes.myProfile.href
+},
+{
+    title: routes.myFriends.title,
+    href: routes.myFriends.href
+},
+{
+    title: routes.myGroups.title,
+    href: routes.myGroups.href
+},
+{
+    title: routes.myParties.title,
+    href: routes.myParties.href
+},
+{
+    title: routes.myMessages.title,
+    href: routes.myMessages.href
+},
+{
+    title: routes.myAccount.title,
+    href: routes.myAccount.href
+},
+{
+    title: routes.myPrivacy.title,
+    href: routes.myPrivacy.href
+}];
 

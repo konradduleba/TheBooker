@@ -1,0 +1,13 @@
+.quick-menu-wrapper {
+    ul {
+        padding: 10px;
+
+        li {
+            padding: 2px 0 0 0;
+
+            &:nth-child(1) {
+                padding: 0;
+            }
+        }
+    }
+}
