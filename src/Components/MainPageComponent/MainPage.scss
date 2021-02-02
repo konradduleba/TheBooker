@@ -29,10 +29,25 @@
       }
     }
 
+    .quick-panel-wrapper+section.section-component {
+      width: calc(var(--app-width) - var(--quick-search-form-left-side-width));
+    }
+
     .login-left-component-wrapper {
       width: var(--login-form-left-side-width);
       margin: 0 5px 0 0;
       border: 1px dashed var(--main-banner-bgc);
+    }
+
+    .quick-search-wrapper,
+    .quick-menu-wrapper {
+      width: var(--quick-search-form-left-side-width);
+      margin: 0 5px 0 0;
+      border: 1px dashed var(--main-banner-bgc);
+    }
+
+    .quick-menu-wrapper {
+      margin-top: 5px;
     }
 
     .login-left-component-wrapper,

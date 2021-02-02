@@ -12,6 +12,7 @@ import LoginPage from '../Components/LoginPageComponent/LoginPage';
 import LoginLeftComponent from '../Components/LoginLeftComponent/LoginLeftComponent';
 import { Route, Switch, Redirect } from "react-router-dom";
 import { UserData } from '../Authentication/UserDataContext';
+import NotFoundPage from '../Components/NotFoundPage/NotFoundPage';
 
 const NotLoggedInRoutes = (): JSX.Element => {
     const { userData } = useContext(UserData);
@@ -33,7 +34,7 @@ const NotLoggedInRoutes = (): JSX.Element => {
                     <Route exact path="/terms" component={TermsPageComponent} />
                     <Route exact path="/faq" component={FAQPageComponent} />
                     <Redirect exact path="/" to="/app/home" />
-                    <Route path="*" component={() => <>404</>} />
+                    <Route path="*" component={NotFoundPage} />
                 </Switch>
             </main>
             <FooterComponent />

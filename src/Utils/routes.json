@@ -50,5 +50,33 @@
     "privacy": {
         "title": "privacy",
         "href": "/privacy"
+    },
+    "myProfile":{
+        "title": "My Profile",
+        "href": "/my-profile"
+    },
+    "myFriends":{
+        "title": "My Friends",
+        "href": "/my-friends"
+    },
+    "myGroups":{
+        "title": "My Groups",
+        "href": "/my-groups"
+    },
+    "myParties":{
+        "title": "My Parties",
+        "href": "/my-parties"
+    },
+    "myMessages":{
+        "title": "My Messages",
+        "href": "/my-messages"
+    },
+    "myAccount":{
+        "title": "My Account",
+        "href":"/my-account"
+    },
+    "myPrivacy": {
+        "title": "My Privacy",
+        "href": "/my-privacy"
     }
 }

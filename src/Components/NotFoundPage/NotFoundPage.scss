@@ -1,0 +1,21 @@
+.page-not-found-wrapper {
+    &.column-with-padding {
+        padding-top: 0;
+    }
+
+    .column-with-padding {
+        align-items: flex-start;
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        li {
+            padding: 0;
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}
