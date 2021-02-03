@@ -7,6 +7,7 @@ import ContactPageComponent from '../Components/ContactPageComponent/ContactPage
 import FAQPageComponent from '../Components/FAQPageComponent/FAQPageComponent';
 import FooterComponent from '../Components/FooterComponent/FooterComponent';
 import LogoutPageComponent from '../Components/LogoutPageComponent/LogoutPageComponent';
+import MyProfilePageComponent from '../Components/MyProfilePageComponent/MyProfilePageComponent';
 import NotFoundPage from '../Components/NotFoundPage/NotFoundPage';
 import PrivacyPolicyComponent from '../Components/PrivacyPolicyComponent/PrivacyPolicyComponent';
 import QuickMenuComponent from '../Components/QuickMenuComponent/QuickMenuComponent';
@@ -34,6 +35,7 @@ const LoggedInRoutes = (): JSX.Element => {
                     <Route path="/app/terms" component={TermsPageComponent} />
                     <Route path="/app/privacy" component={PrivacyPolicyComponent} />
                     <Route path="/app/logout" component={LogoutPageComponent} />
+                    <Route path="/app/my-profile" component={MyProfilePageComponent} />
                     <Route path="/app/*" component={NotFoundPage} />
                     <Redirect path='/app' to='/app/home' />
                 </Switch>

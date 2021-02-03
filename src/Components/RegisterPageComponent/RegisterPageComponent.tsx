@@ -6,17 +6,10 @@ import HeaderMeta from '../GlobalComponents/HeaderMeta';
 import SectionComponent from '../GlobalComponents/SectionComponent';
 import { registerMeta } from '../../Utils/headerMeta.json';
 import './RegisterPageComponent.scss';
-
-interface LoginTypes {
-    firstName: string;
-    lastName: string;
-    email: string;
-    password: string;
-    terms: boolean;
-}
+import IRegister from '../../Types/IRegister';
 
 const RegisterPageComponent = (): JSX.Element => {
-    const { register, handleSubmit } = useForm<LoginTypes>();
+    const { register, handleSubmit } = useForm<IRegister>();
 
     const registerForm = [{
         label: "First name:",
@@ -43,7 +36,7 @@ const RegisterPageComponent = (): JSX.Element => {
         ref: register({ required: true, maxLength: 40, minLength: 8, pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,40}/i })
     }]
 
-    const onSubmit = (data: LoginTypes) => console.log(data);
+    const onSubmit = (data: IRegister) => console.log(data);
 
     return (
         <SectionComponent header="Registration">

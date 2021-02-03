@@ -3,17 +3,13 @@ import { useForm } from "react-hook-form";
 import routes from '../../Utils/routes.json';
 import { Link } from 'react-router-dom';
 import { UserData } from '../../Authentication/UserDataContext';
-
-interface LoginTypes {
-    email: string;
-    password: string;
-}
+import ILogin from '../../Types/ILogin';
 
 const LoginComponent = (): JSX.Element => {
-    const { register, handleSubmit, reset } = useForm<LoginTypes>();
+    const { register, handleSubmit, reset } = useForm<ILogin>();
     const { setUserData } = useContext(UserData);
 
-    const onSubmit = ({ email, password }: LoginTypes) => {
+    const onSubmit = ({ email, password }: ILogin) => {
         if (email === 'admin@admin.pl' && password === 'admin123' && setUserData) {
             setUserData({ isLoggedIn: true });
             return reset();

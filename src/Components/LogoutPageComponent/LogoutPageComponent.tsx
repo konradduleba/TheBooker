@@ -10,7 +10,7 @@ const LogoutPageComponent = (): JSX.Element => {
     const logout = (): void => setUserData && setUserData({ isLoggedIn: false });
 
     return (
-        <SectionComponent header="Logout from TheBooker ">
+        <SectionComponent header="Logout from TheBooker">
             <div className='logout-page-wrapper column-with-padding'>
                 <h1 className='header'>[ Logout ]</h1>
                 <p>Are you sure you want to logout from TheBooker</p>
