@@ -1,11 +1,8 @@
 import React from 'react';
 import { Helmet } from "react-helmet-async";
+import IHeaderMeta from '../../Types/IHeaderMeta';
 
-interface Meta {
-    title: string;
-}
-
-const HeaderMeta = ({ title }: Meta): JSX.Element => (
+const HeaderMeta = ({ title }: IHeaderMeta): JSX.Element => (
     <Helmet>
         <title>TheBooker | {title}</title>
     </Helmet>

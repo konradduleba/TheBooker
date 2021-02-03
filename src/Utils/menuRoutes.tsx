@@ -1,7 +1,7 @@
 import routes from './routes.json';
-import { MenuListTypes } from './globalTypes';
+import IMenuListTypes from '../Types/IMenuListTypes';
 
-export const menuListNotLoggedIn: MenuListTypes[] = [{
+export const menuListNotLoggedIn: IMenuListTypes[] = [{
     title: routes.login.title,
     href: routes.login.href
 },
@@ -15,7 +15,7 @@ export const menuListNotLoggedIn: MenuListTypes[] = [{
 }];
 
 
-export const menuListLoggedIn: MenuListTypes[] = [{
+export const menuListLoggedIn: IMenuListTypes[] = [{
     title: routes.home.title,
     href: routes.home.href,
 },
@@ -44,7 +44,7 @@ export const menuListLoggedIn: MenuListTypes[] = [{
     href: routes.logout.href,
 }];
 
-export const footerMenu: MenuListTypes[] = [{
+export const footerMenu: IMenuListTypes[] = [{
     title: routes.about.title,
     href: routes.about.href
 },
@@ -65,7 +65,7 @@ export const footerMenu: MenuListTypes[] = [{
     href: routes.privacy.href
 }];
 
-export const quickLinks: MenuListTypes[] = [{
+export const quickLinks: IMenuListTypes[] = [{
     title: routes.myProfile.title,
     href: routes.myProfile.href
 },

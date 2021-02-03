@@ -1,18 +1,11 @@
 import React from 'react';
+import IMultipleSections from '../../Types/IMultipleSections';
+import IPrivacyTypes from '../../Types/IPrivacyTypes';
 import SectionComponent from './SectionComponent';
 
-interface PrivacyTypes {
-    title: string;
-    description: string;
-}
-
-interface MultipleSections {
-    listOfSections: PrivacyTypes[];
-}
-
-const GenerateMultipleSections = ({ listOfSections }: MultipleSections): JSX.Element => (
+const GenerateMultipleSections = ({ listOfSections }: IMultipleSections): JSX.Element => (
     <>
-        {listOfSections.map(({ title, description }: PrivacyTypes) => (
+        {listOfSections.map(({ title, description }: IPrivacyTypes) => (
             <SectionComponent
                 className="inside-window margin-between-sections"
                 id={title}
