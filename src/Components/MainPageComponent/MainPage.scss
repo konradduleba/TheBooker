@@ -12,6 +12,7 @@
       margin: 0 auto;
       align-items: center;
       text-align: left;
+      height: fit-content;
 
       &.inside-window {
         width: calc(100% - 40px);

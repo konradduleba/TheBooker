@@ -1,0 +1,12 @@
+.logout-page-wrapper {
+    &.column-with-padding {
+        padding-top: 0;
+    }
+
+    div {
+        margin: 20px;
+        display: flex;
+        width: 40%;
+        justify-content: space-around;
+    }
+}

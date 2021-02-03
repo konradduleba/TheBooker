@@ -1,11 +1,17 @@
 import React, { useContext } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { UserData } from '../Authentication/UserDataContext';
+import AboutPageComponent from '../Components/AboutPageComponent/AboutPageComponent';
 import BannerComponent from '../Components/BannerComponent/BannerComponent';
+import ContactPageComponent from '../Components/ContactPageComponent/ContactPageComponent';
+import FAQPageComponent from '../Components/FAQPageComponent/FAQPageComponent';
 import FooterComponent from '../Components/FooterComponent/FooterComponent';
+import LogoutPageComponent from '../Components/LogoutPageComponent/LogoutPageComponent';
 import NotFoundPage from '../Components/NotFoundPage/NotFoundPage';
+import PrivacyPolicyComponent from '../Components/PrivacyPolicyComponent/PrivacyPolicyComponent';
 import QuickMenuComponent from '../Components/QuickMenuComponent/QuickMenuComponent';
 import QuickSearchComponent from '../Components/QuickSearchComponent/QuickSearchComponent';
+import TermsPageComponent from '../Components/TermsPageComponent/TermsPageComponent';
 
 const LoggedInRoutes = (): JSX.Element => {
     const { userData } = useContext(UserData);
@@ -22,6 +28,12 @@ const LoggedInRoutes = (): JSX.Element => {
                 </div>
                 <Switch>
                     <Route exact path="/app/home"><h1>Hello</h1></Route>
+                    <Route path="/app/about" component={AboutPageComponent} />
+                    <Route path="/app/contact" component={ContactPageComponent} />
+                    <Route path="/app/faq" component={FAQPageComponent} />
+                    <Route path="/app/terms" component={TermsPageComponent} />
+                    <Route path="/app/privacy" component={PrivacyPolicyComponent} />
+                    <Route path="/app/logout" component={LogoutPageComponent} />
                     <Route path="/app/*" component={NotFoundPage} />
                     <Redirect path='/app' to='/app/home' />
                 </Switch>
