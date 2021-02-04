@@ -77,5 +77,30 @@
 
     .right-side {
         width: calc(60% - 20px);
+
+        .data-wrapper {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+
+            .info-container {
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 3px 0;
+
+                    span {
+                        width: 60%;
+
+                        &:nth-child(1) {
+                            width: 40%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

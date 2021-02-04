@@ -1,5 +1,6 @@
 import React from 'react';
 import IPersonData from '../../Types/IPersonData';
+import HeaderMeta from '../GlobalComponents/HeaderMeta';
 import SectionComponent from '../GlobalComponents/SectionComponent';
 
 const UserInfoComponent = ({ accountInfo, basicInfo, contactInfo, personalInfo }: IPersonData): JSX.Element => {
@@ -10,34 +11,96 @@ const UserInfoComponent = ({ accountInfo, basicInfo, contactInfo, personalInfo }
 
     return (
         <SectionComponent header="Information" style={{ width: '100%' }}>
-            <div>
+            <HeaderMeta title={`${accountInfo.name} ${accountInfo.lastName}'s Profile`} />
+            <div className='data-wrapper'>
                 <h2>{accountInfo.header}</h2>
-                <p>Name: {accountInfo.name} {accountInfo.lastName}</p>
-                <p>Member Since: {accountInfo.memberSince}</p>
-                <p>Last Update: {accountInfo.lastUpdate}</p>
+                <div className='info-container'>
+                    <div className='tag-container'>
+                        <p>
+                            <span>Name:</span>
+                            <span>{accountInfo.name} {accountInfo.lastName}</span>
+                        </p>
+                        <p>
+                            <span>Member Since:</span>
+                            <span>{accountInfo.memberSince}</span>
+                        </p>
+                        <p>
+                            <span>Last Update:</span>
+                            <span>{accountInfo.lastUpdate}</span>
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div>
+            <div className='data-wrapper'>
                 <h2>{basicInfo.header}</h2>
-                <p>School: {basicInfo.school}</p>
-                <p>Status: {basicInfo.status}</p>
-                <p>Sex: {basicInfo.sex}</p>
-                <p>City: {basicInfo.city}</p>
-                <p>Birthday: {basicInfo.birthday}</p>
+                <div className='info-container'>
+                    <p>
+                        <span>School:</span>
+                        <span>{basicInfo.school}</span>
+                    </p>
+                    <p>
+                        <span>Status:</span>
+                        <span>{basicInfo.status}</span>
+                    </p>
+                    <p>
+                        <span>Sex:</span>
+                        <span>{basicInfo.sex}</span>
+                    </p>
+                    <p>
+                        <span>City:</span>
+                        <span>{basicInfo.city}</span>
+                    </p>
+                    <p>
+                        <span>Birthday:</span>
+                        <span>{basicInfo.birthday}</span>
+                    </p>
+                </div>
             </div>
-            <div>
+            <div className='data-wrapper'>
                 <h2>{contactInfo.header}</h2>
-                <p>Email: {contactInfo.email}</p>
-                <p>Phone: {contactInfo.phone}</p>
+                <div className='info-container'>
+                    <p>
+                        <span>Email:</span>
+                        <span>{contactInfo.email}</span>
+                    </p>
+                    <p>
+                        <span>Phone:</span>
+                        <span>{contactInfo.phone}</span>
+                    </p>
+                </div>
             </div>
-            <div>
+            <div className='data-wrapper'>
                 <h2>{personalInfo.header}</h2>
-                <p>Looking For: {personalInfo.lookingFor}</p>
-                <p>Interested In: {personalInfo.interestedIn}</p>
-                <p>Relationship Status: {personalInfo.relationshipStatus} with {personalInfo.partner}</p>
-                <p>Interests: {personalInfo.interests.length && renderMultipleValues(personalInfo.interests)}</p>
-                <p>Favourite Music: {personalInfo.favouriteMusic.length && renderMultipleValues(personalInfo.favouriteMusic)}</p>
-                <p>Favourite Movies: {personalInfo.favouriteMovies.length && renderMultipleValues(personalInfo.favouriteMovies)}</p>
-                <p>About Me: {personalInfo.aboutMe}</p>
+                <div className='info-container'>
+                    <p>
+                        <span>Looking For:</span>
+                        <span>{personalInfo.lookingFor}</span>
+                    </p>
+                    <p>
+                        <span>Interested In:</span>
+                        <span>{personalInfo.interestedIn}</span>
+                    </p>
+                    <p>
+                        <span>Relationship Status:</span>
+                        <span>{personalInfo.relationshipStatus} with {personalInfo.partner}</span>
+                    </p>
+                    <p>
+                        <span>Interests:</span>
+                        <span>{personalInfo.interests.length && renderMultipleValues(personalInfo.interests)}</span>
+                    </p>
+                    <p>
+                        <span>Favourite Music:</span>
+                        <span>{personalInfo.favouriteMusic.length && renderMultipleValues(personalInfo.favouriteMusic)}</span>
+                    </p>
+                    <p>
+                        <span>Favourite Movies:</span>
+                        <span>{personalInfo.favouriteMovies.length && renderMultipleValues(personalInfo.favouriteMovies)}</span>
+                    </p>
+                    <p>
+                        <span>About Me:</span>
+                        <span>{personalInfo.aboutMe}</span>
+                    </p>
+                </div>
             </div>
         </SectionComponent>
     )
