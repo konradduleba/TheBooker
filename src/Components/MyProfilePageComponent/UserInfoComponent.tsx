@@ -1,6 +1,5 @@
 import React from 'react';
 import IPersonData from '../../Types/IPersonData';
-import HeaderMeta from '../GlobalComponents/HeaderMeta';
 import SectionComponent from '../GlobalComponents/SectionComponent';
 
 const UserInfoComponent = ({ accountInfo, basicInfo, contactInfo, personalInfo }: IPersonData): JSX.Element => {
@@ -11,7 +10,6 @@ const UserInfoComponent = ({ accountInfo, basicInfo, contactInfo, personalInfo }
 
     return (
         <SectionComponent header="Information" style={{ width: '100%' }}>
-            <HeaderMeta title={`${accountInfo.name} ${accountInfo.lastName}'s Profile`} />
             <div className='data-wrapper'>
                 <h2>{accountInfo.header}</h2>
                 <div className='info-container'>

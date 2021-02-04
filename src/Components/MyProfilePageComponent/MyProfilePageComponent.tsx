@@ -9,14 +9,19 @@ import SendMessageOrPoke from './SendMessageOrPoke';
 import UserInfoComponent from './UserInfoComponent';
 import { UserData } from '../../Authentication/UserDataContext';
 import defaultUser from '../../Utils/defaultUserData.json';
+import HeaderMeta from '../GlobalComponents/HeaderMeta';
 
 const MyProfilePageComponent = (): JSX.Element => {
     const { userData } = useContext(UserData);
+    const isThisMe = userData?.userData?.ID === defaultUser.ID ? true : false;
     const accountData = userData?.userData ? userData.userData.accountInfo : defaultUser.accountInfo;
     const defaultUserData = userData?.userData ? userData?.userData : defaultUser;
 
+    const userProfileName = isThisMe ? 'My Profile' : `${userData?.userData?.accountInfo.name} ${userData?.userData?.accountInfo.lastName}'s Profile`;
+
     return (
-        <SectionComponent header="Konrad Dulęba's profile">
+        <SectionComponent header={userProfileName}>
+            <HeaderMeta title={userProfileName} />
             <div className='my-profile-page-wrapper column-with-padding'>
                 <div className='left-side'>
                     <PictureComponent {...accountData} />

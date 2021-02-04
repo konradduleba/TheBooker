@@ -4,6 +4,7 @@ import IContactInfo from "./IContactInfo";
 import IPersonalInfo from "./IPersonalInfo";
 
 export default interface IPersonData {
+    ID: number;
     accountInfo: IAccountInfo;
     basicInfo: IBasicInfo;
     contactInfo: IContactInfo;
