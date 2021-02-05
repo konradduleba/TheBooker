@@ -1,3 +1,3 @@
 export default interface IFriendListComponent {
-    name: string;
+    limit?: number;
 }
