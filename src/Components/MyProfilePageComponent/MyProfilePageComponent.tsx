@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import SectionComponent from '../GlobalComponents/SectionComponent';
 import ConnectionComponent from './ConnectionComponent';
-import FriendListComponent from './FriendListComponent';
+import FriendListComponent from '../GlobalComponents/FriendListComponent';
 import MutualFriendsComponent from './MutualFriendsComponent';
 import './MyProfilePageComponent.scss';
 import PictureComponent from './PictureComponent';
@@ -28,7 +28,7 @@ const MyProfilePageComponent = (): JSX.Element => {
                     <SendMessageOrPoke {...accountData} />
                     <ConnectionComponent />
                     <MutualFriendsComponent {...accountData} />
-                    <FriendListComponent {...accountData} />
+                    <FriendListComponent limit={4} />
                 </div>
                 <div className='right-side'>
                     <UserInfoComponent {...defaultUserData} />

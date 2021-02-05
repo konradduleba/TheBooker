@@ -14,6 +14,10 @@
       text-align: left;
       height: fit-content;
 
+      &.my-friends-wrapper {
+        border: 0;
+      }
+
       &.inside-window {
         width: calc(100% - 40px);
       }
