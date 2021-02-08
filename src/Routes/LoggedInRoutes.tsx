@@ -15,6 +15,7 @@ import QuickSearchComponent from '../Components/QuickSearchComponent/QuickSearch
 import TermsPageComponent from '../Components/TermsPageComponent/TermsPageComponent';
 import MyFriendsComponent from '../Components/MyFriendsComponent/MyFriendsComponent';
 import MyGroupsComponent from '../Components/MyGroupsComponent/MyGroupsComponent';
+import MyPartiesComponent from '../Components/MyPartiesComponent/MyPartiesComponent';
 
 const LoggedInRoutes = (): JSX.Element => {
     const { userData } = useContext(UserData);
@@ -40,6 +41,7 @@ const LoggedInRoutes = (): JSX.Element => {
                     <Route path="/app/my-profile" component={MyProfilePageComponent} />
                     <Route path="/app/my-friends" component={MyFriendsComponent} />
                     <Route path="/app/my-groups" component={MyGroupsComponent} />
+                    <Route path="/app/my-parties" component={MyPartiesComponent} />
                     <Route path="/app/*" component={NotFoundPage} />
                     <Redirect path='/app' to='/app/home' />
                 </Switch>
