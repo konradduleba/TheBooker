@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import MenuList from '../GlobalComponents/MenuList';
-import './FooterComponent.scss';
+import MenuList from '../GlobalComponents/MenuList/MenuList';
+import './Styles/FooterComponent.scss';
 import { footerMenu } from '../../Utils/menuRoutes';
-import { UserData } from '../../Authentication/UserDataContext';
+import { UserData } from '../../Authentication/UserDataContext/UserDataContext';
 
 const FooterComponent = (): JSX.Element => {
     const { userData } = useContext(UserData);

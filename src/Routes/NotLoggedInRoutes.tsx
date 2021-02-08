@@ -11,7 +11,7 @@ import FooterComponent from '../Components/FooterComponent/FooterComponent';
 import LoginPage from '../Components/LoginPageComponent/LoginPage';
 import LoginLeftComponent from '../Components/LoginLeftComponent/LoginLeftComponent';
 import { Route, Switch, Redirect } from "react-router-dom";
-import { UserData } from '../Authentication/UserDataContext';
+import { UserData } from '../Authentication/UserDataContext/UserDataContext';
 import NotFoundPage from '../Components/NotFoundPage/NotFoundPage';
 
 const NotLoggedInRoutes = (): JSX.Element => {

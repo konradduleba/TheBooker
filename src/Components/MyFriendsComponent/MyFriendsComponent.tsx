@@ -1,5 +1,5 @@
 import React from 'react';
-import FriendListComponent from '../GlobalComponents/FriendListComponent';
+import FriendListComponent from '../GlobalComponents/FriendListComponent/FriendListComponent';
 import './MyFriendsComponent.scss';
 
 const MyFriendsComponent = (): JSX.Element => (

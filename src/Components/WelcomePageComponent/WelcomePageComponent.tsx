@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { register, login } from '../../Utils/routes.json';
-import './WelcomePageComponent.scss';
+import './Styles/WelcomePageComponent.scss';
 import DotIcon from '../../Assets/dot.png';
-import SectionComponent from '../GlobalComponents/SectionComponent';
-import HeaderMeta from '../GlobalComponents/HeaderMeta';
+import SectionComponent from '../GlobalComponents/SectionComponent/SectionComponent';
+import HeaderMeta from '../GlobalComponents/HeaderMeta/HeaderMeta';
 import { welcomeMeta } from '../../Utils/headerMeta.json';
 
 const WelcomePageComponent = (): JSX.Element => (

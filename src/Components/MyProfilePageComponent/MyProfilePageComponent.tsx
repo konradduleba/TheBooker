@@ -1,27 +1,29 @@
 import React, { useContext } from 'react';
-import SectionComponent from '../GlobalComponents/SectionComponent';
-import ConnectionComponent from './ConnectionComponent';
-import FriendListComponent from '../GlobalComponents/FriendListComponent';
-import MutualFriendsComponent from './MutualFriendsComponent';
-import './MyProfilePageComponent.scss';
-import PictureComponent from './PictureComponent';
-import SendMessageOrPoke from './SendMessageOrPoke';
-import UserInfoComponent from './UserInfoComponent';
-import { UserData } from '../../Authentication/UserDataContext';
+import SectionComponent from '../GlobalComponents/SectionComponent/SectionComponent';
+import ConnectionComponent from './Components/ConnectionComponent';
+import FriendListComponent from '../GlobalComponents/FriendListComponent/FriendListComponent';
+import MutualFriendsComponent from './Components/MutualFriendsComponent';
+import './Styles/MyProfilePageComponent.scss';
+import PictureComponent from './Components/PictureComponent';
+import SendMessageOrPoke from './Components/SendMessageOrPoke';
+import UserInfoComponent from './Components/UserInfoComponent';
+import { UserData } from '../../Authentication/UserDataContext/UserDataContext';
 import defaultUser from '../../Utils/defaultUserData.json';
-import HeaderMeta from '../GlobalComponents/HeaderMeta';
+import HeaderMeta from '../GlobalComponents/HeaderMeta/HeaderMeta';
+import createSectionHeader from './Functions/createSectionHeader';
 
 const MyProfilePageComponent = (): JSX.Element => {
     const { userData } = useContext(UserData);
-    const isThisMe = userData?.userData?.ID === defaultUser.ID ? true : false;
     const accountData = userData?.userData ? userData.userData.accountInfo : defaultUser.accountInfo;
     const defaultUserData = userData?.userData ? userData?.userData : defaultUser;
 
-    const userProfileName = isThisMe ? 'My Profile' : `${userData?.userData?.accountInfo.name} ${userData?.userData?.accountInfo.lastName}'s Profile`;
+    const userInfo = userData?.userData ? userData.userData : defaultUser;
+
+    const sectionHeader = createSectionHeader(userInfo);
 
     return (
-        <SectionComponent header={userProfileName}>
-            <HeaderMeta title={userProfileName} />
+        <SectionComponent header={sectionHeader}>
+            <HeaderMeta title={sectionHeader} />
             <div className='my-profile-page-wrapper column-with-padding'>
                 <div className='left-side'>
                     <PictureComponent {...accountData} />

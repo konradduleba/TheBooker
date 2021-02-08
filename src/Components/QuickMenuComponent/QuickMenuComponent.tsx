@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import MenuList from '../GlobalComponents/MenuList';
+import MenuList from '../GlobalComponents/MenuList/MenuList';
 import { quickLinks } from '../../Utils/menuRoutes';
-import { UserData } from '../../Authentication/UserDataContext';
-import './QuickMenuComponent.scss';
+import { UserData } from '../../Authentication/UserDataContext/UserDataContext';
+import './Styles/QuickMenuComponent.scss';
 
 const QuickMenuComponent = (): JSX.Element => {
     const { userData } = useContext(UserData);
