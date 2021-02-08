@@ -1,5 +1,5 @@
 import routes from './routes.json';
-import IMenuListTypes from '../Types/IMenuListTypes';
+import IMenuListTypes from '../GlobalTypes/IMenuListTypes';
 
 export const menuListNotLoggedIn: IMenuListTypes[] = [{
     title: routes.login.title,

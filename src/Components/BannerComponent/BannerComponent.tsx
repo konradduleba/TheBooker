@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
-import MenuList from '../GlobalComponents/MenuList';
-import { UserData } from '../../Authentication/UserDataContext';
+import MenuList from '../GlobalComponents/MenuList/MenuList';
+import { UserData } from '../../Authentication/UserDataContext/UserDataContext';
 import { menuListLoggedIn, menuListNotLoggedIn } from '../../Utils/menuRoutes';
 import { Link } from 'react-router-dom';
 import TheBookerBanner from '../../Assets/thebooker-banner.jpg';
 import TheBookerLogo from '../../Assets/thebooker-logo.jpg';
-import './BannerComponent.scss';
+import './Styles/BannerComponent.scss';
 
 const BannerComponent = (): JSX.Element => {
     const { userData } = useContext(UserData);

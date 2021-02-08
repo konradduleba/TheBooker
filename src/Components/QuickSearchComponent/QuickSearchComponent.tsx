@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import IQuickSearch from '../../Types/IQuickSearch';
-import './QuickSearchComponent.scss';
+import IQuickSearch from './Types/IQuickSearch';
+import './Styles/QuickSearchComponent.scss';
 
 const QuickSearchComponent = (): JSX.Element => {
     const { register, handleSubmit } = useForm<IQuickSearch>();

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import { UserData } from '../Authentication/UserDataContext';
+import { UserData } from '../Authentication/UserDataContext/UserDataContext';
 import AboutPageComponent from '../Components/AboutPageComponent/AboutPageComponent';
 import BannerComponent from '../Components/BannerComponent/BannerComponent';
 import ContactPageComponent from '../Components/ContactPageComponent/ContactPageComponent';

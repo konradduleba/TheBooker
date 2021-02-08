@@ -1,12 +1,12 @@
 import React from 'react';
-import SectionComponent from '../GlobalComponents/SectionComponent';
-import './FAQPageComponent.scss';
+import SectionComponent from '../GlobalComponents/SectionComponent/SectionComponent';
+import './Styles/FAQPageComponent.scss';
 import faq from '../../Utils/faq.json';
-import GenerateMultipleSections from '../GlobalComponents/GenerateMultipleSections';
+import GenerateMultipleSections from '../GlobalComponents/GenerateMultipleSections/GenerateMultipleSections';
 import dotIcon from '../../Assets/dot.png';
-import HeaderMeta from '../GlobalComponents/HeaderMeta';
+import HeaderMeta from '../GlobalComponents/HeaderMeta/HeaderMeta';
 import { faqMeta } from '../../Utils/headerMeta.json';
-import ScrollToTopOnMount from '../GlobalComponents/ScrollToTopOnMount';
+import ScrollToTopOnMount from '../GlobalComponents/ScrollToTopOnMount/ScrollToTopOnMount';
 
 const FAQPageComponent = (): JSX.Element => (
     <SectionComponent header="Frequently Asked Questions">

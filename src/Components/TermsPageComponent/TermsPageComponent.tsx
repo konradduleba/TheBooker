@@ -1,11 +1,11 @@
 import React from 'react';
-import SectionComponent from '../GlobalComponents/SectionComponent';
-import './TermsPageComponent.scss';
+import SectionComponent from '../GlobalComponents/SectionComponent/SectionComponent';
+import './Styles/TermsPageComponent.scss';
 import termsOfUse from '../../Utils/termsOfUse.json';
-import GenerateMultipleSections from '../GlobalComponents/GenerateMultipleSections';
-import HeaderMeta from '../GlobalComponents/HeaderMeta';
+import GenerateMultipleSections from '../GlobalComponents/GenerateMultipleSections/GenerateMultipleSections';
+import HeaderMeta from '../GlobalComponents/HeaderMeta/HeaderMeta';
 import { termsMeta } from '../../Utils/headerMeta.json';
-import ScrollToTopOnMount from '../GlobalComponents/ScrollToTopOnMount';
+import ScrollToTopOnMount from '../GlobalComponents/ScrollToTopOnMount/ScrollToTopOnMount';
 
 const TermsPageComponent = (): JSX.Element => (
     <SectionComponent header="TheBooker Terms of Use">

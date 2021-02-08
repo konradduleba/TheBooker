@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { contact } from '../../Utils/routes.json';
-import HeaderMeta from '../GlobalComponents/HeaderMeta';
-import SectionComponent from '../GlobalComponents/SectionComponent';
+import HeaderMeta from '../GlobalComponents/HeaderMeta/HeaderMeta';
+import SectionComponent from '../GlobalComponents/SectionComponent/SectionComponent';
 import { aboutMeta } from '../../Utils/headerMeta.json';
-import './AboutPageComponent.scss';
+import './Styles/AboutPageComponent.scss';
 
 const AboutPageComponent = (): JSX.Element => (
     <SectionComponent header="About TheBooker">

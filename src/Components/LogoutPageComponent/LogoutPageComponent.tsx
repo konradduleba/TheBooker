@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import SectionComponent from '../GlobalComponents/SectionComponent';
-import { UserData } from '../../Authentication/UserDataContext';
-import './LogoutPageComponent.scss';
+import SectionComponent from '../GlobalComponents/SectionComponent/SectionComponent';
+import { UserData } from '../../Authentication/UserDataContext/UserDataContext';
+import './Styles/LogoutPageComponent.scss';
 
 const LogoutPageComponent = (): JSX.Element => {
     const { setUserData } = useContext(UserData);

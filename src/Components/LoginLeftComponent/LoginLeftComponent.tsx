@@ -1,6 +1,6 @@
 import React from 'react';
-import LoginComponent from '../GlobalComponents/LoginComponent';
-import './LoginLeftComponent.scss';
+import LoginComponent from '../GlobalComponents/LoginComponent/LoginComponent';
+import './Styles/LoginLeftComponent.scss';
 
 const LoginLeftComponent = (): JSX.Element => {
 

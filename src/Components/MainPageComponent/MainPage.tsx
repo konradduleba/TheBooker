@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from "react-router-dom";
 import NotLoggedInRoutes from '../../Routes/NotLoggedInRoutes';
 import LoggedInRoutes from '../../Routes/LoggedInRoutes';
-import './MainPage.scss';
+import './Styles/MainPage.scss';
 
 const App = (): JSX.Element => {
 

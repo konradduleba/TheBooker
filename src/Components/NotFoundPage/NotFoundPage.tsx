@@ -1,8 +1,8 @@
 import React from 'react';
-import HeaderMeta from '../GlobalComponents/HeaderMeta';
-import SectionComponent from '../GlobalComponents/SectionComponent';
+import HeaderMeta from '../GlobalComponents/HeaderMeta/HeaderMeta';
+import SectionComponent from '../GlobalComponents/SectionComponent/SectionComponent';
 import dot from '../../Assets/dot.png';
-import './NotFoundPage.scss';
+import './Styles/NotFoundPage.scss';
 import { Link } from 'react-router-dom';
 
 const NotFoundPage = (): JSX.Element => (

@@ -2,11 +2,11 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { Link } from 'react-router-dom';
 import { terms } from '../../Utils/routes.json';
-import HeaderMeta from '../GlobalComponents/HeaderMeta';
-import SectionComponent from '../GlobalComponents/SectionComponent';
+import HeaderMeta from '../GlobalComponents/HeaderMeta/HeaderMeta';
+import SectionComponent from '../GlobalComponents/SectionComponent/SectionComponent';
 import { registerMeta } from '../../Utils/headerMeta.json';
-import './RegisterPageComponent.scss';
-import IRegister from '../../Types/IRegister';
+import './Styles/RegisterPageComponent.scss';
+import IRegister from './Types/IRegister';
 
 const RegisterPageComponent = (): JSX.Element => {
     const { register, handleSubmit } = useForm<IRegister>();
