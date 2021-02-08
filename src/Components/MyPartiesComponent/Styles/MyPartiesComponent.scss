@@ -1,0 +1,57 @@
+.my-parties-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        display: flex;
+        flex-direction: column;
+
+        &>h1 {
+            margin: 20px 0;
+            text-align: center;
+        }
+    }
+
+
+    ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 5px;
+
+        li {
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: calc(100% - 20px);
+            text-align: center;
+            border: 1px solid var(--main-banner-bgc);
+            padding: unset;
+
+            img {
+                width: 80%;
+                height: unset;
+                margin: unset;
+            }
+
+            h2 {
+                width: 100%;
+                padding: 5px;
+                background-color: var(--main-banner-bgc);
+                color: white;
+            }
+
+            button {
+                width: calc(100% - 10px);
+                margin: 10px 5px 5px;
+                cursor: pointer;
+            }
+
+            p {
+                width: 100%;
+                padding: 5px;
+            }
+        }
+    }
+}
