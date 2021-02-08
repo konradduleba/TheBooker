@@ -23,11 +23,7 @@ const FriendListComponent = ({ limit }: IFriendListComponent): JSX.Element => {
     return (
         <SectionComponent header={sectionHeader} style={{ width: '100%' }}>
             <div className='friend-list-container'>
-                {limit ?
-                    <DisplayFriends friendList={generateFriendsArray(friendList, limit)} />
-                    :
-                    <DisplayFriends friendList={friendList} />
-                }
+                <DisplayFriends friendList={generateFriendsArray(friendList, limit)} />
             </div>
         </SectionComponent>
     )
