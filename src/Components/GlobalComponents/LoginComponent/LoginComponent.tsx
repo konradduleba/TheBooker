@@ -12,6 +12,7 @@ const LoginComponent = (): JSX.Element => {
     const onSubmit = ({ email, password }: ILogin) => {
         if (email === 'admin@admin.pl' && password === 'admin123' && setUserData) {
             setUserData({ isLoggedIn: true });
+
             return reset();
         }
     }

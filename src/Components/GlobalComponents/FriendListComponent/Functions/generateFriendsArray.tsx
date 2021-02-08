@@ -9,7 +9,7 @@ const generateFriendsArray = (friendList: IRandomPerson[], limit?: number): IRan
             let status = false;
 
             while (!status) {
-                const number = generateRandomNumber(friendList.length);
+                const number: number = generateRandomNumber(friendList.length);
                 if (!randomFriends.filter(({ ID }) => ID === number).length) {
                     randomFriends.push(friendList[number]);
 

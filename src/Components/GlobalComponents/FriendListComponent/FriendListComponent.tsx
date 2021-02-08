@@ -8,21 +8,26 @@ import DisplayFriends from './Components/DisplayFriends';
 import createSectionHeader from './Functions/createSectionHeader';
 import testFriendList from './testFriendList';
 import generateFriendsArray from './Functions/generateFriendsArray';
+import IPersonData from '../../../GlobalTypes/IPersonData/IPersonData';
 
 const FriendListComponent = ({ limit }: IFriendListComponent): JSX.Element => {
     const { userData } = useContext(UserData);
     const [friendList, setFriendList] = useState<IRandomPerson[]>([]);
 
-    const userInfo = userData?.userData ? userData.userData : defaultUser;
+    const userInfo: IPersonData = userData?.userData ? userData.userData : defaultUser;
 
-    const sectionHeader = createSectionHeader(userInfo, friendList);
+    const sectionHeader: string = createSectionHeader(userInfo, friendList);
 
-    useEffect(() => setFriendList(testFriendList), []);
+    useEffect((): void => setFriendList(testFriendList), []);
 
     return (
         <SectionComponent header={sectionHeader} style={{ width: '100%' }}>
             <div className='friend-list-container'>
-                {limit ? <DisplayFriends {...generateFriendsArray(friendList)} /> : <DisplayFriends {...friendList} />}
+                {limit ?
+                    <DisplayFriends friendList={generateFriendsArray(friendList, limit)} />
+                    :
+                    <DisplayFriends friendList={friendList} />
+                }
             </div>
         </SectionComponent>
     )
