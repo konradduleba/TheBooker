@@ -9,8 +9,12 @@ const MyPartiesComponent = (): JSX.Element => {
     const { finishedParties, actualParties, incomingParties } = separatePartiesIntoGroups(testParties);
 
     return (
-        <SectionComponent header={`My Parties`}>
+        <SectionComponent header='My Parties'>
             <div className='my-parties-wrapper'>
+                <nav>
+                    <button className='normal-button'>Search Party</button>
+                    <button className='normal-button'>Add Party</button>
+                </nav>
                 <div>
                     <h1>[ Incoming Parties ]</h1>
                     <ul>

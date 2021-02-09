@@ -12,9 +12,9 @@ const testGroups: IMyParties[] = [{
 },
 {
     ID: 1,
-    name: 'Urodziny mojej kochanej Natalii',
+    name: 'Urodziny mojej kochanej Natalki',
     photo: Person,
-    monthDayYear: '02/06/2021',
+    monthDayYear: '01/20/2021',
     hourMinuteSecond: '21:00:53'
 },
 {
