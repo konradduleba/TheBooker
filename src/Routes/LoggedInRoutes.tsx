@@ -16,6 +16,8 @@ import TermsPageComponent from '../Components/TermsPageComponent/TermsPageCompon
 import MyFriendsComponent from '../Components/MyFriendsComponent/MyFriendsComponent';
 import MyGroupsComponent from '../Components/MyGroupsComponent/MyGroupsComponent';
 import MyPartiesComponent from '../Components/MyPartiesComponent/MyPartiesComponent';
+import AddPartyComponent from '../Components/CreatePartyComponent/CreatePartyComponent';
+import routes from '../Utils/routes.json';
 
 const LoggedInRoutes = (): JSX.Element => {
     const { userData } = useContext(UserData);
@@ -32,16 +34,17 @@ const LoggedInRoutes = (): JSX.Element => {
                 </div>
                 <Switch>
                     <Route exact path="/app/home"><h1>Hello</h1></Route>
-                    <Route path="/app/about" component={AboutPageComponent} />
-                    <Route path="/app/contact" component={ContactPageComponent} />
-                    <Route path="/app/faq" component={FAQPageComponent} />
-                    <Route path="/app/terms" component={TermsPageComponent} />
-                    <Route path="/app/privacy" component={PrivacyPolicyComponent} />
-                    <Route path="/app/logout" component={LogoutPageComponent} />
-                    <Route path="/app/my-profile" component={MyProfilePageComponent} />
-                    <Route path="/app/my-friends" component={MyFriendsComponent} />
-                    <Route path="/app/my-groups" component={MyGroupsComponent} />
-                    <Route path="/app/my-parties" component={MyPartiesComponent} />
+                    <Route path={`/app${routes.about.href}`} component={AboutPageComponent} />
+                    <Route path={`/app${routes.contact.href}`} component={ContactPageComponent} />
+                    <Route path={`/app${routes.faq.href}`} component={FAQPageComponent} />
+                    <Route path={`/app${routes.terms.href}`} component={TermsPageComponent} />
+                    <Route path={`/app${routes.privacy.href}`} component={PrivacyPolicyComponent} />
+                    <Route path={`/app${routes.logout.href}`} component={LogoutPageComponent} />
+                    <Route path={`/app${routes.myProfile.href}`} component={MyProfilePageComponent} />
+                    <Route path={`/app${routes.myFriends.href}`} component={MyFriendsComponent} />
+                    <Route path={`/app${routes.myGroups.href}`} component={MyGroupsComponent} />
+                    <Route path={`/app${routes.myParties.href}`} component={MyPartiesComponent} />
+                    <Route path={`/app${routes.createParty.href}`} component={AddPartyComponent} />
                     <Route path="/app/*" component={NotFoundPage} />
                     <Redirect path='/app' to='/app/home' />
                 </Switch>

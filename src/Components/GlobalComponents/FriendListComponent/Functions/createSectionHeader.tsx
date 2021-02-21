@@ -6,7 +6,7 @@ const createSectionHeader = ({ ID, accountInfo }: IPersonData, friendList: IRand
     const isThisMe = ID === defaultUser.ID ? true : false;
     const numberOfFriends: number = friendList.length;
     const userProfileName = `${accountInfo.name} ${accountInfo.lastName}`;
-    const sectionHeader = isThisMe ? `My Friends (${numberOfFriends})` : `${userProfileName} (${numberOfFriends})`;
+    const sectionHeader = isThisMe ? `My Friends (${numberOfFriends})` : `${userProfileName} Friends (${numberOfFriends})`;
 
     return sectionHeader;
 }
