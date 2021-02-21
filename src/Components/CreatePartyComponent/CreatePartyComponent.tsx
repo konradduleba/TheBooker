@@ -14,6 +14,8 @@ import GenerateDateInputs from './Components/GenerateDateInputs';
 import GenerateBasicInfoInputs from './Components/GenerateBasicInfoInputs';
 import IPartyBasicInfoInputs from './Types/IPartyBasicInfoInputs';
 import SelectMultipleFriends from './Components/SelectMultipleFriends';
+import { myParties } from '../../Utils/routes.json';
+import { Link } from 'react-router-dom';
 
 const AddPartyComponent = (): JSX.Element => {
     const { register, handleSubmit, errors, reset, control } = useForm<IPartyForm>({
@@ -81,6 +83,11 @@ const AddPartyComponent = (): JSX.Element => {
         <SectionComponent header={sectionHeader}>
             <HeaderMeta title={sectionHeader} />
             <div className='create-party-wrapper column-with-padding'>
+                <nav>
+                    <Link to={`/app${myParties.href}`}>
+                        <button className='normal-button'>Go Back</button>
+                    </Link>
+                </nav>
                 <h1 className='header'>[ Create party ]</h1>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <GenerateBasicInfoInputs basicInfoInputs={partyInfoInputs} />

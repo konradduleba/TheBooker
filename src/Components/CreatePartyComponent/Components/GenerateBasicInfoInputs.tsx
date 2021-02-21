@@ -3,10 +3,11 @@ import IGenerateBasicInfoInputs from '../Types/IGenerateBasicInfoInputs';
 
 const GenerateBasicInfoInputs = ({ basicInfoInputs }: IGenerateBasicInfoInputs): JSX.Element => {
     const hiddenImageInput = useRef<HTMLInputElement | null>(null);
+    const imageButton = useRef<HTMLButtonElement | null>(null);
 
-    const selectPicture = () => {
-        hiddenImageInput.current && hiddenImageInput.current.click();
-    }
+    const selectPicture = () => hiddenImageInput.current && hiddenImageInput.current.click();
+
+    const updateSelectedImagePlaceholder = () => imageButton.current && (imageButton.current.innerText = "Selected");
 
     return (
         <>
@@ -16,7 +17,10 @@ const GenerateBasicInfoInputs = ({ basicInfoInputs }: IGenerateBasicInfoInputs):
                         <label>{label}</label>
                         {type === 'file' ?
                             <>
-                                <button onClick={selectPicture} className="normal-button">Select Picture</button>
+                                <button
+                                    onClick={selectPicture}
+                                    ref={imageButton}
+                                    className="normal-button">Select Picture</button>
                                 <input
                                     name={name}
                                     type='file'
@@ -26,6 +30,7 @@ const GenerateBasicInfoInputs = ({ basicInfoInputs }: IGenerateBasicInfoInputs):
                                         hiddenImageInput.current = e;
                                     }}
                                     className='field-input'
+                                    onChange={updateSelectedImagePlaceholder}
                                 />
                             </>
                             :

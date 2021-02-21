@@ -24,6 +24,7 @@ const GenerateDateInputs = ({ partyDateInputs }: IGenerateDateInputs): JSX.Eleme
                                 timeCaption={settings.timeCaption}
                                 timeIntervals={settings.timeIntervals}
                                 placeholderText={placeholder}
+                                onChangeRaw={event => event.preventDefault()}
                             />
                         )}
                     />
