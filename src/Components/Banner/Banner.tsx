@@ -5,7 +5,7 @@ import { menuListLoggedIn, menuListNotLoggedIn } from '../../Utils/menuRoutes';
 import { Link } from 'react-router-dom';
 import TheBookerBanner from '../../Assets/thebooker-banner.jpg';
 import TheBookerLogo from '../../Assets/thebooker-logo.jpg';
-import './Styles/BannerComponent.scss';
+import './Styles/Banner.scss';
 
 const BannerComponent = (): JSX.Element => {
     const { userData } = useContext(UserData);

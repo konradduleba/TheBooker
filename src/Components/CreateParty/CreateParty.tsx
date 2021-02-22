@@ -2,7 +2,7 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import HeaderMeta from '../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../Global/Section/Section';
-import './Styles/CreatePartyComponent.scss';
+import './Styles/CreateParty.scss';
 import "react-datepicker/dist/react-datepicker.css";
 import IPartyForm from './Types/IPartyForm';
 import { yupResolver } from '@hookform/resolvers/yup';

@@ -4,7 +4,7 @@ import { contact } from '../../Utils/routes.json';
 import HeaderMeta from '../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../Global/Section/Section';
 import { aboutMeta } from '../../Utils/headerMeta.json';
-import './Styles/AboutPageComponent.scss';
+import './Styles/AboutPage.scss';
 
 const AboutPageComponent = (): JSX.Element => (
     <SectionComponent header="About TheBooker">

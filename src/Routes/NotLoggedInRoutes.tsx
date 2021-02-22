@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
-import WelcomePageComponent from '../Components/WelcomePage/WelcomePage';
-import RegisterPageComponent from '../Components/RegisterPage/RegisterPage';
-import AboutPageComponent from '../Components/AboutPageComponent/AboutPageComponent';
-import ContactPageComponent from '../Components/ContactPageComponent/ContactPageComponent';
-import PrivacyPolicyComponent from '../Components/PrivacyPolicy/PrivacyPolicy';
-import TermsPageComponent from '../Components/TermsPage/TermsPage';
-import FAQPageComponent from '../Components/FAQPage/FAQPage';
-import BannerComponent from '../Components/BannerComponent/BannerComponent';
-import FooterComponent from '../Components/Footer/Footer';
+import WelcomePage from '../Components/WelcomePage/WelcomePage';
+import RegisterPage from '../Components/RegisterPage/RegisterPage';
+import AboutPage from '../Components/AboutPage/AboutPage';
+import ContactPage from '../Components/ContactPage/ContactPage';
+import PrivacyPolicy from '../Components/PrivacyPolicy/PrivacyPolicy';
+import TermsPage from '../Components/TermsPage/TermsPage';
+import FAQPage from '../Components/FAQPage/FAQPage';
+import Banner from '../Components/Banner/Banner';
+import Footer from '../Components/Footer/Footer';
 import LoginPage from '../Components/LoginPage/LoginPage';
-import LoginLeftComponent from '../Components/LoginLeft/LoginLeft';
+import LoginLeft from '../Components/LoginLeft/LoginLeft';
 import { Route, Switch, Redirect } from "react-router-dom";
 import { UserData } from '../Authentication/UserDataContext/UserDataContext';
 import NotFoundPage from '../Components/NotFoundPage/NotFoundPage';
@@ -21,23 +21,23 @@ const NotLoggedInRoutes = (): JSX.Element => {
 
     return (
         <div className="main-page-wrapper">
-            <BannerComponent />
+            <Banner />
             <main>
-                <LoginLeftComponent />
+                <LoginLeft />
                 <Switch>
-                    <Route exact path="/welcome" component={WelcomePageComponent} />
+                    <Route exact path="/welcome" component={WelcomePage} />
                     <Route exact path="/login" component={LoginPage} />
-                    <Route exact path="/register" component={RegisterPageComponent} />
-                    <Route exact path="/about" component={AboutPageComponent} />
-                    <Route exact path="/contact" component={ContactPageComponent} />
-                    <Route exact path="/privacy" component={PrivacyPolicyComponent} />
-                    <Route exact path="/terms" component={TermsPageComponent} />
-                    <Route exact path="/faq" component={FAQPageComponent} />
+                    <Route exact path="/register" component={RegisterPage} />
+                    <Route exact path="/about" component={AboutPage} />
+                    <Route exact path="/contact" component={ContactPage} />
+                    <Route exact path="/privacy" component={PrivacyPolicy} />
+                    <Route exact path="/terms" component={TermsPage} />
+                    <Route exact path="/faq" component={FAQPage} />
                     <Redirect exact path="/" to="/app/home" />
                     <Route path="*" component={NotFoundPage} />
                 </Switch>
             </main>
-            <FooterComponent />
+            <Footer />
         </div>
     )
 };
