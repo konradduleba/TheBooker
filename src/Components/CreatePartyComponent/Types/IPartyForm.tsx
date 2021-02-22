@@ -1,4 +1,4 @@
-import IRandomPerson from "../../GlobalComponents/FriendListComponent/Types/IRandomPerson";
+import IRandomPerson from "../../Global/FriendList/Types/IRandomPerson";
 
 export default interface IPartyForm {
     name: string;

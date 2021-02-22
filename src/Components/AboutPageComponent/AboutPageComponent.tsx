@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { contact } from '../../Utils/routes.json';
-import HeaderMeta from '../GlobalComponents/HeaderMeta/HeaderMeta';
-import SectionComponent from '../GlobalComponents/SectionComponent/SectionComponent';
+import HeaderMeta from '../Global/HeaderMeta/HeaderMeta';
+import SectionComponent from '../Global/Section/Section';
 import { aboutMeta } from '../../Utils/headerMeta.json';
 import './Styles/AboutPageComponent.scss';
 

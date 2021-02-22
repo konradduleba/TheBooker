@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SectionComponent from '../GlobalComponents/SectionComponent/SectionComponent';
+import SectionComponent from '../Global/Section/Section';
 import './Styles/ContactPageComponent.scss';
-import HeaderMeta from '../GlobalComponents/HeaderMeta/HeaderMeta';
+import HeaderMeta from '../Global/HeaderMeta/HeaderMeta';
 import { contactMeta } from '../../Utils/headerMeta.json';
 
 const ContactPageComponent = (): JSX.Element => (

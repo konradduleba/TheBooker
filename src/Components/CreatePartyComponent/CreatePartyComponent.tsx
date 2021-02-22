@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import HeaderMeta from '../GlobalComponents/HeaderMeta/HeaderMeta';
-import SectionComponent from '../GlobalComponents/SectionComponent/SectionComponent';
+import HeaderMeta from '../Global/HeaderMeta/HeaderMeta';
+import SectionComponent from '../Global/Section/Section';
 import './Styles/CreatePartyComponent.scss';
 import "react-datepicker/dist/react-datepicker.css";
 import IPartyForm from './Types/IPartyForm';

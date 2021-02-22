@@ -1,4 +1,4 @@
-import testFriendList from '../../GlobalComponents/FriendListComponent/testFriendList';
+import testFriendList from '../../Global/FriendList/testFriendList';
 import ISelectOptions from '../Types/ISelectOptions';
 
 const generateFriendList = (): ISelectOptions[] => {

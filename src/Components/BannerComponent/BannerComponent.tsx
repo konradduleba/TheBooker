@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import MenuList from '../GlobalComponents/MenuList/MenuList';
+import MenuList from '../Global/MenuList/MenuList';
 import { UserData } from '../../Authentication/UserDataContext/UserDataContext';
 import { menuListLoggedIn, menuListNotLoggedIn } from '../../Utils/menuRoutes';
 import { Link } from 'react-router-dom';
