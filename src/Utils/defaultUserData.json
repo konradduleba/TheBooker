@@ -1,6 +1,7 @@
 {
     "ID": 1,
     "accountInfo": {
+        "username": "konraddduleba1",
         "header": "Account Info:",
         "name": "Name",
         "lastName": "LastName",

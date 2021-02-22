@@ -18,6 +18,7 @@ import MyGroups from '../Components/MyGroups/MyGroups';
 import MyParties from '../Components/MyParties/MyParties';
 import AddParty from '../Components/CreateParty/CreateParty';
 import routes from '../Utils/routes.json';
+import MyAccountPage from '../Components/MyAccountPage/MyAccountPage';
 
 const LoggedInRoutes = (): JSX.Element => {
     const { userData } = useContext(UserData);
@@ -45,6 +46,7 @@ const LoggedInRoutes = (): JSX.Element => {
                     <Route path={`/app${routes.myGroups.href}`} component={MyGroups} />
                     <Route path={`/app${routes.myParties.href}`} component={MyParties} />
                     <Route path={`/app${routes.createParty.href}`} component={AddParty} />
+                    <Route path={`/app${routes.myAccount.href}`} component={MyAccountPage} />
                     <Route path="/app/*" component={NotFoundPage} />
                     <Redirect path='/app' to='/app/home' />
                 </Switch>

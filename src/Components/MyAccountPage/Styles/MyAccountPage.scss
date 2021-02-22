@@ -1,0 +1,69 @@
+.my-account-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    .info-container,
+    aside {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .info-container {
+        align-items: center;
+        justify-content: space-between;
+
+        aside {
+            p {
+                padding: 0 20px;
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            flex-direction: row;
+
+            .save-input,
+            button {
+                padding: 3px 10px;
+                cursor: pointer;
+            }
+
+            .save-input {
+                margin-right: 10px;
+            }
+        }
+
+        .edit-container {
+            display: flex;
+            flex-direction: column;
+
+            div {
+                display: flex;
+                align-items: center;
+
+                &:first-child {
+                    margin-bottom: 10px;
+                }
+
+                label {
+                    margin-right: 10px;
+                }
+
+                .error {
+                    width: 220px;
+                    margin: 0 10px;
+                    text-align: center;
+                    color: red;
+                }
+            }
+        }
+    }
+}
