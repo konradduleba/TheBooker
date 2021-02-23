@@ -1,7 +1,9 @@
 import React from 'react';
 import HeaderMeta from '../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../Global/Section/Section';
+import Contact from './Components/Contact';
 import UserCredentials from './Components/UserCredentials';
+import Username from './Components/Username';
 import './Styles/MyAccountPage.scss';
 
 const MyAccountPage = (): JSX.Element => {
@@ -12,6 +14,8 @@ const MyAccountPage = (): JSX.Element => {
             <HeaderMeta title={sectionHeader} />
             <div className='my-account-page-wrapper'>
                 <UserCredentials />
+                <Username />
+                <Contact />
             </div>
         </SectionComponent>
     )

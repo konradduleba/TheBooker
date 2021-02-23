@@ -12,10 +12,15 @@
     .info-container {
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 10px;
 
         aside {
             p {
-                padding: 0 20px;
+                &:first-child {
+                    width: 100px;
+                    text-align: left;
+                    margin-left: 5px;
+                }
             }
         }
     }
@@ -23,8 +28,13 @@
     form {
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
+
+        &.single-input {
+            align-items: center;
+            margin-bottom: 10px;
+        }
 
         div {
             display: flex;
@@ -49,17 +59,18 @@
                 display: flex;
                 align-items: center;
 
-                &:first-child {
-                    margin-bottom: 10px;
+                &:nth-child(2) {
+                    margin: 10px 0;
                 }
 
                 label {
-                    margin-right: 10px;
+                    width: 100px;
+                    text-align: left;
+                    margin-left: 5px;
                 }
 
                 .error {
                     width: 220px;
-                    margin: 0 10px;
                     text-align: center;
                     color: red;
                 }
