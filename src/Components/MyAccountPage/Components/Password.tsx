@@ -30,6 +30,7 @@ const Password = (): JSX.Element => {
             value: `Change Password`
         },
         form: {
+            className: 'space-bottom',
             handleSubmit: handleSubmit,
             fields: [{
                 label: 'Current:',

@@ -14,6 +14,10 @@
         justify-content: space-between;
         margin-bottom: 10px;
 
+        .normal-button {
+            width: 50px;
+        }
+
         aside {
             p {
                 &:first-child {
@@ -33,6 +37,10 @@
 
         &.single-input {
             align-items: center;
+            margin-bottom: 10px;
+        }
+
+        &.space-bottom {
             margin-bottom: 10px;
         }
 
