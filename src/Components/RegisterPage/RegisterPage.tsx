@@ -33,7 +33,7 @@ const RegisterPageComponent = (): JSX.Element => {
         label: "Password*:",
         name: "password",
         type: "password",
-        ref: register({ required: true, maxLength: 40, minLength: 8, pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,40}/i })
+        ref: register({ required: true, maxLength: 40, minLength: 8, pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!#%*?&])[A-Za-z\d@$!#%*?&]{8,40}/i })
     }]
 
     const onSubmit = (data: IRegister) => console.log(data);
@@ -62,7 +62,7 @@ const RegisterPageComponent = (): JSX.Element => {
                         />
                         <p>I have read and understood the <Link to={terms.href}>Terms of Use</Link>, and I agree to them.</p>
                     </div>
-                    <p className='password-info'>* You can choose any password. It does have to be minimum 8 characters long, contain at least one uppercase, lowercase letter and one digit.</p>
+                    <p className='password-info'>* You can choose any password. Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character.</p>
                     <input type="submit" value="Register Now!" className='register-button' />
                 </form>
             </div>
