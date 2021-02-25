@@ -4,7 +4,7 @@ import HeaderMeta from '../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../Global/Section/Section';
 import { myAccount } from '../../Utils/routes.json';
 import './Styles/DeleteAccount.scss';
-import DeleteAccountForm from '../DeactivateAccount/Components/DeleteAccountForm';
+import DeleteAccountForm from './Components/DeleteAccountForm';
 
 const DeleteAccount = (): JSX.Element => {
     const [isContinue, setContinue] = useState<boolean>(false);
@@ -22,7 +22,7 @@ const DeleteAccount = (): JSX.Element => {
                     <h1>[ Delete ]</h1>
                     <h2>This is permanent</h2>
                     <p>When you delete your TheBooker account, you {`won't`} be able to retrieve the content or information {`you've`} shared. All of your messages will also be deleted.</p>
-                    <button className='normal-button' onClick={() => setContinue(true)}>Continue</button>
+                    {!isContinue && <button className='normal-button' onClick={() => setContinue(true)}>Continue</button>}
                 </div>
                 {isContinue && <DeleteAccountForm />}
             </div>
