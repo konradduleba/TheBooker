@@ -1,23 +1,26 @@
 import React, { useContext } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { UserData } from '../Authentication/UserDataContext/UserDataContext';
-import AboutPageComponent from '../Components/AboutPageComponent/AboutPageComponent';
-import BannerComponent from '../Components/BannerComponent/BannerComponent';
-import ContactPageComponent from '../Components/ContactPageComponent/ContactPageComponent';
-import FAQPageComponent from '../Components/FAQPageComponent/FAQPageComponent';
-import FooterComponent from '../Components/FooterComponent/FooterComponent';
-import LogoutPageComponent from '../Components/LogoutPageComponent/LogoutPageComponent';
-import MyProfilePageComponent from '../Components/MyProfilePageComponent/MyProfilePageComponent';
+import AboutPage from '../Components/AboutPage/AboutPage';
+import Banner from '../Components/Banner/Banner';
+import ContactPage from '../Components/ContactPage/ContactPage';
+import FAQPage from '../Components/FAQPage/FAQPage';
+import Footer from '../Components/Footer/Footer';
+import LogoutPage from '../Components/LogoutPage/LogoutPage';
+import MyProfilePage from '../Components/MyProfilePage/MyProfilePage';
 import NotFoundPage from '../Components/NotFoundPage/NotFoundPage';
-import PrivacyPolicyComponent from '../Components/PrivacyPolicyComponent/PrivacyPolicyComponent';
-import QuickMenuComponent from '../Components/QuickMenuComponent/QuickMenuComponent';
-import QuickSearchComponent from '../Components/QuickSearchComponent/QuickSearchComponent';
-import TermsPageComponent from '../Components/TermsPageComponent/TermsPageComponent';
-import MyFriendsComponent from '../Components/MyFriendsComponent/MyFriendsComponent';
-import MyGroupsComponent from '../Components/MyGroupsComponent/MyGroupsComponent';
-import MyPartiesComponent from '../Components/MyPartiesComponent/MyPartiesComponent';
-import AddPartyComponent from '../Components/CreatePartyComponent/CreatePartyComponent';
+import PrivacyPolicy from '../Components/PrivacyPolicy/PrivacyPolicy';
+import QuickMenu from '../Components/QuickMenu/QuickMenu';
+import QuickSearch from '../Components/QuickSearch/QuickSearch';
+import TermsPage from '../Components/TermsPage/TermsPage';
+import MyFriends from '../Components/MyFriends/MyFriends';
+import MyGroups from '../Components/MyGroups/MyGroups';
+import MyParties from '../Components/MyParties/MyParties';
+import AddParty from '../Components/CreateParty/CreateParty';
 import routes from '../Utils/routes.json';
+import MyAccountPage from '../Components/MyAccountPage/MyAccountPage';
+import DeleteAccount from '../Components/DeleteAccount/DeleteAccount';
+import DeactivateAccount from '../Components/DeactivateAccount/DeactivateAccount';
 
 const LoggedInRoutes = (): JSX.Element => {
     const { userData } = useContext(UserData);
@@ -26,30 +29,33 @@ const LoggedInRoutes = (): JSX.Element => {
 
     return (
         <div className="main-page-wrapper">
-            <BannerComponent />
+            <Banner />
             <main>
                 <div className='quick-panel-wrapper'>
-                    <QuickSearchComponent />
-                    <QuickMenuComponent />
+                    <QuickSearch />
+                    <QuickMenu />
                 </div>
                 <Switch>
                     <Route exact path="/app/home"><h1>Hello</h1></Route>
-                    <Route path={`/app${routes.about.href}`} component={AboutPageComponent} />
-                    <Route path={`/app${routes.contact.href}`} component={ContactPageComponent} />
-                    <Route path={`/app${routes.faq.href}`} component={FAQPageComponent} />
-                    <Route path={`/app${routes.terms.href}`} component={TermsPageComponent} />
-                    <Route path={`/app${routes.privacy.href}`} component={PrivacyPolicyComponent} />
-                    <Route path={`/app${routes.logout.href}`} component={LogoutPageComponent} />
-                    <Route path={`/app${routes.myProfile.href}`} component={MyProfilePageComponent} />
-                    <Route path={`/app${routes.myFriends.href}`} component={MyFriendsComponent} />
-                    <Route path={`/app${routes.myGroups.href}`} component={MyGroupsComponent} />
-                    <Route path={`/app${routes.myParties.href}`} component={MyPartiesComponent} />
-                    <Route path={`/app${routes.createParty.href}`} component={AddPartyComponent} />
+                    <Route path={`/app${routes.about.href}`} component={AboutPage} />
+                    <Route path={`/app${routes.contact.href}`} component={ContactPage} />
+                    <Route path={`/app${routes.faq.href}`} component={FAQPage} />
+                    <Route path={`/app${routes.terms.href}`} component={TermsPage} />
+                    <Route path={`/app${routes.privacy.href}`} component={PrivacyPolicy} />
+                    <Route path={`/app${routes.logout.href}`} component={LogoutPage} />
+                    <Route path={`/app${routes.myProfile.href}`} component={MyProfilePage} />
+                    <Route path={`/app${routes.myFriends.href}`} component={MyFriends} />
+                    <Route path={`/app${routes.myGroups.href}`} component={MyGroups} />
+                    <Route path={`/app${routes.myParties.href}`} component={MyParties} />
+                    <Route path={`/app${routes.createParty.href}`} component={AddParty} />
+                    <Route path={`/app${routes.myAccount.href}`} component={MyAccountPage} />
+                    <Route path={`/app${routes.deleteAccount.href}`} component={DeleteAccount} />
+                    <Route path={`/app${routes.deactivateAccount.href}`} component={DeactivateAccount} />
                     <Route path="/app/*" component={NotFoundPage} />
                     <Redirect path='/app' to='/app/home' />
                 </Switch>
             </main>
-            <FooterComponent />
+            <Footer />
         </div>
     );
 };

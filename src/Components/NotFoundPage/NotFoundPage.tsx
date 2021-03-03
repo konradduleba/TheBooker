@@ -1,6 +1,6 @@
 import React from 'react';
-import HeaderMeta from '../GlobalComponents/HeaderMeta/HeaderMeta';
-import SectionComponent from '../GlobalComponents/SectionComponent/SectionComponent';
+import HeaderMeta from '../Global/HeaderMeta/HeaderMeta';
+import SectionComponent from '../Global/Section/Section';
 import dot from '../../Assets/dot.png';
 import './Styles/NotFoundPage.scss';
 import { Link } from 'react-router-dom';
