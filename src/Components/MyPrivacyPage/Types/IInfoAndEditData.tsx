@@ -11,5 +11,7 @@ export default interface IInfoAndEditData {
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         error: any;
         name: string;
-    }
+    },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    options?: any;
 }

@@ -7,33 +7,31 @@ import defaultUser from '../../../Utils/defaultUserData.json';
 import GenerateInfoAndEditForm from './GenerateInfoAndEditForm';
 import ISeeFuturePosts from '../Types/ISeeFuturePosts';
 import IInfoAndEditData from '../Types/IInfoAndEditData';
-import EFriendRequestsOptions from '../Enums/EFriendRequestsOptions';
 
 const validationSchema = yup.object().shape({
     option: yup.string().required("Option is required")
 });
 
-const FriendRequest = (): JSX.Element => {
+const FriendList = (): JSX.Element => {
     const { register, handleSubmit, errors } = useForm<ISeeFuturePosts>({ resolver: yupResolver(validationSchema) });
     const { userData } = useContext(UserData);
     const { privacyInfo } = userData?.userData ? userData.userData : defaultUser;
-    const { friendRequest } = privacyInfo;
+    const { friendList } = privacyInfo;
 
     const infoAndEditData: IInfoAndEditData = {
         info: {
-            label: 'Who can send you friend requests?',
-            value: friendRequest
+            label: 'Who can see your friend list?',
+            value: friendList
         },
         form: {
             handleSubmit: handleSubmit,
             error: errors.option,
             ref: register,
             name: "option",
-        },
-        options: EFriendRequestsOptions
+        }
     }
 
     return <GenerateInfoAndEditForm infoAndEditData={infoAndEditData} />
 }
 
-export default FriendRequest;
+export default FriendList;

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import ESelectOptions from '../Enums/ESelectOptions';
 import IGenerateInfoAndEditForm from '../Types/IGenerateInfoAndEditForm';
+import GenerateOptions from './GenerateOptions';
 
 const GenerateInfoAndEditForm = ({ infoAndEditData }: IGenerateInfoAndEditForm): JSX.Element => {
     const [edit, setEdit] = useState<boolean>(false);
-    const { form, info } = infoAndEditData;
+    const { form, info, options } = infoAndEditData;
     const { ref, name, handleSubmit } = form;
     const { label, value } = info;
 
@@ -19,9 +19,7 @@ const GenerateInfoAndEditForm = ({ infoAndEditData }: IGenerateInfoAndEditForm):
                 <div className='edit-container'>
                     <label>{label}</label>
                     <select ref={ref} name={name} defaultValue={value}>
-                        {Object.values(ESelectOptions).map(option => <option
-                            key={option}
-                            value={option}>{option}</option>)}
+                        <GenerateOptions optionsEnum={options} />
                     </select>
                 </div>
                 <div>

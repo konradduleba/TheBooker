@@ -36,6 +36,10 @@
     "privacyInfo": {
         "seeFuturePosts": "Only Me",
         "following": "Only Me",
-        "friendRequest": "Everyone"
+        "friendRequest": "Everyone",
+        "friendList": "Everyone",
+        "tag": "My Friends",
+        "phoneNumber": "My Friends",
+        "emailAddress": "My Friends"
     }
 }
