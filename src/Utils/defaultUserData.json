@@ -22,7 +22,7 @@
         "email": "email@email.email",
         "phone": "123 456 789"
     },
-    "personalInfo":{
+    "personalInfo": {
         "header": "Personal Info:",
         "lookingFor": "lookingFor",
         "interestedIn": "interestedIn",
@@ -32,5 +32,8 @@
         "favouriteMusic": [],
         "favouriteMovies": [],
         "aboutMe": "about me"
+    },
+    "privacyInfo": {
+        "seeFuturePosts": "Only Me"
     }
 }

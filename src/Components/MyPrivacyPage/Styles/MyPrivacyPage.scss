@@ -1,0 +1,74 @@
+.my-privacy-page-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    .info-container,
+    aside {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .info-container {
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        aside {
+            width: 70%;
+
+            p {
+                &:first-child {
+                    width: 75%;
+                }
+
+                &:last-child {
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        div {
+            display: flex;
+            flex-direction: row;
+
+            .save-input,
+            button {
+                padding: 3px 10px;
+                cursor: pointer;
+            }
+
+            .save-input {
+                margin-right: 10px;
+            }
+        }
+
+        .edit-container {
+            display: flex;
+            flex-direction: row;
+            width: 70%;
+            height: 27px;
+            align-items: center;
+
+            &:nth-child(2) {
+                margin: 10px 0;
+            }
+
+            label {
+                width: 75%;
+            }
+
+            select {
+                cursor: pointer;
+            }
+        }
+    }
+}
