@@ -35,6 +35,7 @@
     },
     "privacyInfo": {
         "seeFuturePosts": "Only Me",
-        "following": "Only Me"
+        "following": "Only Me",
+        "friendRequest": "Everyone"
     }
 }
