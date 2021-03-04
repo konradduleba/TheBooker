@@ -12,16 +12,16 @@ const validationSchema = yup.object().shape({
     option: yup.string().required("Option is required")
 });
 
-const SeeFuturePosts = (): JSX.Element => {
+const Following = (): JSX.Element => {
     const { register, handleSubmit, errors } = useForm<ISeeFuturePosts>({ resolver: yupResolver(validationSchema) });
     const { userData } = useContext(UserData);
     const { privacyInfo } = userData?.userData ? userData.userData : defaultUser;
-    const { seeFuturePosts } = privacyInfo;
+    const { following } = privacyInfo;
 
     const infoAndEditData: IInfoAndEditData = {
         info: {
-            label: 'Who can see your future posts?',
-            value: seeFuturePosts
+            label: 'Who can see the people and pages you follow?',
+            value: following
         },
         form: {
             handleSubmit: handleSubmit,
@@ -34,4 +34,4 @@ const SeeFuturePosts = (): JSX.Element => {
     return <GenerateInfoAndEditForm infoAndEditData={infoAndEditData} />
 }
 
-export default SeeFuturePosts;
+export default Following;

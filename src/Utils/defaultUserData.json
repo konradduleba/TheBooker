@@ -34,6 +34,7 @@
         "aboutMe": "about me"
     },
     "privacyInfo": {
-        "seeFuturePosts": "Only Me"
+        "seeFuturePosts": "Only Me",
+        "following": "Only Me"
     }
 }

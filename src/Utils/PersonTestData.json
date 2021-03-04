@@ -34,6 +34,7 @@
         "aboutMe": "Hello there I'm general Kenobi and I'm looking for friends. Would like to be my friend? Mate?"
     },
     "privacyInfo": {
-        "seeFuturePosts": "My Friends"
+        "seeFuturePosts": "My Friends",
+        "following": "My Friends"
     }
 }
