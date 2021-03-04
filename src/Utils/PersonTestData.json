@@ -32,5 +32,14 @@
         "favouriteMusic": ["U2", "Modern Talking", "Eminem", "Red Hot Chilli Pepers", "Jazz"],
         "favouriteMovies": ["Social Network", "Back to the Future", "21"],
         "aboutMe": "Hello there I'm general Kenobi and I'm looking for friends. Would like to be my friend? Mate?"
+    },
+    "privacyInfo": {
+        "seeFuturePosts": "My Friends",
+        "following": "My Friends",
+        "friendRequest": "Everyone",
+        "friendList": "Everyone",
+        "tag": "My Friends",
+        "phoneNumber": "My Friends",
+        "emailAddress": "My Friends"
     }
 }
