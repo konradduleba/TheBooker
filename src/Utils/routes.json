@@ -83,12 +83,16 @@
         "title": "Create Party",
         "href": "/create-party"
     },
-    "deleteAccount":{
+    "deleteAccount": {
         "title": "Delete Account",
         "href": "/delete-account"
     },
-    "deactivateAccount":{
+    "deactivateAccount": {
         "title": "Deactivate Account",
         "href": "/deactivate-account"
+    },
+    "people": {
+        "title": "People",
+        "href": "/people"
     }
 }
