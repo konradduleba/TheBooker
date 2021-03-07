@@ -1,12 +1,10 @@
-import IPersonData from '../../../../GlobalTypes/IPersonData/IPersonData';
-import defaultUser from '../../../../Utils/defaultUserData.json';
+import IAccountInfo from '../../../../GlobalTypes/IPersonData/IAccountInfo';
 import IRandomPerson from '../Types/IRandomPerson';
 
-const createSectionHeader = ({ ID, accountInfo }: IPersonData, friendList: IRandomPerson[]): string => {
-    const isThisMe = ID === defaultUser.ID ? true : false;
+const createSectionHeader = ({ name, lastName }: IAccountInfo, friendList: IRandomPerson[]): string => {
     const numberOfFriends: number = friendList.length;
-    const userProfileName = `${accountInfo.name} ${accountInfo.lastName}`;
-    const sectionHeader = isThisMe ? `My Friends (${numberOfFriends})` : `${userProfileName} Friends (${numberOfFriends})`;
+    const userProfileName = `${name} ${lastName}`;
+    const sectionHeader = `${userProfileName} Friends (${numberOfFriends})`;
 
     return sectionHeader;
 }

@@ -23,6 +23,7 @@ import DeleteAccount from '../Components/DeleteAccount/DeleteAccount';
 import DeactivateAccount from '../Components/DeactivateAccount/DeactivateAccount';
 import MyPrivacyPage from '../Components/MyPrivacyPage/MyPrivacyPage';
 import SearchPage from '../Components/SearchPage/SearchPage';
+import UserProfilePage from '../Components/UserProfilePage/UserProfilePage';
 
 const LoggedInRoutes = (): JSX.Element => {
     const { userData } = useContext(UserData);
@@ -55,6 +56,7 @@ const LoggedInRoutes = (): JSX.Element => {
                     <Route path={`/app${routes.deactivateAccount.href}`} component={DeactivateAccount} />
                     <Route path={`/app${routes.myPrivacy.href}`} component={MyPrivacyPage} />
                     <Route path={`/app${routes.search.href}/:sentence?`} component={SearchPage} />
+                    <Route path={`/app${routes.people.href}/:id`} component={UserProfilePage} />
                     <Route path="/app/*" component={NotFoundPage} />
                     <Redirect path='/app' to='/app/home' />
                 </Switch>

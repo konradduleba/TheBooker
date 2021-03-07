@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionComponent from '../../Global/Section/Section';
+import SectionComponent from '../../../Global/Section/Section';
 
 const ConnectionComponent = (): JSX.Element => (
     <SectionComponent header="Connection" style={{ width: '100%' }} className='margin-between-sections'>

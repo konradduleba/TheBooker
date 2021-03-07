@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionComponent from '../../Global/Section/Section';
+import SectionComponent from '../../../Global/Section/Section';
 import IPictureComponent from '../Types/IPictureComponent';
 
 const PictureComponent = ({ name, lastName, picture }: IPictureComponent): JSX.Element => (
