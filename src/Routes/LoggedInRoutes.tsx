@@ -25,6 +25,7 @@ import MyPrivacyPage from '../Components/MyPrivacyPage/MyPrivacyPage';
 import SearchPage from '../Components/SearchPage/SearchPage';
 import UserProfilePage from '../Components/UserProfilePage/UserProfilePage';
 import SocialNetPage from '../Components/SocialNetPage/SocialNetPage';
+import InvitePage from '../Components/InvitePage/InvitePage';
 
 const LoggedInRoutes = (): JSX.Element => {
     const { userData } = useContext(UserData);
@@ -59,6 +60,7 @@ const LoggedInRoutes = (): JSX.Element => {
                     <Route path={`/app${routes.search.href}/:sentence?`} component={SearchPage} />
                     <Route path={`/app${routes.people.href}/:id`} component={UserProfilePage} />
                     <Route path={`/app${routes.socialNet.href}`} component={SocialNetPage} />
+                    <Route path={`/app${routes.invite.href}`} component={InvitePage} />
                     <Route path="/app/*" component={NotFoundPage} />
                     <Redirect path='/app' to='/app/home' />
                 </Switch>
