@@ -1,6 +1,6 @@
 import React from 'react';
-import IPersonData from '../../../GlobalTypes/IPersonData/IPersonData';
-import SectionComponent from '../../Global/Section/Section';
+import IPersonData from '../../../../GlobalTypes/IPersonData/IPersonData';
+import SectionComponent from '../../../Global/Section/Section';
 import displayMultipleUserValues from '../Functions/displayMultipleUserValues';
 
 const UserInfoComponent = ({ accountInfo, basicInfo, contactInfo, personalInfo }: IPersonData): JSX.Element => (

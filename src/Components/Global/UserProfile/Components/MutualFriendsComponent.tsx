@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import IMutualFriendComponent from '../Types/IMutualFriendComponent';
-import SectionComponent from '../../Global/Section/Section';
+import SectionComponent from '../../../Global/Section/Section';
 
 const MutualFriendsComponent = ({ name }: IMutualFriendComponent): JSX.Element => (
     <SectionComponent header="Mutual Friends" style={{ width: '100%' }} className='margin-between-sections'>
