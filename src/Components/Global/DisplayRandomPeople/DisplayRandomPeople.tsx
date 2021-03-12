@@ -1,9 +1,9 @@
 import React from 'react';
-import IDisplayFriendsRequests from '../Types/IDisplayFriendsRequests';
+import IDisplayRandomPeople from './Types/IDisplayRandomPeople';
 import { people } from '../../../Utils/routes.json';
 import { Link } from 'react-router-dom';
 
-const DisplayFriendsRequests = ({ inviteList }: IDisplayFriendsRequests): JSX.Element => (
+const DisplayRandomPeople = ({ inviteList }: IDisplayRandomPeople): JSX.Element => (
     <div className='requests-container'>
         {inviteList.map(({ id, name, photo, birthday, school }) => <div key={`${name}${id}`} className='single-request'>
             <div className='credentials-container'>
@@ -25,4 +25,4 @@ const DisplayFriendsRequests = ({ inviteList }: IDisplayFriendsRequests): JSX.El
     </div>
 );
 
-export default DisplayFriendsRequests;
+export default DisplayRandomPeople;
