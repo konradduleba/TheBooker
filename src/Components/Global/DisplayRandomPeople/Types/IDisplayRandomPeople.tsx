@@ -1,5 +1,5 @@
 import IInviteList from "./IInviteList";
 
-export default interface IDisplayFriendsRequests {
+export default interface IDisplayRandomPeople {
     inviteList: IInviteList[];
 }
