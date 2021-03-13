@@ -101,6 +101,13 @@ input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+textarea {
+  resize: none;
+  overflow: hidden;
+  outline: none;
+}
+
+textarea,
 input.field-input {
   border: 1px solid #666666;
   background-color: #D9DFEA;
