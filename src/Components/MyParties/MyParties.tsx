@@ -5,8 +5,9 @@ import './Styles/MyParties.scss';
 import DisplayParty from './Components/DisplayParty';
 import separatePartiesIntoGroups from './Functions/separatePartiesIntoGroups';
 import { Link } from 'react-router-dom';
-import { createParty } from '../../Utils/routes.json'
+import { createParty, search } from '../../Utils/routes.json';
 import HeaderMeta from '../Global/HeaderMeta/HeaderMeta';
+import ESearchTypes from '../SearchPage/Enums/ESearchTypes';
 
 const MyPartiesComponent = (): JSX.Element => {
     const { finishedParties, actualParties, incomingParties } = separatePartiesIntoGroups(testParties);
@@ -17,7 +18,9 @@ const MyPartiesComponent = (): JSX.Element => {
             <HeaderMeta title={sectionHeader} />
             <div className='my-parties-wrapper'>
                 <nav>
-                    <button className='normal-button'>Search Party</button>
+                    <Link to={`/app${search.href}/${ESearchTypes.PARTY}`}>
+                        <button className='normal-button'>Search Party</button>
+                    </Link>
                     <Link to={`/app${createParty.href}`}>
                         <button className='normal-button'>{createParty.title}</button>
                     </Link>

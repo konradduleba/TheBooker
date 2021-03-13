@@ -94,5 +94,9 @@
     "people": {
         "title": "People",
         "href": "/people"
+    },
+    "createGroup": {
+        "title": "Create Group",
+        "href": "/create-group"
     }
 }

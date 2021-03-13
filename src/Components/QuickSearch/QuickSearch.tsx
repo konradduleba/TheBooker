@@ -4,12 +4,13 @@ import IQuickSearch from './Types/IQuickSearch';
 import './Styles/QuickSearch.scss';
 import { useHistory } from 'react-router';
 import { search } from '../../Utils/routes.json';
+import ESearchTypes from '../SearchPage/Enums/ESearchTypes';
 
 const QuickSearchComponent = (): JSX.Element => {
     const { register, handleSubmit } = useForm<IQuickSearch>();
     const history = useHistory();
 
-    const onSubmit = ({ value }: IQuickSearch) => history.push(`/app${search.href}/${value}`);
+    const onSubmit = ({ value }: IQuickSearch) => history.push(`/app${search.href}/${ESearchTypes.USER}/${value}`);
 
     return (
         <section className='quick-search-wrapper'>

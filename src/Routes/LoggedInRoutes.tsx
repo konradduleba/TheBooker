@@ -14,7 +14,7 @@ import QuickMenu from '../Components/QuickMenu/QuickMenu';
 import QuickSearch from '../Components/QuickSearch/QuickSearch';
 import TermsPage from '../Components/TermsPage/TermsPage';
 import MyFriends from '../Components/MyFriends/MyFriends';
-import MyGroups from '../Components/MyGroups/MyGroups';
+import MyGroupsPage from '../Components/MyGroupsPage/MyGroupsPage';
 import MyParties from '../Components/MyParties/MyParties';
 import AddParty from '../Components/CreateParty/CreateParty';
 import routes from '../Utils/routes.json';
@@ -51,14 +51,14 @@ const LoggedInRoutes = (): JSX.Element => {
                     <Route path={`/app${routes.logout.href}`} component={LogoutPage} />
                     <Route path={`/app${routes.myProfile.href}`} component={MyProfilePage} />
                     <Route path={`/app${routes.myFriends.href}`} component={MyFriends} />
-                    <Route path={`/app${routes.myGroups.href}`} component={MyGroups} />
+                    <Route path={`/app${routes.myGroups.href}`} component={MyGroupsPage} />
                     <Route path={`/app${routes.myParties.href}`} component={MyParties} />
                     <Route path={`/app${routes.createParty.href}`} component={AddParty} />
                     <Route path={`/app${routes.myAccount.href}`} component={MyAccountPage} />
                     <Route path={`/app${routes.deleteAccount.href}`} component={DeleteAccount} />
                     <Route path={`/app${routes.deactivateAccount.href}`} component={DeactivateAccount} />
                     <Route path={`/app${routes.myPrivacy.href}`} component={MyPrivacyPage} />
-                    <Route path={`/app${routes.search.href}/:sentence?`} component={SearchPage} />
+                    <Route path={`/app${routes.search.href}/:type?/:sentence?`} component={SearchPage} />
                     <Route path={`/app${routes.people.href}/:id`} component={UserProfilePage} />
                     <Route path={`/app${routes.socialNet.href}`} component={SocialNetPage} />
                     <Route path={`/app${routes.invite.href}`} component={InvitePage} />
