@@ -4,12 +4,12 @@ import Person from '../../Assets/person.jpg';
 import IMyGroups from './Types/IMyGroups';
 
 const testGroups: IMyGroups[] = [{
-    ID: 0,
+    id: 0,
     name: 'Testowa grupa',
     photo: Person
 },
 {
-    ID: 1,
+    id: 1,
     name: 'Natalie na the bookerze',
     photo: Person
 },];

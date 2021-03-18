@@ -1,5 +1,5 @@
 export default interface IMyGroups {
-    ID: number;
+    id: number;
     name: string;
     photo: string;
 }

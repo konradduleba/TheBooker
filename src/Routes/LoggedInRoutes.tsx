@@ -28,6 +28,7 @@ import SocialNetPage from '../Components/SocialNetPage/SocialNetPage';
 import InvitePage from '../Components/InvitePage/InvitePage';
 import GlobalPage from '../Components/GlobalPage/GlobalPage';
 import CreateGroup from '../Components/CreateGroup/CreateGroup';
+import GroupProfile from '../Components/Global/GroupProfile/GroupProfile';
 
 const LoggedInRoutes = (): JSX.Element => {
     const { userData } = useContext(UserData);
@@ -54,6 +55,7 @@ const LoggedInRoutes = (): JSX.Element => {
                     <Route path={`/app${routes.myFriends.href}`} component={MyFriends} />
                     <Route path={`/app${routes.myGroups.href}`} component={MyGroupsPage} />
                     <Route path={`/app${routes.createGroup.href}`} component={CreateGroup} />
+                    <Route path={`/app${routes.groupProfile.href}/:id`} component={GroupProfile} />
                     <Route path={`/app${routes.myParties.href}`} component={MyParties} />
                     <Route path={`/app${routes.createParty.href}`} component={AddParty} />
                     <Route path={`/app${routes.myAccount.href}`} component={MyAccountPage} />

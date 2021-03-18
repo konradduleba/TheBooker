@@ -98,5 +98,21 @@
     "createGroup": {
         "title": "Create Group",
         "href": "/create-group"
+    },
+    "groupProfile": {
+        "title": "Group Profile",
+        "href": "/group"
+    },
+    "createGroupPost": {
+        "title": "Create Post",
+        "href": "/create-group-post"
+    },
+    "leaveGroup": {
+        "title": "Leave Group",
+        "href": "/leave-group"
+    },
+    "groupPreferences": {
+        "title":"My Preferences",
+        "href": "/group-preferences"
     }
 }
