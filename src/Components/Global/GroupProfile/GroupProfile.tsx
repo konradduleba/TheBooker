@@ -33,7 +33,7 @@ const GroupProfile = (): JSX.Element => {
                 </div>
                 <div className='right-side'>
                     <Picture picture={picture} />
-                    <Options id={id} />
+                    <Options id={id} name={name} />
                 </div>
             </div>
         </SectionComponent>
