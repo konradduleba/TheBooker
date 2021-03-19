@@ -30,6 +30,7 @@ import GlobalPage from '../Components/GlobalPage/GlobalPage';
 import CreateGroup from '../Components/CreateGroup/CreateGroup';
 import GroupProfile from '../Components/Global/GroupProfile/GroupProfile';
 import LeaveGroupPage from '../Components/LeaveGroupPage/LeaveGroupPage';
+import CreateGroupPostPage from '../Components/CreateGroupPostPage/CreateGroupPostPage';
 
 const LoggedInRoutes = (): JSX.Element => {
     const { userData } = useContext(UserData);
@@ -58,8 +59,8 @@ const LoggedInRoutes = (): JSX.Element => {
                     <Route path={`/app${routes.createGroup.href}`} component={CreateGroup} />
                     <Route path={`/app${routes.groupProfile.href}/:id`} component={GroupProfile} />
                     <Route path={`/app${routes.leaveGroup.href}/:id/:name`} component={LeaveGroupPage} />
-                    {/* <Route path={`/app${routes.groupPreferences.href}/:id`} component={GroupPreferencesPage} />
-                    <Route path={`/app${routes.createGroupPost.href}/:id`} component={CreateGroupPage} /> */}
+                    {/* <Route path={`/app${routes.groupPreferences.href}/:id`} component={GroupPreferencesPage} />*/
+                        <Route path={`/app${routes.createGroupPost.href}/:id`} component={CreateGroupPostPage} />}
                     <Route path={`/app${routes.myParties.href}`} component={MyParties} />
                     <Route path={`/app${routes.createParty.href}`} component={AddParty} />
                     <Route path={`/app${routes.myAccount.href}`} component={MyAccountPage} />
