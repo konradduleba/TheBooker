@@ -10,6 +10,8 @@ import ISearchForm from './Types/ISearchForm';
 import testFriendList from '../Global/FriendList/testFriendList';
 import IRandomPerson from '../Global/FriendList/Types/IRandomPerson';
 import ShowRequestResult from './Components/ShowRequestResult';
+import ESearchTypes from './Enums/ESearchTypes';
+import GenerateSearchOptions from './Components/GenerateSearchOptions';
 
 const validationSchema = yup.object().shape({
     sentence: yup.string().required("This place can not be empty.")
@@ -20,7 +22,7 @@ const validationSchema = yup.object().shape({
 
 const SearchPage = (): JSX.Element => {
     const { register, handleSubmit, errors } = useForm<ISearchForm>({ resolver: yupResolver(validationSchema) });
-    const { sentence } = useParams<ISearchForm>();
+    const { sentence, type } = useParams<ISearchForm>();
     const [isFormSended, setFormSended] = useState<boolean>(false);
     const [searchResult, setSearchResult] = useState<IRandomPerson[]>([]);
     const sendSearchRef = useRef<HTMLInputElement>(null);
@@ -33,7 +35,9 @@ const SearchPage = (): JSX.Element => {
 
     const clickSearch = () => sendSearchRef.current?.click();
 
-    useEffect(() => { sentence && clickSearch() }, [sentence]);
+    useEffect(() => {
+        sentence && clickSearch()
+    }, [sentence]);
 
     const sectionHeader = 'Search';
 
@@ -43,6 +47,12 @@ const SearchPage = (): JSX.Element => {
             <div className='search-page-wrapper column-with-padding'>
                 <form onSubmit={handleSubmit(onSubmit)} className={!isFormSended ? `space-between-components` : ''}>
                     <div className='search-container'>
+                        <select
+                            name="type"
+                            ref={register}
+                            defaultValue={type ? type : ESearchTypes.USER}>
+                            <GenerateSearchOptions />
+                        </select>
                         <input
                             name="sentence"
                             ref={register}
