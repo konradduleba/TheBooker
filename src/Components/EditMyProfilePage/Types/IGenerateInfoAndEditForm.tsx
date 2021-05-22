@@ -3,5 +3,5 @@ import ISaveEditField from "./ISaveEditField";
 
 export default interface IGenerateInfoAndEditForm {
     formData: IReturnedEditValues;
-    setEditedData: (value: ISaveEditField) => void;
+    setEditedData?: (value: ISaveEditField) => void;
 }

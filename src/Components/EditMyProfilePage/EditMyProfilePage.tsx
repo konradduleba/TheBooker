@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import IPersonData from '../../GlobalTypes/IPersonData/IPersonData';
 import HeaderMeta from '../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../Global/Section/Section';
+import EditUserProfileTemplate from '../Global/Templates/EditUserProfileTemplate';
 import EditUserInformation from './Components/EditUserInformation';
 import HomeButton from './Components/HomeButton';
 import Navigation from './Components/Navigation';
-import ELoaderMessages from './Enums/ELoaderMessages';
 import getMyUserData from './Functions/getMyUserData';
 import './Styles/EditMyProfilePage.scss';
 import IAvaibleUserDataToEdit from './Types/IAvaibleUserDataToEdit';
@@ -13,7 +13,6 @@ import ISaveEditField from './Types/ISaveEditField';
 
 const EditMyProfilePage = (): JSX.Element => {
     const [userData, setUserData] = useState<IPersonData | null>(null);
-    const [loaderMessage, setLoaderMessage] = useState<string>(ELoaderMessages.LOADING_DATA);
     const [editedData, setEditedData] = useState<IAvaibleUserDataToEdit | null>(null);
 
     const sectionHeader = "Edit My Profile";
@@ -31,16 +30,14 @@ const EditMyProfilePage = (): JSX.Element => {
             if (isSuccess)
                 return setUserData(userData);
 
-            return setLoaderMessage(ELoaderMessages.FAILED_LOADED_DATA);
+            return null;
         }
 
         getUserData();
     }, [])
 
     if (!userData)
-        return (
-            <h1>{loaderMessage}</h1>
-        )
+        return <EditUserProfileTemplate />
 
     const { accountInfo, basicInfo, contactInfo, personalInfo } = userData;
 

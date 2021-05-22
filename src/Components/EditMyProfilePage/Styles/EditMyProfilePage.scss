@@ -1,4 +1,5 @@
-.edit-my-profile-page-wrapper {
+.edit-my-profile-page-wrapper,
+.edit-user-profile-template {
 
     nav {
         display: flex;
@@ -91,5 +92,11 @@
                 }
             }
         }
+    }
+}
+
+.edit-user-profile-template {
+    .edit-data-container {
+        background-color: #f3f3f3;
     }
 }

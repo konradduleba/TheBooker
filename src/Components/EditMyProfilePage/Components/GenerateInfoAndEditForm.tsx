@@ -17,7 +17,8 @@ const GenerateInfoAndEditForm = ({ formData, setEditedData }: IGenerateInfoAndEd
 
         setEdit(false);
         setFormValue(value);
-        return setEditedData(data);
+
+        return setEditedData ? setEditedData(data) : null;
     }
 
     if (edit)
