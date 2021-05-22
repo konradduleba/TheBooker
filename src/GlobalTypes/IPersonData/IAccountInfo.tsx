@@ -1,9 +1,7 @@
 export default interface IAccountInfo {
-    username: string;
-    header: string;
     name: string;
-    lastName: string;
+    lastname: string;
     picture: string;
-    memberSince: string;
-    lastUpdate: string;
+    memberSince: Date | null;
+    lastUpdate: Date | null;
 }

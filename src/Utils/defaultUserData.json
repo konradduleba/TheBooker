@@ -1,45 +1,30 @@
 {
-    "ID": 1,
     "accountInfo": {
-        "username": "konraddduleba1",
-        "header": "Account Info:",
         "name": "Name",
-        "lastName": "LastName",
+        "lastname": "LastName",
         "picture": "https://i.pinimg.com/564x/5c/a1/42/5ca142d34fd1903773b4f4e6f43d9045.jpg",
-        "memberSince": "January 01, 1970",
-        "lastUpdate": "January 01, 1970"
+        "memberSince": null,
+        "lastUpdate": null
     },
     "basicInfo": {
-        "header": "Basic Info:",
         "school": "School",
         "status": "Status",
         "sex": "Sex",
         "city": "City",
-        "birthday": "01/01/1970"
+        "birthday": null
     },
     "contactInfo": {
-        "header": "Contact Info:",
         "email": "email@email.email",
         "phone": "123 456 789"
     },
     "personalInfo": {
-        "header": "Personal Info:",
         "lookingFor": "lookingFor",
         "interestedIn": "interestedIn",
         "relationshipStatus": "relationshipStatus",
         "partner": "partner",
-        "interests": [],
-        "favouriteMusic": [],
-        "favouriteMovies": [],
+        "interests": "",
+        "favouriteMusic": "",
+        "favouriteMovies": "",
         "aboutMe": "about me"
-    },
-    "privacyInfo": {
-        "seeFuturePosts": "Only Me",
-        "following": "Only Me",
-        "friendRequest": "Everyone",
-        "friendList": "Everyone",
-        "tag": "My Friends",
-        "phoneNumber": "My Friends",
-        "emailAddress": "My Friends"
     }
 }

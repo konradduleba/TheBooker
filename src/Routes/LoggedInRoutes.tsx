@@ -32,6 +32,7 @@ import GroupProfile from '../Components/Global/GroupProfile/GroupProfile';
 import LeaveGroupPage from '../Components/LeaveGroupPage/LeaveGroupPage';
 import CreateGroupPostPage from '../Components/CreateGroupPostPage/CreateGroupPostPage';
 import GroupPreferencesPage from '../Components/GroupPreferencesPage/GroupPreferencesPage';
+import EditMyProfilePage from '../Components/EditMyProfilePage/EditMyProfilePage';
 
 const LoggedInRoutes = (): JSX.Element => {
     const { userData } = useContext(UserData);
@@ -55,6 +56,7 @@ const LoggedInRoutes = (): JSX.Element => {
                     <Route path={`/app${routes.privacy.href}`} component={PrivacyPolicy} />
                     <Route path={`/app${routes.logout.href}`} component={LogoutPage} />
                     <Route path={`/app${routes.myProfile.href}`} component={MyProfilePage} />
+                    <Route path={`/app${routes.editProfile.href}`} component={EditMyProfilePage} />
                     <Route path={`/app${routes.myFriends.href}`} component={MyFriends} />
                     <Route path={`/app${routes.myGroups.href}`} component={MyGroupsPage} />
                     <Route path={`/app${routes.createGroup.href}`} component={CreateGroup} />

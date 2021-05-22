@@ -1,4 +1,4 @@
 export default interface IDeactivateAccount {
-    password: string;
-    date: string;
+    currentPassword: string;
+    numberOfDays: number;
 }

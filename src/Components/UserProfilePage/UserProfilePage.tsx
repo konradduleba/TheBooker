@@ -8,7 +8,9 @@ const UserProfilePage = (): JSX.Element => {
     const { id } = useParams<IUserProfilePage>();
     console.log(id);
 
-    return <UserProfile personData={defaultUserData} />
+    // return <UserProfile personData={defaultUserData} />
+
+    return <h1>EST</h1>
 }
 
 export default UserProfilePage

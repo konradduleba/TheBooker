@@ -31,6 +31,23 @@
         background-color: var(--main-app-color);
         color: #fff;
         padding: 3px;
+
+        .my-profile-header-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+
+          a {
+            color: #fff;
+            padding: 0 5px;
+            text-decoration: unset;
+
+            &:hover {
+              color: var(--link-hover-color);
+            }
+          }
+        }
       }
     }
 

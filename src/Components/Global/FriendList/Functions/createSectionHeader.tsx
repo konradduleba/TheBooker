@@ -1,9 +1,9 @@
 import IAccountInfo from '../../../../GlobalTypes/IPersonData/IAccountInfo';
 import IRandomPerson from '../Types/IRandomPerson';
 
-const createSectionHeader = ({ name, lastName }: IAccountInfo, friendList: IRandomPerson[]): string => {
+const createSectionHeader = ({ name, lastname }: IAccountInfo, friendList: IRandomPerson[]): string => {
     const numberOfFriends: number = friendList.length;
-    const userProfileName = `${name} ${lastName}`;
+    const userProfileName = `${name} ${lastname}`;
     const sectionHeader = `${userProfileName} Friends (${numberOfFriends})`;
 
     return sectionHeader;

@@ -1,12 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
-import { UserData } from '../../../Authentication/UserDataContext/UserDataContext';
 import * as yup from "yup";
 import { yupResolver } from '@hookform/resolvers/yup';
-import defaultUser from '../../../Utils/defaultUserData.json';
 import IUsername from '../Types/IUsername';
 import IInfoAndEditData from '../Types/IInfoAndEditData';
 import GenerateInfoAndEditForm from './GenerateInfoAndEditForm';
+import { IOnSubmit } from '../Types/IGenerateInfoAndEditForm';
+import patchAccountData from '../Functions/patchAccountData';
+import EEndPointList from '../Enums/EEndPointList';
 
 const validationSchema = yup.object().shape({
     username: yup.string()
@@ -15,16 +16,29 @@ const validationSchema = yup.object().shape({
         .max(20, "Username have to contain maximum 30 characters")
 });
 
-const Username = (): JSX.Element => {
+const Username = ({ username }: IUsername): JSX.Element => {
+    const [newUsername, setNewUsername] = useState<string>(username);
     const { register, handleSubmit, errors } = useForm<IUsername>({ resolver: yupResolver(validationSchema) });
-    const { userData } = useContext(UserData);
-    const { accountInfo } = userData?.userData ? userData.userData : defaultUser;
-    const { username } = accountInfo;
+
+    const onUpdate = async (data: IOnSubmit) => {
+        const { username } = data;
+
+        const formData = {
+            newUsername: username
+        };
+
+        const { isSuccess } = await patchAccountData(formData, EEndPointList.PATCH_USERNAME);
+
+        if (isSuccess)
+            return setNewUsername(username);
+
+        return null;
+    }
 
     const infoAndEditData: IInfoAndEditData = {
         info: {
             label: 'Username',
-            value: username
+            value: newUsername
         },
         form: {
             className: 'single-input',
@@ -34,12 +48,13 @@ const Username = (): JSX.Element => {
                 name: 'username',
                 type: 'text',
                 ref: register,
-                error: errors.username
+                error: errors.username,
+                inputValue: newUsername
             }]
         }
     }
 
-    return <GenerateInfoAndEditForm infoAndEditData={infoAndEditData} />
+    return <GenerateInfoAndEditForm infoAndEditData={infoAndEditData} submitHandler={onUpdate} />
 }
 
 export default Username;

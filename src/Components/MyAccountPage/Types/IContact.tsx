@@ -1,3 +1,3 @@
 export default interface IContact {
-    contact: string;
+    email: string | null;
 }

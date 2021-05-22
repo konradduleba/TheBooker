@@ -76,3 +76,15 @@
         }
     }
 }
+
+.user-privacy-template {
+    .section-header {
+        color: transparent !important;
+    }
+
+    div {
+        background-color: #f3f3f3;
+        height: calc((7 * 37px) + 10px);
+        width: 100%;
+    }
+}

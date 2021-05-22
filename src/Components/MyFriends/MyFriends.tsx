@@ -7,12 +7,12 @@ import defaultUserData from '../../Utils/defaultUserData.json';
 
 const MyFriendsComponent = (): JSX.Element => {
     const { userData } = useContext(UserData);
-    const { accountInfo } = userData?.userData ? userData.userData : defaultUserData;
+    // const { accountInfo } = userData?.userData ? userData.userData : defaultUserData;
 
     return (
         <section className='my-friends-wrapper section-component'>
             <HeaderMeta title='My Friends' />
-            <FriendListComponent accountInfo={accountInfo} />
+            {/* <FriendListComponent accountInfo={accountInfo} /> */}
         </section>
     )
 }

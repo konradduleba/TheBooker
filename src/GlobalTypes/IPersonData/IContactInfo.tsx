@@ -1,5 +1,4 @@
 export default interface IContactInfo {
-    header: string;
-    email: string;
-    phone: string;
+    email: string | null;
+    phone: string | null;
 }

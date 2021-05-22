@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from '@hookform/resolvers/yup';
 import IInfoAndEditData from '../Types/IInfoAndEditData';
 import GenerateInfoAndEditForm from './GenerateInfoAndEditForm';
 import IPassword from '../Types/IPassword';
+import { IOnSubmit } from '../Types/IGenerateInfoAndEditForm';
+import patchAccountData from '../Functions/patchAccountData';
+import EEndPointList from '../Enums/EEndPointList';
+import { UserData } from '../../../Authentication/UserDataContext/UserDataContext';
 
 const validationSchema = yup.object().shape({
     currentPassword: yup.string()
@@ -22,7 +26,24 @@ const validationSchema = yup.object().shape({
 });
 
 const Password = (): JSX.Element => {
+    const { logoutUser } = useContext(UserData);
     const { register, handleSubmit, errors } = useForm<IPassword>({ resolver: yupResolver(validationSchema) });
+
+    const onUpdate = async (data: IOnSubmit) => {
+        const { newPassword, currentPassword } = data;
+
+        const formData = {
+            newPassword,
+            currentPassword
+        }
+
+        const { isSuccess } = await patchAccountData(formData, EEndPointList.PATCH_USER_PASSWORD);
+
+        if (isSuccess && logoutUser)
+            return logoutUser();
+
+        return null;
+    }
 
     const infoAndEditData: IInfoAndEditData = {
         info: {
@@ -37,7 +58,7 @@ const Password = (): JSX.Element => {
                 name: 'currentPassword',
                 type: 'password',
                 ref: register,
-                error: errors.currentPassword
+                error: errors.currentPassword,
             },
             {
                 label: 'New:',
@@ -56,7 +77,7 @@ const Password = (): JSX.Element => {
         }
     }
 
-    return <GenerateInfoAndEditForm infoAndEditData={infoAndEditData} />
+    return <GenerateInfoAndEditForm infoAndEditData={infoAndEditData} submitHandler={onUpdate} />
 }
 
 export default Password;

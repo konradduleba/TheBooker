@@ -1,14 +1,30 @@
-import React, { useContext } from 'react';
-import { UserData } from '../../Authentication/UserDataContext/UserDataContext';
-import defaultUser from '../../Utils/defaultUserData.json';
+import React, { useEffect, useState } from 'react';
+import IPersonData from '../../GlobalTypes/IPersonData/IPersonData';
+import UserProfileTemplate from '../Global/Templates/UserProfileTemplate';
 import UserProfile from '../Global/UserProfile/UserProfile';
+import getMyUserData from './Functions/getMyUserData';
 
 const MyProfilePageComponent = (): JSX.Element => {
-    const { userData } = useContext(UserData);
-    const personData = userData?.userData ? userData.userData : defaultUser;
+    const [userData, setUserData] = useState<IPersonData | null>(null);
+
+    useEffect(() => {
+        const getUserData = async () => {
+            const { isSuccess, userData } = await getMyUserData();
+
+            if (isSuccess)
+                return setUserData(userData);
+
+            return null;
+        }
+
+        getUserData();
+    }, [])
+
+    if (!userData)
+        return <UserProfileTemplate />
 
     return (
-        <UserProfile personData={personData} />
+        <UserProfile personData={userData} isThatMe={true} />
     )
 };
 export default MyProfilePageComponent;

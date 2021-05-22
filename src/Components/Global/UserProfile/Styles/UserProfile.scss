@@ -96,10 +96,29 @@
 
                         &:nth-child(1) {
                             width: 40%;
+                            text-transform: capitalize;
                         }
                     }
                 }
             }
         }
+    }
+}
+
+.template {
+
+    .section-header,
+    p,
+    a,
+    h2 {
+        color: transparent !important;
+    }
+
+    img {
+        visibility: hidden;
+    }
+
+    section {
+        background-color: #f3f3f3;
     }
 }

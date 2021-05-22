@@ -6,4 +6,5 @@ export default interface IFormData {
     ref: any;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     error: any;
+    inputValue?: string | null;
 }

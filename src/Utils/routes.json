@@ -55,6 +55,10 @@
         "title": "My Profile",
         "href": "/my-profile"
     },
+    "editProfile":{
+        "title": "Edit Profile",
+        "href": "/edit-profile"
+    },
     "myFriends":{
         "title": "My Friends",
         "href": "/my-friends"

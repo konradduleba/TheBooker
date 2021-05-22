@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import HeaderMeta from '../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../Global/Section/Section';
 import Following from './Components/Following';
@@ -9,21 +9,41 @@ import './Styles/MyPrivacyPage.scss';
 import Tag from './Components/Tag';
 import EmailAddress from './Components/EmailAddress';
 import PhoneNumber from './Components/PhoneNumber';
+import IPrivacyInfo from '../../GlobalTypes/IPersonData/IPrivacyInfo';
+import getUserPrivacy from './Functions/getUserPrivacy';
+import UserPrivacyTemplate from '../Global/Templates/UserPrivacyTemplate';
 
 const MyPrivacyPage = (): JSX.Element => {
+    const [userPrivacy, setUserPrivacy] = useState<IPrivacyInfo | null>(null);
     const sectionHeader = 'My Privacy';
+
+    useEffect(() => {
+        const initalizeUserPrivacy = async () => {
+            const { isSuccess, privacyInfo } = await getUserPrivacy();
+
+            if (isSuccess && privacyInfo)
+                return setUserPrivacy(privacyInfo);
+
+            return null;
+        }
+
+        initalizeUserPrivacy();
+    }, [])
+
+    if (!userPrivacy)
+        return <UserPrivacyTemplate />
 
     return (
         <SectionComponent header={sectionHeader}>
             <HeaderMeta title={sectionHeader} />
             <div className='my-privacy-page-wrapper'>
-                <SeeFuturePosts />
-                <Following />
-                <FriendRequest />
-                <FriendList />
-                <Tag />
-                <PhoneNumber />
-                <EmailAddress />
+                <SeeFuturePosts {...userPrivacy} />
+                <Following {...userPrivacy} />
+                <FriendRequest {...userPrivacy} />
+                <FriendList {...userPrivacy} />
+                <Tag {...userPrivacy} />
+                <PhoneNumber {...userPrivacy} />
+                <EmailAddress {...userPrivacy} />
             </div>
         </SectionComponent>
     )

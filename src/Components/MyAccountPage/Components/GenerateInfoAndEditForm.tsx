@@ -1,24 +1,30 @@
 import React, { useState } from 'react';
-import IGenerateInfoAndEditForm from '../Types/IGenerateInfoAndEditForm';
+import IGenerateInfoAndEditForm, { IOnSubmit } from '../Types/IGenerateInfoAndEditForm';
 
-const GenerateInfoAndEditForm = ({ infoAndEditData }: IGenerateInfoAndEditForm): JSX.Element => {
+const GenerateInfoAndEditForm = ({ infoAndEditData, submitHandler }: IGenerateInfoAndEditForm): JSX.Element => {
     const [edit, setEdit] = useState<boolean>(false);
     const { form, info } = infoAndEditData;
     const { className, fields, handleSubmit } = form;
     const { label, value } = info;
 
-    const onSubmit = (data: unknown) => {
-        console.log(data);
-        setEdit(false);
+    const onSubmit = (data: IOnSubmit) => {
+        submitHandler(data);
+        return setEdit(false);
     };
 
     if (edit)
         return (
             <form onSubmit={handleSubmit(onSubmit)} className={className}>
                 <div className='edit-container'>
-                    {fields.map(({ label, name, type, ref, error }) => <div key={label}>
+                    {fields.map(({ label, name, type, ref, error, inputValue }) => <div key={label}>
                         <label>{label}</label>
-                        <input name={name} type={type} ref={ref} className='field-input'></input>
+                        <input
+                            name={name}
+                            type={type}
+                            ref={ref}
+                            className='field-input'
+                            defaultValue={inputValue ? inputValue : ''}
+                        ></input>
                         {error && <p className='error'>{error.message}</p>}
                     </div>)}
                 </div>

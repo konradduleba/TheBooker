@@ -1,11 +1,10 @@
 export default interface IPersonalInfo {
-    header: string;
-    lookingFor: string;
-    interestedIn: string;
-    relationshipStatus: string;
-    partner: string;
-    interests: string[];
-    favouriteMusic: string[];
-    favouriteMovies: string[];
-    aboutMe: string;
+    lookingFor: string | null;
+    interestedIn: string | null;
+    relationshipStatus: string | null;
+    partner: string | null;
+    interests: string | null;
+    favouriteMusic: string | null;
+    favouriteMovies: string | null;
+    aboutMe: string | null;
 }
