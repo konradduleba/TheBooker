@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import HeaderMeta from '../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../Global/Section/Section';
+import MyAccountTemplate from '../Global/Templates/MyAccountTemplate';
 import Contact from './Components/Contact';
 import Deactivate from './Components/Deactivate';
 import Delete from './Components/Delete';
@@ -30,7 +31,7 @@ const MyAccountPage = (): JSX.Element => {
     const sectionHeader = 'My Account';
 
     if (!accountData)
-        return <h1>Loading</h1>
+        return <MyAccountTemplate />
 
     return (
         <SectionComponent header={sectionHeader}>
