@@ -10,6 +10,7 @@
   --main-app-color: rgb(59, 89, 152);
   --main-button-bgc: #538ADC;
   --main-banner-bgc: #3b5998;
+  --main-disabled-bgc: #ddd;
   --link-color: #538adc;
   --link-hover-color: lightblue;
   --app-font-size: 14px;
@@ -132,4 +133,14 @@ input:active {
 button.normal-button {
   padding: 3px 10px;
   cursor: pointer;
+}
+
+button.normal-button:disabled {
+  border: 2px solid var(--main-disabled-bgc);
+  border-top-color: var(--main-disabled-bgc);
+  border-left-color: var(--main-disabled-bgc);
+  border-bottom-color: var(--main-disabled-bgc);
+  border-right-color: var(--main-disabled-bgc);
+  background-color: var(--main-disabled-bgc);
+  color: #fff;
 }

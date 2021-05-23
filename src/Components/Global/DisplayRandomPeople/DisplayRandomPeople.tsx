@@ -1,6 +1,6 @@
 import React from 'react';
 import IDisplayRandomPeople from './Types/IDisplayRandomPeople';
-import { people } from '../../../Utils/routes.json';
+import { people } from '../../../Routes/Utils/routes.json';
 import { Link } from 'react-router-dom';
 
 const DisplayRandomPeople = ({ inviteList }: IDisplayRandomPeople): JSX.Element => (

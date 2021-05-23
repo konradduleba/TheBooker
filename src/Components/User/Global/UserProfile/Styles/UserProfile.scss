@@ -1,0 +1,124 @@
+.user-profile-page-wrapper {
+    &.column-with-padding {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .left-side {
+        width: 40%;
+
+        .picture-container {
+            margin: 5px auto;
+            width: 65%;
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .send-message-or-poke-wrapper {
+            border: 1px solid var(--main-banner-bgc);
+            margin-bottom: 20px;
+
+            div {
+                padding: 5px 10px;
+                border-top: 1px solid var(--main-banner-bgc);
+
+                &:nth-child(1) {
+                    border-top: 0;
+                }
+
+                p {
+                    color: var(--link-color);
+                    cursor: pointer;
+
+                    &:hover {
+                        text-decoration: underline;
+                        color: var(--link-hover-color);
+                    }
+                }
+
+                a {
+                    display: block;
+                }
+            }
+        }
+
+        .connection-container,
+        .mutual-friends-container {
+            padding: 5px 10px;
+            align-items: flex-start;
+        }
+
+        .friend-list-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 5px;
+
+            div {
+                margin: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: calc(100% - 10px);
+                text-align: center;
+            }
+
+            img {
+                width: 100%;
+                margin-bottom: 3px;
+            }
+        }
+    }
+
+    .right-side {
+        width: calc(60% - 20px);
+
+        .data-wrapper {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+
+            .info-container {
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    display: flex;
+                    flex-direction: row;
+                    margin: 3px 0;
+
+                    span {
+                        width: 60%;
+
+                        &:nth-child(1) {
+                            width: 40%;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.template {
+
+    .section-header,
+    p,
+    a,
+    h2 {
+        color: transparent !important;
+    }
+
+    img {
+        visibility: hidden;
+    }
+
+    section {
+        background-color: #f3f3f3;
+    }
+}

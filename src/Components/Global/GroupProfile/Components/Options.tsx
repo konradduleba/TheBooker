@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { createGroupPost, leaveGroup, groupPreferences } from '../../../../Utils/routes.json';
+import { createGroupPost, leaveGroup, groupPreferences } from '../../../../Routes/Utils/routes.json';
 import IOptions from '../Types/IOptions';
 
 const Options = ({ id, name }: IOptions): JSX.Element => (

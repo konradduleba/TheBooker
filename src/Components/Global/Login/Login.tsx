@@ -1,17 +1,37 @@
 import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
-import routes from '../../../Utils/routes.json';
+import routes from '../../../Routes/Utils/routes.json';
 import { Link } from 'react-router-dom';
-import { UserData } from '../../../Authentication/UserDataContext/UserDataContext';
+import { UserData } from '../../../Contexts/UserDataContext/UserData';
 import ILogin from './Types/ILogin';
+import userLogin from './Functions/userLogin';
+import getUserData from './Functions/getUserData';
+import setLocalStorageData from './Functions/setLocalStorageData';
 
 const LoginComponent = (): JSX.Element => {
     const { register, handleSubmit, reset } = useForm<ILogin>();
     const { setUserData } = useContext(UserData);
 
-    const onSubmit = ({ email, password }: ILogin) => {
-        if (email === 'admin@admin.pl' && password === 'admin123' && setUserData) {
-            setUserData({ isLoggedIn: true });
+    const onSubmit = async ({ email, password }: ILogin) => {
+        if (setUserData) {
+            const { isSuccess, error } = await userLogin(email, password);
+
+            if (isSuccess) {
+                setLocalStorageData();
+
+                const { isSuccess, userData } = await getUserData();
+
+                if (isSuccess)
+                    return setUserData({
+                        isLoggedIn: true,
+                        userData
+                    })
+
+            }
+
+            if (error) {
+                console.log(error);
+            }
 
             return reset();
         }
@@ -49,9 +69,9 @@ const LoginComponent = (): JSX.Element => {
             </div>
             <div className='button-container'>
                 <Link to={routes.register.href}>
-                    <button>{routes.register.title}</button>
+                    <button type='button'>{routes.register.title}</button>
                 </Link>
-                <input type="submit" value="login" />
+                <input type="submit" value="login" onClick={() => console.log('tutaj')} />
             </div>
         </form>
     )

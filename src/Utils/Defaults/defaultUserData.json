@@ -1,0 +1,30 @@
+{
+    "accountInfo": {
+        "name": "",
+        "lastname": "",
+        "picture": "https://i.pinimg.com/564x/5c/a1/42/5ca142d34fd1903773b4f4e6f43d9045.jpg",
+        "memberSince": null,
+        "lastUpdate": null
+    },
+    "basicInfo": {
+        "school": "",
+        "status": "",
+        "sex": "",
+        "city": "",
+        "birthday": null
+    },
+    "contactInfo": {
+        "email": "",
+        "phone": ""
+    },
+    "personalInfo": {
+        "lookingFor": "",
+        "interestedIn": "",
+        "relationshipStatus": "",
+        "partner": "",
+        "interests": "",
+        "favouriteMusic": "",
+        "favouriteMovies": "",
+        "aboutMe": ""
+    }
+}

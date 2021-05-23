@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import IAnswersContent from '../Types/IAnswersContent';
-import { people } from '../../../../Utils/routes.json';
+import { people } from '../../../../Routes/Utils/routes.json';
 
 const Answers = ({ answers }: IAnswersContent): JSX.Element => (
     <div className='answers-container'>

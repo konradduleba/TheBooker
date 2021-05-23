@@ -1,4 +1,4 @@
-import IAccountInfo from "../../../../GlobalTypes/IPersonData/IAccountInfo";
+import IAccountInfo from "../../../../Utils/Types/IAccountInfo";
 
 export default interface IFriendListComponent {
     limit?: number;

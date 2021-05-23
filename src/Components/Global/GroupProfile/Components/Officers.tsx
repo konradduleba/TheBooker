@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SectionComponent from '../../Section/Section';
 import IOfficersComponent from '../Types/IOfficersComponent';
-import { people } from '../../../../Utils/routes.json';
+import { people } from '../../../../Routes/Utils/routes.json';
 
 const Officers = ({ officers }: IOfficersComponent): JSX.Element => (
     <SectionComponent header="Officers" style={{ width: "100%", marginBottom: "10px" }}>
