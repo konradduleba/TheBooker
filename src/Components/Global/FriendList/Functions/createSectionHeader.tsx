@@ -1,4 +1,4 @@
-import IAccountInfo from '../../../../GlobalTypes/IPersonData/IAccountInfo';
+import IAccountInfo from '../../../../Utils/Types/IAccountInfo';
 import IRandomPerson from '../Types/IRandomPerson';
 
 const createSectionHeader = ({ name, lastname }: IAccountInfo, friendList: IRandomPerson[]): string => {

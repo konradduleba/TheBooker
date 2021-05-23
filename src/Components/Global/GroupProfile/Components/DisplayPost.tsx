@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import IDisplayPost from '../Types/IDisplayPost';
-import { people } from '../../../../Utils/routes.json';
+import { people } from '../../../../Routes/Utils/routes.json';
 import Answers from './Answers';
 import SectionComponent from '../../Section/Section';
 

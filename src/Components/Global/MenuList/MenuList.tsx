@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import IMenuListTypes from '../../../Routes/Types/IMenuListTypes';
 import IListOfItems from './Types/IListOfItems';
-import IMenuListTypes from '../../../GlobalTypes/IMenuListTypes';
 
 const MenuList = ({ menuList, isUserLoggedIn }: IListOfItems): JSX.Element => (
     <ul>

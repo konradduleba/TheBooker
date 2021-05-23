@@ -1,18 +1,18 @@
 import React, { useContext } from 'react';
-import WelcomePage from '../Components/WelcomePage/WelcomePage';
-import RegisterPage from '../Components/RegisterPage/RegisterPage';
-import AboutPage from '../Components/AboutPage/AboutPage';
-import ContactPage from '../Components/ContactPage/ContactPage';
-import PrivacyPolicy from '../Components/PrivacyPolicy/PrivacyPolicy';
-import TermsPage from '../Components/TermsPage/TermsPage';
-import FAQPage from '../Components/FAQPage/FAQPage';
-import Banner from '../Components/Banner/Banner';
-import Footer from '../Components/Footer/Footer';
-import LoginPage from '../Components/LoginPage/LoginPage';
-import LoginLeft from '../Components/LoginLeft/LoginLeft';
-import { Route, Switch, Redirect } from "react-router-dom";
-import { UserData } from '../Authentication/UserDataContext/UserDataContext';
-import NotFoundPage from '../Components/NotFoundPage/NotFoundPage';
+import { Redirect, Switch, Route } from 'react-router';
+import Banner from '../Components/Global/Banner/Banner';
+import Footer from '../Components/Global/Footer/Footer';
+import LoginLeft from '../Components/Global/LoginLeft/LoginLeft';
+import { UserData } from '../Contexts/UserDataContext/UserData';
+import AboutPage from '../Pages/AboutPage/AboutPage';
+import ContactPage from '../Pages/ContactPage/ContactPage';
+import FAQPage from '../Pages/FAQPage/FAQPage';
+import LoginPage from '../Pages/LoginPage/LoginPage';
+import NotFoundPage from '../Pages/NotFoundPage/NotFoundPage';
+import PrivacyPolicy from '../Pages/PrivacyPolicy/PrivacyPolicy';
+import RegisterPage from '../Pages/RegisterPage/RegisterPage';
+import TermsPage from '../Pages/TermsPage/TermsPage';
+import WelcomePage from '../Pages/WelcomePage/WelcomePage';
 
 const NotLoggedInRoutes = (): JSX.Element => {
     const { userData } = useContext(UserData);

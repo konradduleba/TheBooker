@@ -1,4 +1,4 @@
-import axiosInstance from "../../../../Backend/axios"
+import axiosInstance from "../../../../Authentication/axios"
 import EndPointListEnum from "../Database/EndPointListEnum";
 import ReturnedLoginTypes from "../Database/ReturnedLoginTypes";
 

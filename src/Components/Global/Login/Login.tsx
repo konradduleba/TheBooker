@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
-import routes from '../../../Utils/routes.json';
+import routes from '../../../Routes/Utils/routes.json';
 import { Link } from 'react-router-dom';
-import { UserData } from '../../../Authentication/UserDataContext/UserDataContext';
+import { UserData } from '../../../Contexts/UserDataContext/UserData';
 import ILogin from './Types/ILogin';
 import userLogin from './Functions/userLogin';
 import getUserData from './Functions/getUserData';
