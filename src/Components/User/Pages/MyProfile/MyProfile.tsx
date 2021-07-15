@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import IPersonData from '../../../../Utils/Types/IPersonData';
 import UserProfileTemplate from '../../../Global/Templates/UserProfileTemplate';
-import UserProfile from '../../Global/UserProfile/UserProfile';
+import UserProfile from '../../Global/UserProfileComponent/UserProfileComponent';
 import getMyUserData from './Functions/getMyUserData';
 
 const MyProfile = (): JSX.Element => {

@@ -12,7 +12,7 @@ import IUserProfile from './Types/IUserProfile';
 import validateSectionHeader from './Functions/validateSectionHeader';
 import EditMyProfileButton from './Components/EditMyProfileButton';
 
-const UserProfile = ({ personData, isThatMe, isTemplate }: IUserProfile): JSX.Element => {
+const UserProfileComponent = ({ personData, isThatMe, isTemplate }: IUserProfile): JSX.Element => {
     const { accountInfo } = personData;
 
     const sectionHeader = validateSectionHeader(isThatMe, accountInfo);
@@ -37,4 +37,4 @@ const UserProfile = ({ personData, isThatMe, isTemplate }: IUserProfile): JSX.El
         </SectionComponent>
     )
 };
-export default UserProfile;
+export default UserProfileComponent;
