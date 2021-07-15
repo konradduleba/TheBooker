@@ -20,7 +20,7 @@ const validationSchema = yup.object().shape({
         .matches(/^[A-Za-z]{2,40}/i, "Search input can not contain numbers")
 });
 
-const SearchPage = (): JSX.Element => {
+const Search = (): JSX.Element => {
     const { register, handleSubmit, errors } = useForm<ISearchForm>({ resolver: yupResolver(validationSchema) });
     const { sentence, type } = useParams<ISearchForm>();
     const [isFormSended, setFormSended] = useState<boolean>(false);
@@ -69,4 +69,4 @@ const SearchPage = (): JSX.Element => {
     )
 }
 
-export default SearchPage;
+export default Search;

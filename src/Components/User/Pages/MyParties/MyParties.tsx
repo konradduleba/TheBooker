@@ -4,7 +4,7 @@ import './Styles/MyParties.scss';
 import DisplayParty from './Components/DisplayParty';
 import separatePartiesIntoGroups from './Functions/separatePartiesIntoGroups';
 import { Link } from 'react-router-dom';
-import ESearchTypes from '../SearchPage/Enums/ESearchTypes';
+import ESearchTypes from '../Search/Enums/ESearchTypes';
 import HeaderMeta from '../../../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../../../Global/Section/Section';
 import { search, createParty } from '../../../../Routes/Utils/routes.json';

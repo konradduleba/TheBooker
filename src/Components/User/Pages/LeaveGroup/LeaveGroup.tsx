@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import HeaderMeta from '../../../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../../../Global/Section/Section';
 
-const LeaveGroupPage = (): JSX.Element => {
+const LeaveGroup = (): JSX.Element => {
     const { id, name } = useParams<ILeaveGroupParams>();
 
     return (
@@ -27,4 +27,4 @@ const LeaveGroupPage = (): JSX.Element => {
     )
 }
 
-export default LeaveGroupPage;
+export default LeaveGroup;

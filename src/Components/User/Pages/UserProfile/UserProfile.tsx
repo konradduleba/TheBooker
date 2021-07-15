@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams } from "react-router"
 // import defaultUserData from '../../../../Utils/Defaults/defaultUserData.json';
-import IUserProfilePage from './Types/IUserProfilePage';
+import IUserProfile from './Types/IUserProfile';
 
-const UserProfilePage = (): JSX.Element => {
-    const { id } = useParams<IUserProfilePage>();
+const UserProfile = (): JSX.Element => {
+    const { id } = useParams<IUserProfile>();
     console.log(id);
 
     // return <UserProfile personData={defaultUserData} />
@@ -12,4 +12,4 @@ const UserProfilePage = (): JSX.Element => {
     return <h1>EST</h1>
 }
 
-export default UserProfilePage
+export default UserProfile

@@ -4,7 +4,7 @@ import IQuickSearch from './Types/IQuickSearch';
 import './Styles/QuickSearch.scss';
 import { useHistory } from 'react-router';
 import { search } from '../../../../Routes/Utils/routes.json';
-import ESearchTypes from '../../Pages/SearchPage/Enums/ESearchTypes';
+import ESearchTypes from '../../Pages/Search/Enums/ESearchTypes';
 
 const QuickSearchComponent = (): JSX.Element => {
     const { register, handleSubmit } = useForm<IQuickSearch>();

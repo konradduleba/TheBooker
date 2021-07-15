@@ -4,7 +4,7 @@ import UserProfileTemplate from '../../../Global/Templates/UserProfileTemplate';
 import UserProfile from '../../Global/UserProfile/UserProfile';
 import getMyUserData from './Functions/getMyUserData';
 
-const MyProfilePageComponent = (): JSX.Element => {
+const MyProfile = (): JSX.Element => {
     const [userData, setUserData] = useState<IPersonData | null>(null);
 
     useEffect(() => {
@@ -27,4 +27,4 @@ const MyProfilePageComponent = (): JSX.Element => {
         <UserProfile personData={userData} isThatMe={true} />
     )
 };
-export default MyProfilePageComponent;
+export default MyProfile;

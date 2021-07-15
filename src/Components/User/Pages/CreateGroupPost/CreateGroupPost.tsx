@@ -12,7 +12,7 @@ import ICreateGroupParams from './Types/ICreateGroupParams';
 import HeaderMeta from '../../../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../../../Global/Section/Section';
 
-const CreateGroupPostPage = (): JSX.Element => {
+const CreateGroupPost = (): JSX.Element => {
     const { register, handleSubmit, errors, reset } = useForm<ICreateGroupPost>({
         resolver: yupResolver(validationSchema),
     });
@@ -61,4 +61,4 @@ const CreateGroupPostPage = (): JSX.Element => {
     )
 }
 
-export default CreateGroupPostPage;
+export default CreateGroupPost;

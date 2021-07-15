@@ -1,7 +1,7 @@
 import React from 'react';
 import defaultUserData from '../../../Utils/Defaults/defaultUserData.json';
-import EditUserInformation from '../../User/Pages/EditMyProfilePage/Components/EditUserInformation';
-import Navigation from '../../User/Pages/EditMyProfilePage/Components/Navigation';
+import EditUserInformation from '../../User/Pages/EditMyProfile/Components/EditUserInformation';
+import Navigation from '../../User/Pages/EditMyProfile/Components/Navigation';
 import SectionComponent from '../Section/Section';
 
 const EditUserProfileTemplate = (): JSX.Element => (

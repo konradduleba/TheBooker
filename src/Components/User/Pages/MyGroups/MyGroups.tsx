@@ -4,11 +4,11 @@ import './Styles/MyGroupsPage.scss';
 import DisplayGroupsUserBelongTo from './Components/DisplayGroupsUserBelongTo';
 import { Link } from 'react-router-dom';
 import { search, createGroup } from '../../../../Routes/Utils/routes.json';
-import ESearchTypes from '../SearchPage/Enums/ESearchTypes';
+import ESearchTypes from '../Search/Enums/ESearchTypes';
 import HeaderMeta from '../../../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../../../Global/Section/Section';
 
-const MyGroupsComponent = (): JSX.Element => (
+const MyGroups = (): JSX.Element => (
     <SectionComponent header={`My Groups (${testGroupList.length})`}>
         <HeaderMeta title='My Groups' />
         <div className='my-groups-page-wrapper'>
@@ -25,4 +25,4 @@ const MyGroupsComponent = (): JSX.Element => (
     </SectionComponent>
 );
 
-export default MyGroupsComponent;
+export default MyGroups;

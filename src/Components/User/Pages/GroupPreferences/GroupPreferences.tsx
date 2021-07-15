@@ -7,7 +7,7 @@ import ESelectOptions from './Enums/ESelectOptions';
 import './Styles/GroupPreferencesPage.scss';
 import IGroupPreferencesParams from './Types/IGroupPreferencesParams';
 
-const GroupPreferencesPage = (): JSX.Element => {
+const GroupPreferences = (): JSX.Element => {
     const { id } = useParams<IGroupPreferencesParams>();
 
     const sectionHeader = 'Your preferences';
@@ -22,4 +22,4 @@ const GroupPreferencesPage = (): JSX.Element => {
     )
 }
 
-export default GroupPreferencesPage;
+export default GroupPreferences;

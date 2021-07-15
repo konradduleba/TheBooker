@@ -13,7 +13,7 @@ import HeaderMeta from '../../../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../../../Global/Section/Section';
 import UserPrivacyTemplate from '../../../Global/Templates/UserPrivacyTemplate';
 
-const MyPrivacyPage = (): JSX.Element => {
+const MyPrivacy = (): JSX.Element => {
     const [userPrivacy, setUserPrivacy] = useState<IPrivacyInfo | null>(null);
     const sectionHeader = 'My Privacy';
 
@@ -49,4 +49,4 @@ const MyPrivacyPage = (): JSX.Element => {
     )
 };
 
-export default MyPrivacyPage;
+export default MyPrivacy;

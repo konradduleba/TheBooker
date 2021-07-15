@@ -12,7 +12,7 @@ import getAccountData from './Functions/getAccountData';
 import './Styles/MyAccountPage.scss';
 import IUserData from './Types/IUserData';
 
-const MyAccountPage = (): JSX.Element => {
+const MyAccount = (): JSX.Element => {
     const [accountData, setAccountData] = useState<IUserData | null>(null);
 
     useEffect(() => {
@@ -48,4 +48,4 @@ const MyAccountPage = (): JSX.Element => {
     )
 };
 
-export default MyAccountPage;
+export default MyAccount;

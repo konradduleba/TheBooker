@@ -11,7 +11,7 @@ import './Styles/EditMyProfilePage.scss';
 import IAvaibleUserDataToEdit from './Types/IAvaibleUserDataToEdit';
 import ISaveEditField from './Types/ISaveEditField';
 
-const EditMyProfilePage = (): JSX.Element => {
+const EditMyProfile = (): JSX.Element => {
     const [userData, setUserData] = useState<IPersonData | null>(null);
     const [editedData, setEditedData] = useState<IAvaibleUserDataToEdit | null>(null);
 
@@ -58,4 +58,4 @@ const EditMyProfilePage = (): JSX.Element => {
     )
 }
 
-export default EditMyProfilePage;
+export default EditMyProfile;

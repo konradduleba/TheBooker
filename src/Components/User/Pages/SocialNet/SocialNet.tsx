@@ -5,7 +5,7 @@ import './Styles/SocialNetPage.scss';
 import HeaderMeta from '../../../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../../../Global/Section/Section';
 
-const SocialNetPage = (): JSX.Element => {
+const SocialNet = (): JSX.Element => {
     const [friendsLimit, setFriendsLimit] = useState<number>(10);
     const sectionHeader = 'Searched for all people in your social network';
 
@@ -22,4 +22,4 @@ const SocialNetPage = (): JSX.Element => {
     )
 }
 
-export default SocialNetPage;
+export default SocialNet;

@@ -4,7 +4,7 @@ import { UserData } from '../../../../Contexts/UserDataContext/UserData';
 import SectionComponent from '../../../Global/Section/Section';
 import './Styles/LogoutPage.scss';
 
-const LogoutPageComponent = (): JSX.Element => {
+const Logout = (): JSX.Element => {
     const { logoutUser } = useContext(UserData);
 
     const logout = (): void => logoutUser && logoutUser();
@@ -22,4 +22,4 @@ const LogoutPageComponent = (): JSX.Element => {
         </SectionComponent>
     )
 }
-export default LogoutPageComponent;
+export default Logout;

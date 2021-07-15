@@ -6,7 +6,7 @@ import IInviteList from '../../../Global/DisplayRandomPeople/Types/IInviteList';
 import HeaderMeta from '../../../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../../../Global/Section/Section';
 
-const InvitePage = (): JSX.Element => {
+const Invite = (): JSX.Element => {
     const [friendsRequests, setFriendsRequests] = useState<IInviteList[]>([]);
 
     useEffect(() => setFriendsRequests(testInvites), [])
@@ -21,4 +21,4 @@ const InvitePage = (): JSX.Element => {
     )
 };
 
-export default InvitePage;
+export default Invite;
