@@ -1,4 +1,4 @@
 export default interface ISelectOptions {
-    value: number;
+    value: string;
     label: string;
 }

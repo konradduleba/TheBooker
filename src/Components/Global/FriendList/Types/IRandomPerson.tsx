@@ -1,5 +1,7 @@
 export default interface IRandomPerson {
-    ID: number;
+    id: string;
     name: string;
-    photo: string;
+    lastname: string;
+    username: string;
+    picture: string;
 }

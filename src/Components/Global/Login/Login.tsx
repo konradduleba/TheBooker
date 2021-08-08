@@ -71,7 +71,7 @@ const LoginComponent = (): JSX.Element => {
                 <Link to={routes.register.href}>
                     <button type='button'>{routes.register.title}</button>
                 </Link>
-                <input type="submit" value="login" onClick={() => console.log('tutaj')} />
+                <input type="submit" value="login" />
             </div>
         </form>
     )

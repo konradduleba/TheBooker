@@ -15,7 +15,8 @@ const SelectMultipleFriends = ({ control }: ISelectMultipleFriends): JSX.Element
                 <Select
                     defaultValue={value}
                     onChange={onChange}
-                    options={generateFriendList()}
+                    // options={generateFriendList()}
+                    options={[]}
                     placeholder="Select Friends"
                     isMulti
                 />

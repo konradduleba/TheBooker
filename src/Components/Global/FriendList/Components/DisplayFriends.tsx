@@ -4,9 +4,9 @@ import IRandomPerson from '../Types/IRandomPerson';
 
 const DisplayFriends = ({ friendList }: IDisplayFriends): JSX.Element => (
     <>
-        {friendList.map(({ ID, name, photo }: IRandomPerson) => <div key={`${name}${ID}`}>
-            <img src={photo} alt={`${name}`} />
-            <p>{name}</p>
+        {friendList.map(({ id, name, lastname, picture, username }: IRandomPerson) => <div key={id}>
+            <img src={picture} alt={`${name} ${lastname}`} />
+            <p>{name} {lastname}</p>
         </div>)}
     </>
 );
