@@ -1,4 +1,4 @@
-import Login from 'Components/Global/Login/Login';
+import Login from 'Pages/Login/LoginPage';
 import Contact from 'Components/User/Pages/MyAccount/Components/Contact';
 import About from 'Pages/About/About';
 import FAQPageComponent from 'Pages/FAQ/FAQPage';
