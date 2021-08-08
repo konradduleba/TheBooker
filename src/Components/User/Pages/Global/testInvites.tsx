@@ -1,24 +1,30 @@
-import IInviteList from '../../../Global/DisplayRandomPeople/Types/IInviteList';
+import IRandomPerson from 'Components/Global/FriendList/Types/IRandomPerson';
 import PersonPhoto from '../../../../Assets/person.jpg';
 
-const testSocialNetworkUsers: IInviteList[] = [{
-    id: 0,
-    photo: PersonPhoto,
+const testSocialNetworkUsers: IRandomPerson[] = [{
+    id: 'asda',
+    picture: PersonPhoto,
     name: 'Konrad Dulęba',
-    birthday: '01/08/1998',
-    school: 'Politechnika Krakowska'
+    lastname: 'asdass',
+    username: 'asdas'
+    // birthday: '01/08/1998',
+    // school: 'Politechnika Krakowska'
 },
 {
-    id: 1,
-    photo: PersonPhoto,
+    id: 'asdadd',
+    picture: PersonPhoto,
     name: 'Konrad Dukęba',
-    birthday: '02/02/2000'
+    lastname: 'asdass',
+    username: 'asdas'
+    // birthday: '02/02/2000'
 },
 {
-    id: 2,
-    photo: PersonPhoto,
+    id: 'asdada',
+    picture: PersonPhoto,
     name: 'Sraczkeusz Sraczyński',
-    school: 'PWSZ XDDDDD'
+    lastname: 'asdass',
+    username: 'asdas'
+    // school: 'PWSZ XDDDDD'
 }]
 
 export default testSocialNetworkUsers;

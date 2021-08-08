@@ -8,7 +8,6 @@ import ISearchForm from './Types/ISearchForm';
 import ShowRequestResult from './Components/ShowRequestResult';
 import ESearchTypes from './Enums/ESearchTypes';
 import GenerateSearchOptions from './Components/GenerateSearchOptions';
-import testFriendList from '../../../Global/FriendList/testFriendList';
 import IRandomPerson from '../../../Global/FriendList/Types/IRandomPerson';
 import HeaderMeta from '../../../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../../../Global/Section/Section';
@@ -30,7 +29,6 @@ const Search = (): JSX.Element => {
     const onSubmit = (data: ISearchForm) => {
         setFormSended(true);
         console.log(data);
-        setSearchResult(testFriendList);
     }
 
     const clickSearch = () => sendSearchRef.current?.click();

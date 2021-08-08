@@ -5,22 +5,22 @@ import { people, home } from '../../../../../Routes/Utils/routes.json';
 
 const RenderSearchResults = ({ searchResult }: IRenderSearchResults): JSX.Element => {
 
-    const sendRequest = (userID: number) => {
-        console.log(userID);
+    const sendRequest = (username: string) => {
+        console.log(username);
     }
 
     return (
         <div className='search-results'>
-            {searchResult.map(({ ID, name, photo }) => <div key={`${name}${ID}`} className='result-wrapper'>
+            {searchResult.map(({ id, name, lastname, picture, username }) => <div key={id} className='result-wrapper'>
                 <div>
-                    <img src={photo} alt={name} />
-                    <p>{name}</p>
+                    <img src={picture} alt={name} />
+                    <p>{name} {lastname}</p>
                 </div>
                 <div>
-                    <Link to={`/app${people.href}/${ID}`}>
+                    <Link to={`/app${people.href}/${username}`}>
                         <button className='normal-button'>Profile</button>
                     </Link>
-                    <button className='normal-button' onClick={() => sendRequest(ID)}>Invite</button>
+                    <button className='normal-button' onClick={() => sendRequest(username)}>Invite</button>
                 </div>
             </div>)}
             <Link to={`/app${home.href}`}>

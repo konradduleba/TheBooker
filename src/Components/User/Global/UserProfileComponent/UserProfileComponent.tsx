@@ -28,7 +28,7 @@ const UserProfileComponent = ({ personData, isThatMe, isTemplate }: IUserProfile
                     {!isThatMe && <SendMessageOrPoke {...accountInfo} />}
                     <ConnectionComponent isThatMe={isThatMe} />
                     <MutualFriendsComponent {...accountInfo} />
-                    <FriendListComponent limit={4} accountInfo={accountInfo} />
+                    <FriendListComponent limit={4} accountInfo={accountInfo} isThatMe={isThatMe} />
                 </div>
                 <div className='right-side'>
                     <UserInfoComponent {...personData} />
