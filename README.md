@@ -14,9 +14,7 @@ Application is an online directory that connects people through all around the w
 <h3>Project is created after hours and uses technology like:</h3>
 <h3>Frontend:</h3>
 <li>React</li>
-<li>Redux</li>
 <li>TypeScript</li>
-<li>Jest</li>
 <li>Axios</li>
 <li>SASS</li>
 
