@@ -8,4 +8,7 @@ export default interface IPersonData {
     basicInfo: IBasicInfo;
     contactInfo: IContactInfo;
     personalInfo: IPersonalInfo;
+    isOnFriendList?: boolean;
+    isThatMyProfile?: boolean;
+    inviteStatus?: boolean;
 }

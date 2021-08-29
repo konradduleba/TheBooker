@@ -1,3 +1,7 @@
+import IAccountInfo from "Utils/Types/IAccountInfo";
+
 export default interface ISendMessageOrPoke {
-    name: string;
+    isOnFriendList?: boolean;
+    inviteStatus?: boolean;
+    accountInfo: IAccountInfo;
 }

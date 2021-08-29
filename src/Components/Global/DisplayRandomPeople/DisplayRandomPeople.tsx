@@ -3,7 +3,7 @@ import IDisplayRandomPeople from './Types/IDisplayRandomPeople';
 import { people } from '../../../Routes/Utils/routes.json';
 import { Link } from 'react-router-dom';
 
-const DisplayRandomPeople = ({ inviteList, acceptInvite }: IDisplayRandomPeople): JSX.Element => (
+const DisplayRandomPeople = ({ inviteList, acceptInvite, removeInvite }: IDisplayRandomPeople): JSX.Element => (
     <div className='requests-container'>
         {inviteList.map(({ id, name, picture, lastname, username }) => <div key={`${name}${id}`} className='single-request'>
             <div className='credentials-container'>
@@ -19,7 +19,7 @@ const DisplayRandomPeople = ({ inviteList, acceptInvite }: IDisplayRandomPeople)
                     <button className='normal-button'>View Profile</button>
                 </Link>
                 <button className='normal-button' onClick={() => acceptInvite(username)}>Accept Invite</button>
-                <button className='normal-button'>Remove Invite</button>
+                {removeInvite && <button className='normal-button' onClick={() => removeInvite(username)}>Remove Invite</button>}
             </div>
         </div>)}
     </div>
