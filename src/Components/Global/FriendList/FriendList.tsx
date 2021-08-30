@@ -14,7 +14,7 @@ const FriendListComponent = ({ limit, accountInfo, isThatMe }: IFriendListCompon
     const [friendList, setFriendList] = useState<IRandomPerson[]>([]);
     const { id } = useParams<IFriendParams>();
 
-    const sectionHeader: string = createSectionHeader(accountInfo, friendList);
+    const sectionHeader: string = createSectionHeader(accountInfo, friendList, isThatMe);
 
     useEffect((): void => {
         const getFriendList = async () => {

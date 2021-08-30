@@ -1,3 +1,6 @@
+import IAccountInfo from "Utils/Types/IAccountInfo";
+
 export default interface IMutualFriendComponent {
-    name: string;
+    mutualFriendsNumber?: number;
+    accountInfo: IAccountInfo;
 }

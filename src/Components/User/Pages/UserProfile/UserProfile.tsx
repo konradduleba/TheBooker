@@ -24,7 +24,7 @@ const UserProfile = (): JSX.Element => {
     }, [id])
 
     if (!userProfileData)
-        return <h1>EST</h1>
+        return <h1>TUTAJ TEMPLATE DODAC</h1>
 
     return <UserProfileComponent personData={userProfileData} />
 }

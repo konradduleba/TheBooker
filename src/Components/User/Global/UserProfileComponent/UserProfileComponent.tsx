@@ -13,7 +13,7 @@ import validateSectionHeader from './Functions/validateSectionHeader';
 import EditMyProfileButton from './Components/EditMyProfileButton';
 
 const UserProfileComponent = ({ personData, isThatMe, isTemplate }: IUserProfile): JSX.Element => {
-    const { accountInfo, isOnFriendList, isThatMyProfile, inviteStatus } = personData;
+    const { accountInfo, isOnFriendList, isThatMyProfile, inviteStatus, mutualFriendsNumber } = personData;
 
     const isMyProfile = isThatMe ? isThatMe : isThatMyProfile
 
@@ -33,7 +33,7 @@ const UserProfileComponent = ({ personData, isThatMe, isTemplate }: IUserProfile
                         inviteStatus={inviteStatus}
                     />}
                     <ConnectionComponent isThatMe={isMyProfile} />
-                    <MutualFriendsComponent {...accountInfo} />
+                    {!isMyProfile && <MutualFriendsComponent accountInfo={accountInfo} mutualFriendsNumber={mutualFriendsNumber} />}
                     <FriendListComponent limit={4} accountInfo={accountInfo} isThatMe={isMyProfile} />
                 </div>
                 <div className='right-side'>

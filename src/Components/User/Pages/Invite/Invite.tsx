@@ -54,13 +54,15 @@ const Invite = (): JSX.Element => {
     return (
         <SectionComponent header='People that send you friend request'>
             <HeaderMeta title='Invite' />
-            <div className='invite-page-wrapper column-with-padding'>
+            {friendsRequests.length ? <div className='invite-page-wrapper column-with-padding'>
                 <DisplayRandomPeople
                     inviteList={friendsRequests}
                     acceptInvite={username => handleFriendAcception(username)}
                     removeInvite={username => handleRemoveInvite(username)}
                 />
-            </div>
+            </div> :
+                <p className='empty-list-message'>Your Invite List is empty.</p>
+            }
         </SectionComponent>
     )
 };

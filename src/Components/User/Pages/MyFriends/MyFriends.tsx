@@ -1,17 +1,34 @@
-import React from 'react';
-// import { UserData } from '../../../../Contexts/UserDataContext/UserData';
+import DisplayFriends from 'Components/Global/FriendList/Components/DisplayFriends';
+import IRandomPerson from 'Components/Global/FriendList/Types/IRandomPerson';
+import SectionComponent from 'Components/Global/Section/Section';
+import React, { useEffect, useState } from 'react';
 import HeaderMeta from '../../../Global/HeaderMeta/HeaderMeta';
+import getFriendList from './Functions/getFriendList';
 import './Styles/MyFriends.scss';
 
 const MyFriendsComponent = (): JSX.Element => {
-    // const { userData } = useContext(UserData);
-    // const { accountInfo } = userData?.userData ? userData.userData : defaultUserData;
+    const [friendList, setFriendList] = useState<IRandomPerson[] | []>([]);
+
+    useEffect(() => {
+        const getUserFriendList = async () => {
+            const list = await getFriendList();
+
+            setFriendList(list);
+        }
+
+        getUserFriendList();
+    }, []);
 
     return (
-        <section className='my-friends-wrapper section-component'>
+        <SectionComponent header='My Friends'>
             <HeaderMeta title='My Friends' />
-            {/* <FriendListComponent accountInfo={accountInfo} /> */}
-        </section>
+            <div className='friend-list-container'>
+                {friendList.length ?
+                    <DisplayFriends friendList={friendList} /> :
+                    <p>Your Friend List is empty.</p>
+                }
+            </div>
+        </SectionComponent>
     )
 }
 
