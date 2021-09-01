@@ -1,3 +1,4 @@
+import UserProfileTemplate from 'Components/Global/Templates/UserProfileTemplate';
 import UserProfileComponent from 'Components/User/Global/UserProfileComponent/UserProfileComponent';
 import React, { useEffect, useState } from 'react';
 import { useParams } from "react-router"
@@ -24,7 +25,7 @@ const UserProfile = (): JSX.Element => {
     }, [id])
 
     if (!userProfileData)
-        return <h1>TUTAJ TEMPLATE DODAC</h1>
+        return <UserProfileTemplate />
 
     return <UserProfileComponent personData={userProfileData} />
 }
