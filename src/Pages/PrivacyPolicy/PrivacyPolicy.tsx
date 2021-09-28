@@ -7,7 +7,7 @@ import privacyPolicy from './Utils/privacyPolicy.json';
 import './Styles/PrivacyPolicy.scss';
 
 const PrivacyPolicyComponent = (): JSX.Element => (
-    <SectionComponent header="TheBooker Privacy Policy">
+    <SectionComponent header="FriendsLibrary Privacy Policy">
         <ScrollToTopOnMount />
         <div className='privacy-policy-wrapper column-with-padding'>
             <HeaderMeta title="Privacy Policy" />

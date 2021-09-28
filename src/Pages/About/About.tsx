@@ -6,12 +6,12 @@ import SectionComponent from '../../Components/Global/Section/Section';
 import './Styles/AboutPage.scss';
 
 const AboutPageComponent = (): JSX.Element => (
-    <SectionComponent header="About TheBooker">
+    <SectionComponent header="About FriendsLibrary">
         <div className='about-page-wrapper column-with-padding'>
             <HeaderMeta title='About' />
             <h1 className='header'>[ About ]</h1>
             <SectionComponent header="The Project" className="inside-window margin-between-sections">
-                <p className='description'>TheBooker is an online directory that connects people throught social networks at colleges and universities.</p>
+                <p className='description'>FriendsLibrary is an online directory that connects people throught social networks at colleges and universities.</p>
             </SectionComponent>
             <SectionComponent header="The People" className="inside-window">
                 <ul>

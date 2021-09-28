@@ -7,12 +7,18 @@
 }
 
 :root {
-  --main-app-color: rgb(59, 89, 152);
+  /* --main-app-color: rgb(59, 89, 152);
   --main-button-bgc: #538ADC;
   --main-banner-bgc: #3b5998;
   --main-disabled-bgc: #ddd;
   --link-color: #538adc;
-  --link-hover-color: lightblue;
+  --link-hover-color: lightblue; */
+  --main-app-color: #64a460;
+  --main-button-bgc: #64a460;
+  --main-banner-bgc: #64a460;
+  --main-disabled-bgc: #ddd;
+  --link-color: #64a460;
+  --link-hover-color: rgb(116, 219, 116);
   --app-font-size: 14px;
   --login-form-left-side-width: 200px;
   --quick-search-form-left-side-width: 150px;

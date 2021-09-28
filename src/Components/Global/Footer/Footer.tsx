@@ -13,7 +13,7 @@ const FooterComponent = (): JSX.Element => {
             <MenuList menuList={footerMenu} isUserLoggedIn={isUserLoggedIn} />
             <h1>a Mark Zuckenberg production</h1>
             <h2>mirrored in 2021 by Konrad Dulęba</h2>
-            <p>TheBooker &copy; 2004</p>
+            <p>FriendsLibrary &copy; 2021</p>
         </footer>
     )
 };

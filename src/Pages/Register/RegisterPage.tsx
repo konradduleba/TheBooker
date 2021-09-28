@@ -41,7 +41,7 @@ const RegisterPageComponent = (): JSX.Element => {
         <SectionComponent header="Registration">
             <div className='register-page-wrapper column-with-padding'>
                 <HeaderMeta title='Register' />
-                <p>To register for TheBooker.com, just fill in the four fields below. You will have a chance to enter additional information and submit a picture once you have registered.</p>
+                <p>To register for FriendsLibrary.com, just fill in the four fields below. You will have a chance to enter additional information and submit a picture once you have registered.</p>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     {registerForm.map(({ label, name, type, ref }) =>
                         <div className='input-container' key={label}>

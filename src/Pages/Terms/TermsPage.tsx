@@ -7,7 +7,7 @@ import HeaderMeta from '../../Components/Global/HeaderMeta/HeaderMeta';
 import ScrollToTopOnMount from '../../Utils/Functions/ScrollToTopOnMount';
 
 const TermsPageComponent = (): JSX.Element => (
-    <SectionComponent header="TheBooker Terms of Use">
+    <SectionComponent header="FriendsLibrary Terms of Use">
         <div className='terms-of-use-wrapper column-with-padding'>
             <ScrollToTopOnMount />
             <HeaderMeta title="Terms of Use" />

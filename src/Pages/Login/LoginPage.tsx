@@ -5,7 +5,7 @@ import SectionComponent from '../../Components/Global/Section/Section';
 import './Styles/LoginPage.scss';
 
 const LoginPage = (): JSX.Element => (
-    <SectionComponent header="Login to TheBooker">
+    <SectionComponent header="Login to FriendsLibrary">
         <div className='login-page-wrapper column-with-padding'>
             <HeaderMeta title='Login' />
             <h1 className='header'>[ Login ]</h1>

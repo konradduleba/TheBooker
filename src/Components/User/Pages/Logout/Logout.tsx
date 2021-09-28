@@ -10,10 +10,10 @@ const Logout = (): JSX.Element => {
     const logout = (): void => logoutUser && logoutUser();
 
     return (
-        <SectionComponent header="Logout from TheBooker">
+        <SectionComponent header="Logout from FriendsLibrary">
             <div className='logout-page-wrapper column-with-padding'>
                 <h1 className='header'>[ Logout ]</h1>
-                <p>Are you sure you want to logout from TheBooker</p>
+                <p>Are you sure you want to logout from FriendsLibrary</p>
                 <div>
                     <button className='normal-button' onClick={logout}>Yes, I am</button>
                     <Link to='/'><button className='normal-button'>No, I am not</button></Link>

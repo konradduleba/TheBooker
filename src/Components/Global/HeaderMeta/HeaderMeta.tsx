@@ -4,7 +4,7 @@ import IHeaderMeta from './Types/IHeaderMeta';
 
 const HeaderMeta = ({ title }: IHeaderMeta): JSX.Element => (
     <Helmet>
-        <title>TheBooker | {title}</title>
+        <title>FriendsLibrary | {title}</title>
     </Helmet>
 );
 

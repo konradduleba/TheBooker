@@ -7,14 +7,14 @@ import SectionComponent from '../../Components/Global/Section/Section';
 import HeaderMeta from '../../Components/Global/HeaderMeta/HeaderMeta';
 
 const WelcomePageComponent = (): JSX.Element => (
-    <SectionComponent header="Welcome to TheBooker">
+    <SectionComponent header="Welcome to FriendsLibrary">
         <div className='welcome-page-wrapper column-with-padding'>
-            <HeaderMeta title="Welcome to TheBooker!" />
-            <h1 className='header'>[ Welcome to TheBooker ]</h1>
+            <HeaderMeta title="Welcome to FriendsLibrary!" />
+            <h1 className='header'>[ Welcome to FriendsLibrary ]</h1>
             <div>
-                <p>TheBooker is an online directory that connects people through social networks at colleges.</p>
-                <p>We have opened up TheBooker for popular consumption at <span>Harvard University</span>.</p>
-                <p>You can use TheBooker to:</p>
+                <p>FriendsLibrary is an online directory that connects people through social networks at colleges.</p>
+                <p>We have opened up FriendsLibrary for popular consumption at <span>Harvard University</span>.</p>
+                <p>You can use FriendsLibrary to:</p>
                 <ul>
                     <li><img src={DotIcon} alt="black dot" /> Search for people at your school</li>
                     <li><img src={DotIcon} alt="black dot" /> Find out who are in your classes</li>

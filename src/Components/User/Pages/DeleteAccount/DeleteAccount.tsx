@@ -21,7 +21,7 @@ const DeleteAccount = (): JSX.Element => {
                 <div className='content-wrapper'>
                     <h1>[ Delete ]</h1>
                     <h2>This is permanent</h2>
-                    <p>When you delete your TheBooker account, you {`won't`} be able to retrieve the content or information {`you've`} shared. All of your messages will also be deleted.</p>
+                    <p>When you delete your FriendsLibrary account, you {`won't`} be able to retrieve the content or information {`you've`} shared. All of your messages will also be deleted.</p>
                     {!isContinue && <button className='normal-button' onClick={() => setContinue(true)}>Continue</button>}
                 </div>
                 {isContinue && <DeleteAccountForm />}
