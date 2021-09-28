@@ -4,4 +4,5 @@ export default interface IRandomPerson {
     lastname: string;
     username: string;
     picture: string;
+    isThatMe?: boolean;
 }

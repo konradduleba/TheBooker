@@ -12,6 +12,10 @@
             justify-content: space-around;
             width: 400px;
 
+            select {
+                text-transform: capitalize;
+            }
+
             .search-input {
                 padding: 3px 10px;
                 cursor: pointer;

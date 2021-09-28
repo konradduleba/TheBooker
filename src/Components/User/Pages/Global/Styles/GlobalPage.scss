@@ -1,66 +1,42 @@
 .global-page-wrapper {
-    .requests-container {
+    .search-results {
         display: flex;
         flex-direction: column;
-        width: 100%;
+        text-align: center;
 
-        .single-request {
-            width: 100%;
+        .home {
+            margin-top: 20px;
+        }
+
+        .result-wrapper {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            border: 1px dashed var(--main-banner-bgc);
+            width: 400px;
+            height: 70px;
             padding: 10px;
-            margin-bottom: 10px;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
+            margin: 5px 0;
+            border: 1px dashed var(--main-banner-bgc);
 
             div {
                 display: flex;
                 flex-direction: row;
+                align-items: center;
+                width: fit-content;
 
-                &.invite-options {
-                    flex-direction: column;
-                    justify-content: center;
-
-                    button {
-                        width: 120px;
-                        margin-top: 10px;
-
-                        &:first-child {
-                            margin-top: 0;
-                        }
-                    }
+                img {
+                    height: 50px;
+                    width: 50px;
+                    margin-right: 10px;
                 }
 
-                &.credentials-container {
-                    align-items: flex-start;
-
-                    .credentials {
-                        margin-left: 10px;
-                        display: flex;
-                        flex-direction: column;
-
-                        p {
-                            margin-bottom: 5px;
-
-                            &:first-child {
-                                font-weight: bold;
-                            }
-
-                            &:last-child {
-                                margin-bottom: 0;
-                            }
-                        }
-                    }
+                a {
+                    margin-right: 10px;
                 }
-            }
 
-            img {
-                width: 100px;
-                height: 100px;
+                &:last-child {
+                    padding: 10px;
+                }
             }
         }
     }

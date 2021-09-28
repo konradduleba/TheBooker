@@ -1,22 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import testInvites from './testInvites';
 import './Styles/GlobalPage.scss';
-import DisplayRandomPeople from '../../../Global/DisplayRandomPeople/DisplayRandomPeople';
 import HeaderMeta from '../../../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../../../Global/Section/Section';
 import IRandomPerson from 'Components/Global/FriendList/Types/IRandomPerson';
-import acceptFriendInvite from 'Components/Global/DisplayRandomPeople/Functions/acceptFriendInvite';
+import RenderSearchResults from '../Search/Components/RenderSearchResults';
+import getRandomPeople from './Functions/getRandomPeople';
 
 const Global = (): JSX.Element => {
-    const [friendsRequests, setFriendsRequests] = useState<IRandomPerson[]>([]);
+    const [randomPeople, setRandomPeople] = useState<IRandomPerson[]>([]);
 
-    useEffect(() => setFriendsRequests(testInvites), []);
+    useEffect(() => {
+        const getAndSetRandomPeople = async () => {
+            const people = await getRandomPeople();
+
+            return setRandomPeople(people);
+        }
+
+        getAndSetRandomPeople();
+    }, []);
 
     return (
         <SectionComponent header='Random People all around the World'>
             <HeaderMeta title='Global' />
             <div className='global-page-wrapper column-with-padding'>
-                <DisplayRandomPeople inviteList={friendsRequests} acceptInvite={acceptFriendInvite} />
+                <RenderSearchResults searchResult={randomPeople} />
             </div>
         </SectionComponent>
     )

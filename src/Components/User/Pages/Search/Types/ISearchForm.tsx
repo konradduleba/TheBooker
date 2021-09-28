@@ -1,6 +1,6 @@
 import ESearchTypes from "../Enums/ESearchTypes";
 
 export default interface ISearchForm {
-    sentence: string;
+    query: string;
     type: ESearchTypes;
 }

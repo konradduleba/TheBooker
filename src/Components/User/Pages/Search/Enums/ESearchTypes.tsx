@@ -1,7 +1,7 @@
 enum ESearchTypes {
-    USER = "User",
-    GROUP = "Group",
-    PARTY = "Party"
+    USER = "user",
+    GROUP = "group",
+    PARTY = "party"
 }
 
 export default ESearchTypes;

@@ -11,9 +11,10 @@ import GenerateSearchOptions from './Components/GenerateSearchOptions';
 import IRandomPerson from '../../../Global/FriendList/Types/IRandomPerson';
 import HeaderMeta from '../../../Global/HeaderMeta/HeaderMeta';
 import SectionComponent from '../../../Global/Section/Section';
+import postSearchQuery from './Functions/postSearchQuery';
 
 const validationSchema = yup.object().shape({
-    sentence: yup.string().required("This place can not be empty.")
+    query: yup.string().required("This place can not be empty.")
         .min(2, "Search input have to contain minimum 2 characters")
         .max(40, "Search input have to contain maximum 40 characters")
         .matches(/^[A-Za-z]{2,40}/i, "Search input can not contain numbers")
@@ -21,21 +22,24 @@ const validationSchema = yup.object().shape({
 
 const Search = (): JSX.Element => {
     const { register, handleSubmit, errors } = useForm<ISearchForm>({ resolver: yupResolver(validationSchema) });
-    const { sentence, type } = useParams<ISearchForm>();
+    const { query, type } = useParams<ISearchForm>();
     const [isFormSended, setFormSended] = useState<boolean>(false);
     const [searchResult, setSearchResult] = useState<IRandomPerson[]>([]);
     const sendSearchRef = useRef<HTMLInputElement>(null);
 
-    const onSubmit = (data: ISearchForm) => {
+    const onSubmit = async (data: ISearchForm) => {
         setFormSended(true);
-        console.log(data);
+
+        const result = await postSearchQuery(data);
+
+        return setSearchResult(result);
     }
 
     const clickSearch = () => sendSearchRef.current?.click();
 
     useEffect(() => {
-        sentence && clickSearch()
-    }, [sentence]);
+        query && clickSearch()
+    }, [query]);
 
     const sectionHeader = 'Search';
 
@@ -52,14 +56,14 @@ const Search = (): JSX.Element => {
                             <GenerateSearchOptions />
                         </select>
                         <input
-                            name="sentence"
+                            name="query"
                             ref={register}
-                            defaultValue={sentence ? sentence : ''}
+                            defaultValue={query ? query : ''}
                             className='field-input'
                         />
                         <input type="submit" value="Search" className='search-input' ref={sendSearchRef} />
                     </div>
-                    {errors.sentence && <p className='error'>{errors.sentence.message}</p>}
+                    {errors.query && <p className='error'>{errors.query.message}</p>}
                 </form>
                 {isFormSended && <ShowRequestResult searchResult={searchResult} />}
             </div>

@@ -70,7 +70,7 @@ const LoggedInRoutes = (): JSX.Element => {
                     <Route path={`/app${routes.deleteAccount.href}`} component={DeleteAccount} />
                     <Route path={`/app${routes.deactivateAccount.href}`} component={DeactivateAccount} />
                     <Route path={`/app${routes.myPrivacy.href}`} component={MyPrivacyPage} />
-                    <Route path={`/app${routes.search.href}/:type?/:sentence?`} component={SearchPage} />
+                    <Route path={`/app${routes.search.href}/:type?/:query?`} component={SearchPage} />
                     <Route path={`/app${routes.people.href}/:id`} component={UserProfilePage} />
                     <Route path={`/app${routes.socialNet.href}`} component={SocialNetPage} />
                     <Route path={`/app${routes.invite.href}`} component={InvitePage} />
