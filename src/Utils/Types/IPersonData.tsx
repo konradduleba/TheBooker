@@ -12,4 +12,5 @@ export default interface IPersonData {
     isThatMyProfile?: boolean;
     inviteStatus?: boolean;
     mutualFriendsNumber?: number;
+    canSendFriendRequest?: boolean;
 }

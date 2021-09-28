@@ -13,7 +13,7 @@ import validateSectionHeader from './Functions/validateSectionHeader';
 import EditMyProfileButton from './Components/EditMyProfileButton';
 
 const UserProfileComponent = ({ personData, isThatMe, isTemplate }: IUserProfile): JSX.Element => {
-    const { accountInfo, isOnFriendList, isThatMyProfile, inviteStatus, mutualFriendsNumber } = personData;
+    const { accountInfo, isOnFriendList, isThatMyProfile, inviteStatus, mutualFriendsNumber, canSendFriendRequest } = personData;
 
     const isMyProfile = isThatMe ? isThatMe : isThatMyProfile
 
@@ -27,7 +27,7 @@ const UserProfileComponent = ({ personData, isThatMe, isTemplate }: IUserProfile
             <div className='user-profile-page-wrapper column-with-padding'>
                 <div className='left-side'>
                     <PictureComponent {...accountInfo} />
-                    {!isMyProfile && <SendMessageOrPoke
+                    {canSendFriendRequest && !isMyProfile && <SendMessageOrPoke
                         accountInfo={accountInfo}
                         isOnFriendList={isOnFriendList}
                         inviteStatus={inviteStatus}
