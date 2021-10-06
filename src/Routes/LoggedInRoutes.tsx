@@ -1,4 +1,5 @@
 import MyProfile from 'Components/User/Pages/MyProfile/MyProfile';
+import NewProfilePicture from 'Components/User/Pages/NewProfilePicture';
 import About from 'Pages/About/About';
 import ContactPage from 'Pages/Contact/ContactPage';
 import FAQPage from 'Pages/FAQ/FAQPage';
@@ -56,6 +57,7 @@ const LoggedInRoutes = (): JSX.Element => {
                     <Route path={`/app${routes.privacy.href}`} component={PrivacyPolicy} />
                     <Route path={`/app${routes.logout.href}`} component={LogoutPage} />
                     <Route path={`/app${routes.myProfile.href}`} component={MyProfile} />
+                    <Route path={`/app${routes.profilePicture.href}`} component={NewProfilePicture} />
                     <Route path={`/app${routes.editProfile.href}`} component={EditMyProfilePage} />
                     <Route path={`/app${routes.myFriends.href}`} component={MyFriends} />
                     <Route path={`/app${routes.myGroups.href}`} component={MyGroupsPage} />

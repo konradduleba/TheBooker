@@ -1,5 +1,6 @@
+import IAccountInfo from "Utils/Types/IAccountInfo";
+
 export default interface IPictureComponent {
-    picture: string;
-    name: string;
-    lastname: string;
+    accountInfo: IAccountInfo,
+    isMyProfile: boolean | undefined;
 }

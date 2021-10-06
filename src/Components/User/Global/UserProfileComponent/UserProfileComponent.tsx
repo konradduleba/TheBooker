@@ -10,7 +10,6 @@ import UserInfoComponent from './Components/UserInfoComponent';
 import HeaderMeta from '../../../Global/HeaderMeta/HeaderMeta';
 import IUserProfile from './Types/IUserProfile';
 import validateSectionHeader from './Functions/validateSectionHeader';
-import EditMyProfileButton from './Components/EditMyProfileButton';
 
 const UserProfileComponent = ({ personData, isThatMe, isTemplate }: IUserProfile): JSX.Element => {
     const { accountInfo, isOnFriendList, isThatMyProfile, inviteStatus, mutualFriendsNumber, canSendFriendRequest } = personData;
@@ -19,14 +18,12 @@ const UserProfileComponent = ({ personData, isThatMe, isTemplate }: IUserProfile
 
     const sectionHeader = validateSectionHeader(isMyProfile, accountInfo);
 
-    const header = <EditMyProfileButton header={sectionHeader} isThatMe={isMyProfile} />
-
     return (
-        <SectionComponent header={header} className={isTemplate ? 'template' : ''}>
+        <SectionComponent header={sectionHeader} className={isTemplate ? 'template' : ''}>
             <HeaderMeta title={sectionHeader} />
             <div className='user-profile-page-wrapper column-with-padding'>
                 <div className='left-side'>
-                    <PictureComponent {...accountInfo} />
+                    <PictureComponent accountInfo={accountInfo} isMyProfile={isMyProfile} />
                     {canSendFriendRequest && !isMyProfile && <SendMessageOrPoke
                         accountInfo={accountInfo}
                         isOnFriendList={isOnFriendList}
@@ -37,7 +34,7 @@ const UserProfileComponent = ({ personData, isThatMe, isTemplate }: IUserProfile
                     <FriendListComponent limit={4} accountInfo={accountInfo} isThatMe={isMyProfile} />
                 </div>
                 <div className='right-side'>
-                    <UserInfoComponent {...personData} />
+                    <UserInfoComponent personData={personData} isMyProfile={isMyProfile} />
                 </div>
             </div>
         </SectionComponent>

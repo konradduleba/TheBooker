@@ -118,5 +118,9 @@
     "groupPreferences": {
         "title":"My Preferences",
         "href": "/group-preferences"
+    },
+    "profilePicture": {
+        "title": "Edit",
+        "href": "/new-profile-picture"
     }
 }

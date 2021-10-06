@@ -8,14 +8,32 @@
     .left-side {
         width: 40%;
 
-        .picture-container {
-            margin: 5px auto;
-            width: 65%;
-            display: flex;
-            align-items: center;
+        .picture-component {
+            p {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
 
-            img {
-                width: 100%;
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    margin-right: 5px;
+
+                    &:hover {
+                        color: var(--link-hover-color)
+                    }
+                }
+            }
+
+            .picture-container {
+                margin: 5px auto;
+                width: 65%;
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                }
             }
         }
 
